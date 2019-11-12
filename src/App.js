@@ -1,58 +1,27 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import ReactFullpage from "@fullpage/react-fullpage";
 
-function App() {
-  return (
-    <div id="wrapper">
-      <div className="App section">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-      <div className="section">
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-        <h1>test</h1>
-      </div>
-      <div className="section">
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-        <h1>test2</h1>
-      </div>
-    </div>
-  );
-}
+const App = () => (
+  <ReactFullpage
+    //fullpage options
+    licenseKey={"YOUR_KEY_HERE"}
+    scrollingSpeed={1000} /* Options here */
+    render={({ state, fullpageApi }) => {
+      return (
+        <ReactFullpage.Wrapper>
+          <div className="section">
+            <p>Section 1 (welcome to fullpage.js)</p>
+            <button onClick={() => fullpageApi.moveSectionDown()}>
+              Click me to move down
+            </button>
+          </div>
+          <div className="section">
+            <p>Section 2</p>
+          </div>
+        </ReactFullpage.Wrapper>
+      );
+    }}
+  />
+);
 
 export default App;
