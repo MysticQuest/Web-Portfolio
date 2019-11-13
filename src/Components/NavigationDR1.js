@@ -16,9 +16,9 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 import "./Navigation.css";
-
-import "typeface-pacifico";
+import fontTheme1 from "../Themes/barFonts.js";
 
 const drawerWidth = 160;
 
@@ -55,13 +55,11 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: theme.spacing(2)
   },
-
   listItems: {
     margin: "7vh 0 7vh 0"
   },
   listText: {
     padding: "1vh 0 1vh 0",
-    fontFamily: "pacifico",
     textAlign: "center"
   }
 }));
@@ -79,22 +77,22 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <List>
-        {["Home", "Projects", "Games", "About"].map((text, index) => (
-          <ListItem className={classes.listItems} button key={text}>
-            {/* style={{ margin: "4rem 0 4rem 0" }} */}
-            {/* <ListItemIcon style={{ minWidth: "33px" }}>
+      <ThemeProvider theme={fontTheme1}>
+        <List>
+          {["Home", "Projects", "Games", "About"].map((text, index) => (
+            <ListItem className={classes.listItems} button key={text}>
+              {/* <ListItemIcon style={{ minWidth: "33px" }}>
               {index === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon> */}
-            {/* style={{ padding: "1rem 0 1rem 0", fontFamily: "sans-seriff" }} */}
-            <ListItemText
-              className={classes.listText}
-              wrap="true"
-              primary={text}
-            />
-          </ListItem>
-        ))}
-      </List>
+              <ListItemText
+                className={classes.listText}
+                wrap="true"
+                primary={text}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </ThemeProvider>
     </div>
   );
 
