@@ -6,12 +6,12 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-//import InboxIcon from "@material-ui/icons/MoveToInbox";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-//import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-//import MailIcon from "@material-ui/icons/Mail";
+import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -19,6 +19,7 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import "./Navigation.css";
 import fontTheme1 from "../Themes/barFonts.js";
+import iconTheme1 from "../Themes/barIcons.js";
 
 const drawerWidth = 160;
 
@@ -50,19 +51,43 @@ const useStyles = makeStyles(theme => ({
 
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "rgba(51, 4, 4, 0.1)",
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
     color: "white",
     flexGrow: 1,
     padding: theme.spacing(2)
   },
   listItems: {
-    margin: "7vh 0 7vh 0"
+    margin: "0 0 0 0",
+    paddingTop: "3.5vh",
+    flexDirection: "column"
   },
   listText: {
-    padding: "1vh 0 1vh 0",
-    textAlign: "center"
+    padding: "1.5vh 0 1.5vh 0"
+  },
+  listIcons: {
+    minWidth: "33px",
+    color: "rgba(250, 250, 250, 0.6)",
+    transform: "scale(1.5)",
+    paddingLeft: "0.5vh"
   }
 }));
+
+// const activeIndex = window.fullpage_api.getActiveSection().index;
+// const currentIndex = 3;
+
+// const detectActive = ({ classes }) => {
+//   if (activeIndex === currentIndex) {
+//     classes.listText = {
+//       textAlign: "left"
+//     };
+//   } else {
+//     classes.listText = {
+//       textAlign: "right"
+//     };
+//   }
+// };
+
+// console.log(activeIndex);
 
 function ResponsiveDrawer(props) {
   const { container } = props;
@@ -80,16 +105,34 @@ function ResponsiveDrawer(props) {
       <ThemeProvider theme={fontTheme1}>
         <List>
           {["Home", "Projects", "Games", "About"].map((text, index) => (
-            <ListItem className={classes.listItems} button key={text}>
-              {/* <ListItemIcon style={{ minWidth: "33px" }}>
-              {index === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
-              <ListItemText
-                className={classes.listText}
-                wrap="true"
-                primary={text}
-              />
-            </ListItem>
+            <div>
+              <ListItem
+                className={classes.listItems}
+                button
+                key={text}
+                onClick={() => {
+                  window.fullpage_api.moveTo(index + 1);
+                  //console.log(window.fullpage_api.getActiveSection().index);
+                  //console.log(index);
+                  const activeIndex = window.fullpage_api.getActiveSection()
+                    .index;
+                  console.log(activeIndex);
+                  // detectActive();
+                }}
+              >
+                {/* {window.fullpage_api.getActiveSection().index === index ? classes.listText.textAlign: 'left' : classes.listText.textAlign: 'right'} */}
+
+                <ListItemIcon className={classes.listIcons}>
+                  {index === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+
+                <ListItemText
+                  className={classes.listText}
+                  wrap="true"
+                  primary={text}
+                />
+              </ListItem>
+            </div>
           ))}
         </List>
       </ThemeProvider>

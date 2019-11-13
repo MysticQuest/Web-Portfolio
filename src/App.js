@@ -1,8 +1,6 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-
 import "./App.css";
-
 import ResponsiveDrawer from "./Components/NavigationDR1";
 
 //import pic1 from "./pic1.png";
@@ -22,9 +20,11 @@ const App = () => (
               <div className="section container1">
                 {/* <p>Section 1 (welcome to fullpage.js)</p> */}
                 {/* <button onClick={() => fullpageApi.moveSectionDown()}>
-              Click me to move down
-            </button> */}
+                  Click me to move down
+                </button> */}
               </div>
+              <div className="section container2">{/* <p>Section 2</p> */}</div>
+              <div className="section container2">{/* <p>Section 2</p> */}</div>
               <div className="section container2">{/* <p>Section 2</p> */}</div>
             </ReactFullpage.Wrapper>
           </div>
