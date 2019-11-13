@@ -5,21 +5,26 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 //import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import MailIcon from "@material-ui/icons/Mail";
-import MenuIcon from "@material-ui/icons/Menu";
+
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import "./Navigation.css";
 import fontTheme1 from "../Themes/barFonts.js";
-import iconTheme1 from "../Themes/barIcons.js";
+//import ICONS
+import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
+import MailIcon from "@material-ui/icons/Mail";
+import HomeIcon from "@material-ui/icons/Home";
+import MenuIcon from "@material-ui/icons/Menu";
+import IconButton from "@material-ui/core/IconButton";
+//import InboxIcon from "@material-ui/icons/MoveToInbox";
+import InfoIcon from "@material-ui/icons/Info";
+import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 
 const drawerWidth = 160;
 
@@ -58,17 +63,25 @@ const useStyles = makeStyles(theme => ({
   },
   listItems: {
     margin: "0 0 0 0",
-    paddingTop: "3.5vh",
+    paddingTop: "4.5vh",
     flexDirection: "column"
   },
   listText: {
-    padding: "1.5vh 0 1.5vh 0"
+    padding: "0 0 3vh 0"
   },
   listIcons: {
     minWidth: "33px",
     color: "rgba(250, 250, 250, 0.6)",
     transform: "scale(1.5)",
     paddingLeft: "0.5vh"
+  },
+  customActiveElement: {
+    color: "brown",
+    transform: "scale(1.5)",
+    padding: "15vh",
+    margin: "15vh",
+    flexDirection: "row",
+    maxWidth: "15px"
   }
 }));
 
@@ -88,6 +101,21 @@ const useStyles = makeStyles(theme => ({
 // };
 
 // console.log(activeIndex);
+
+function pickIcon(text) {
+  switch (text) {
+    case "Home":
+      return <HomeIcon />;
+    case "About":
+      return <InfoIcon />;
+    case "Games":
+      return <VideogameAssetIcon />;
+    case "Projects":
+      return <AccountBalanceIcon />;
+    default:
+      return <MailIcon />;
+  }
+}
 
 function ResponsiveDrawer(props) {
   const { container } = props;
@@ -109,6 +137,7 @@ function ResponsiveDrawer(props) {
               <ListItem
                 className={classes.listItems}
                 button
+                id={"icon"}
                 key={text}
                 onClick={() => {
                   window.fullpage_api.moveTo(index + 1);
@@ -118,12 +147,33 @@ function ResponsiveDrawer(props) {
                     .index;
                   console.log(activeIndex);
                   // detectActive();
+                  // activeIndex === index
+                  //   ? activeSection()
+                  //   : console.log("Index does not match section");
+
+                  // function activeSection() {
+                  //   console.log("success");
+                  //   var activeDoc = document.getElementById("icon");
+                  //   console.log(activeDoc);
+                  //   activeDoc.className += classes.customActiveElement;
+                  // }
                 }}
               >
-                {/* {window.fullpage_api.getActiveSection().index === index ? classes.listText.textAlign: 'left' : classes.listText.textAlign: 'right'} */}
-
                 <ListItemIcon className={classes.listIcons}>
-                  {index === 0 ? <InboxIcon /> : <MailIcon />}
+                  {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
+                  {pickIcon(text)}
+                  {/* {
+                      switch (text) {
+                        case "Home":
+                          return <HomeIcon />;
+                          break;
+                        case "About":
+                          return <InboxIcon />;
+                          break;
+                        default:
+                          return <MailIcon />;             
+                    }
+                    } */}
                 </ListItemIcon>
 
                 <ListItemText
