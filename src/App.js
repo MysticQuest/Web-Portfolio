@@ -1,37 +1,89 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "./App.css";
-import ResponsiveDrawer from "./Components/NavigationDR1";
+import ResponsiveDrawer from "./Components/Navigation";
 
 //import pic1 from "./pic1.png";
 //import pic2 from "./pic2.png";
+
+//{console.log(fullpageApi.getActiveSection().index)}
+//<button onClick={() => fullpageApi.moveSectionDown()}></button>
+
+const anchors = ["firstPage", "secondPage", "thirdPage", "fourthPage"];
 
 const App = () => (
   <div>
     <ResponsiveDrawer />
     <ReactFullpage
       //fullpage options
-      licenseKey={"YOUR_KEY_HERE"}
+      parallax={true}
+      parallaxOptions={{
+        type: "reveal",
+        percentage: 62,
+        property: "translate"
+      }}
+      scrollOverflowReset={true}
+      cards={false}
+      cardsOptions={{
+        perspective: 50,
+        fadeContent: true,
+        fadeBackground: true
+      }}
+      resetSliders={true}
+      controlArrows={true}
+      animateAnchor={true}
+      keyboardScrolling={true}
+      dragAndMove={true}
+      fadingEffect={"slides"}
+      menu={"#menu"}
+      loopBottom={true}
+      licenseKey={"GPLv3"}
+      activeClass={"active"}
+      anchors={anchors}
+      navigation={true}
+      arrowNavigation={true}
+      slidesNavigation={true}
+      slidesNavPosition={"bottom"}
+      navigationTooltips={[]}
       scrollingSpeed={1000} /* Options here */
+      scrollBar={true}
+      sectionsColor={[]}
+      onLeave={(origin, destination, direction) => {
+        console.log("onLeave event", { origin, destination, direction });
+      }}
       render={({ state, fullpageApi }) => {
         return (
-          <div>
-            <ReactFullpage.Wrapper>
-              <div className="section container1">
-                {/* <p>Section 1 (welcome to fullpage.js)</p> */}
-                {/* <button onClick={() => fullpageApi.moveSectionDown()}>
-                  Click me to move down
-                </button> */}
+          <ReactFullpage.Wrapper>
+            <div className="section container1 fp-noscroll">
+              <div class="slide">
+                <h1>Section 1</h1>{" "}
               </div>
-              <div className="section container2">{/* <p>Section 2</p> */}</div>
-              <div className="section container2">{/* <p>Section 2</p> */}</div>
-              <div className="section container2">{/* <p>Section 2</p> */}</div>
-            </ReactFullpage.Wrapper>
-          </div>
+              <div class="slide">
+                <h1>Section 1</h1>{" "}
+              </div>
+              <div class="slide">
+                <h1>Section 1</h1>{" "}
+              </div>
+            </div>
+            <div className="section container2 fp-noscroll">
+              <h1>Section 2</h1>
+              <div class="slide"> Slide 1 </div>
+              <div class="slide"> Slide 1 </div>
+            </div>
+            <div className="section container2 fp-noscroll">
+              <h1>Section 3</h1>
+            </div>
+            <div className="section container2 fp-noscroll">
+              <h1>Section 4</h1>
+            </div>
+          </ReactFullpage.Wrapper>
         );
       }}
     />
   </div>
 );
+
+/* <div class="section">Whole viewport</div>
+<div class="section fp-auto-height">Auto height</div> --- this is for scrollable bigger sections*/
 
 export default App;

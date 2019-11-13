@@ -9,12 +9,12 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import "./Navigation.css";
+//import THEMES
 import fontTheme1 from "../Themes/barFonts.js";
 //import ICONS
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
@@ -22,11 +22,10 @@ import MailIcon from "@material-ui/icons/Mail";
 import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
-//import InboxIcon from "@material-ui/icons/MoveToInbox";
 import InfoIcon from "@material-ui/icons/Info";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 
-const drawerWidth = 160;
+const drawerWidth = 120;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -59,12 +58,15 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     color: "white",
     flexGrow: 1,
-    padding: theme.spacing(2)
+    padding: "0 0 0 0"
   },
   listItems: {
     margin: "0 0 0 0",
-    paddingTop: "4.5vh",
-    flexDirection: "column"
+    padding: "3.5vh 0 1vh 0",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      padding: "7.5vh 0 3vh 0"
+    }
   },
   listText: {
     padding: "0 0 3vh 0"
@@ -81,7 +83,8 @@ const useStyles = makeStyles(theme => ({
     padding: "15vh",
     margin: "15vh",
     flexDirection: "row",
-    maxWidth: "15px"
+    maxWidth: "15px",
+    textDecoration: "underline"
   }
 }));
 
@@ -101,6 +104,18 @@ const useStyles = makeStyles(theme => ({
 // };
 
 // console.log(activeIndex);
+
+// function activeSection() {
+//   const activeIndex = window.fullpage_api.getActiveSection().index;
+//   console.log(activeIndex);
+//   //var activeDoc = document.getElementById(index);
+//   //console.log(activeDoc);
+//   // activeIndex === index
+//   //   ? activeSection()
+//   //   : console.log("Index does not match section");
+//   //activeDoc.className += classes.customActiveElement;
+// }
+// activeSection();
 
 function pickIcon(text) {
   switch (text) {
@@ -131,52 +146,24 @@ function ResponsiveDrawer(props) {
     <div>
       <div className={classes.toolbar} />
       <ThemeProvider theme={fontTheme1}>
-        <List>
+        <List id="menu">
           {["Home", "Projects", "Games", "About"].map((text, index) => (
             <div>
               <ListItem
+                data-menuanchor="firstPage"
                 className={classes.listItems}
                 button
-                id={"icon"}
                 key={text}
                 onClick={() => {
                   window.fullpage_api.moveTo(index + 1);
-                  //console.log(window.fullpage_api.getActiveSection().index);
-                  //console.log(index);
-                  const activeIndex = window.fullpage_api.getActiveSection()
-                    .index;
-                  console.log(activeIndex);
-                  // detectActive();
-                  // activeIndex === index
-                  //   ? activeSection()
-                  //   : console.log("Index does not match section");
-
-                  // function activeSection() {
-                  //   console.log("success");
-                  //   var activeDoc = document.getElementById("icon");
-                  //   console.log(activeDoc);
-                  //   activeDoc.className += classes.customActiveElement;
-                  // }
                 }}
               >
-                <ListItemIcon className={classes.listIcons}>
-                  {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
+                <ListItemIcon key={index} className={classes.listIcons}>
                   {pickIcon(text)}
-                  {/* {
-                      switch (text) {
-                        case "Home":
-                          return <HomeIcon />;
-                          break;
-                        case "About":
-                          return <InboxIcon />;
-                          break;
-                        default:
-                          return <MailIcon />;             
-                    }
-                    } */}
                 </ListItemIcon>
 
                 <ListItemText
+                  id={index}
                   className={classes.listText}
                   wrap="true"
                   primary={text}

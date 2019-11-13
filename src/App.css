@@ -3,6 +3,7 @@
 }
 
 .container1 {
+  text-align: center;
   display: grid;
   background-image: url("./pic2.png");
   background-repeat: no-repeat;
@@ -11,7 +12,12 @@
   background-position: center;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container2 {
+  text-align: center;
   display: grid;
   background-image: url("./pic1.png");
   background-repeat: no-repeat;
@@ -24,6 +30,35 @@
   display: block;
   max-width: 10%;
   height: auto;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white;
+}
+
+.fp-controlArrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -38px;
+}
+.fp-controlArrow.fp-prev {
+  display: none;
+  left: 50vh;
+  width: 0;
+  border-width: 38.5px 34px 38.5px 0;
+  border-color: transparent #fff transparent transparent;
+}
+.fp-controlArrow.fp-next {
+  right: 2vh;
+  top: 10vh;
+  border-width: 3vh 0 3vh 3vh;
+  border-color: transparent transparent transparent #fff;
 }
 
 /* .App-logo {
