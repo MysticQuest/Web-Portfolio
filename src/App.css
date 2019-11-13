@@ -2,7 +2,31 @@
   text-align: center;
 }
 
-.App-logo {
+.container1 {
+  display: grid;
+  background-image: url("./pic2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container2 {
+  display: grid;
+  background-image: url("./pic1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.back-img {
+  display: block;
+  max-width: 10%;
+  height: auto;
+}
+
+/* .App-logo {
   height: 40vmin;
 }
 
@@ -19,4 +43,4 @@
 
 .App-link {
   color: #09d3ac;
-}
+} */
