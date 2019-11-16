@@ -2,6 +2,15 @@ import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "./App.css";
 import ResponsiveDrawer from "./Components/Navigation";
+//import Detector from "./Components/Detector";
+
+window.onscroll = function() {
+  // console.log(window.fullpage_api.getActiveSection().index);
+  var activeSection = window.fullpage_api.getActiveSection().index;
+  return activeSection;
+};
+
+const activeSection = window.onscroll;
 
 //import pic1 from "./pic1.png";
 //import pic2 from "./pic2.png";
@@ -9,7 +18,7 @@ import ResponsiveDrawer from "./Components/Navigation";
 //{console.log(fullpageApi.getActiveSection().index)}
 //<button onClick={() => fullpageApi.moveSectionDown()}></button>
 
-const anchors = ["firstPage", "secondPage", "thirdPage", "fourthPage"];
+// console.log(window.fullpage_api.getActiveSection().index);
 
 const App = () => (
   <div>
@@ -39,7 +48,8 @@ const App = () => (
       loopBottom={true}
       licenseKey={"GPLv3"}
       activeClass={"active"}
-      anchors={anchors}
+      anchors={["firstPage", "secondPage", "thirdPage", "fourthPage"]}
+      lockAnchors={true}
       navigation={true}
       arrowNavigation={true}
       slidesNavigation={true}
@@ -48,33 +58,32 @@ const App = () => (
       scrollingSpeed={1000} /* Options here */
       scrollBar={true}
       sectionsColor={[]}
-      onLeave={(origin, destination, direction) => {
-        console.log("onLeave event", { origin, destination, direction });
-      }}
+      // afterLoad={(origin, destination, direction) => {
+      //   console.log("after slide load event", {
+      //     origin,
+      //     destination,
+      //     direction
+      //   });
+      // }}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
             <div className="section container1 fp-noscroll">
-              <div class="slide">
-                <h1>Section 1</h1>{" "}
-              </div>
-              <div class="slide">
-                <h1>Section 1</h1>{" "}
-              </div>
-              <div class="slide">
-                <h1>Section 1</h1>{" "}
-              </div>
+              <h1>Section 1</h1>
             </div>
             <div className="section container2 fp-noscroll">
               <h1>Section 2</h1>
-              <div class="slide"> Slide 1 </div>
-              <div class="slide"> Slide 1 </div>
             </div>
             <div className="section container2 fp-noscroll">
               <h1>Section 3</h1>
             </div>
             <div className="section container2 fp-noscroll">
-              <h1>Section 4</h1>
+              <div className="slide">
+                <h1>Section 4</h1>
+              </div>
+              <div className="slide">
+                <h1>Section 4</h1>
+              </div>
             </div>
           </ReactFullpage.Wrapper>
         );
@@ -86,4 +95,8 @@ const App = () => (
 /* <div class="section">Whole viewport</div>
 <div class="section fp-auto-height">Auto height</div> --- this is for scrollable bigger sections*/
 
-export default App;
+// onScroll={() => {
+//   console.log(window.fullpage_api.getActiveSection());
+// }}
+
+export { App, activeSection };

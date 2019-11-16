@@ -10,11 +10,12 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Toolbar from "@material-ui/core/Toolbar";
+import "./Navigation.css";
+import { activeSection } from "../App";
+//import THEMES
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import "./Navigation.css";
-//import THEMES
 import fontTheme1 from "../Themes/barFonts.js";
 //import ICONS
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
@@ -73,7 +74,7 @@ const useStyles = makeStyles(theme => ({
   },
   listIcons: {
     minWidth: "33px",
-    color: "rgba(250, 250, 250, 0.6)",
+    color: "rgba(250, 250, 250, 0.4)",
     transform: "scale(1.5)",
     paddingLeft: "0.5vh"
   },
@@ -117,6 +118,20 @@ const useStyles = makeStyles(theme => ({
 // }
 // activeSection();
 
+// const a = document.getElementsByClassName("a.active");
+// console.log(a);
+
+// var urlParams = new URLSearchParams(window.location.href);
+// console.log(urlParams);
+// console.log(window.location.search);
+// console.log(urlParams.has("#firstPage"));
+// console.log(window.location.href);
+// var myUrl = window.location.href;
+// console.log(myUrl.match("page"));
+
+// const urlHash = window.location.hash;
+// console.log(urlHash);
+
 function pickIcon(text) {
   switch (text) {
     case "Home":
@@ -150,12 +165,14 @@ function ResponsiveDrawer(props) {
           {["Home", "Projects", "Games", "About"].map((text, index) => (
             <div>
               <ListItem
-                data-menuanchor="firstPage"
+                data-menuanchor={"firstPage"}
                 className={classes.listItems}
                 button
                 key={text}
                 onClick={() => {
                   window.fullpage_api.moveTo(index + 1);
+                  console.log(activeSection());
+                  console.log(index);
                 }}
               >
                 <ListItemIcon key={index} className={classes.listIcons}>

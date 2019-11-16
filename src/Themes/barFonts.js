@@ -7,7 +7,7 @@ const fontTheme1 = createMuiTheme({
       fontFamily: "typeface-pacifico",
       fontWeight: 400,
       fontSize: 26,
-      color: "white"
+      color: "rgba(250, 250, 250, 0.9)"
     }
   }
 });
