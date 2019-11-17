@@ -3,19 +3,29 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import "./App.css";
 import ResponsiveDrawer from "./Components/Navigation";
 
+var gCD = false;
 window.onscroll = function() {
-  var activeSection = window.fullpage_api.getActiveSection().index;
-  console.log(activeSection);
-  return activeSection;
-};
-const activeSection = window.onscroll;
+  if (gCD === false) {
+    console.log("scrolled");
+    gCD = true;
+    window.fullpage_api.setAllowScrolling(false, "all");
+    window.fullpage_api.setKeyboardScrolling(false, "all");
 
-//import pic1 from "./pic1.png";
-//import pic2 from "./pic2.png";
+    setTimeout(
+      function() {
+        window.fullpage_api.setAllowScrolling(true, "all");
+        window.fullpage_api.setKeyboardScrolling(true, "all");
+        console.log("timeout ended");
+        gCD = false;
+      },
+      [100]
+    );
+  }
+};
 
 const App = () => (
   <div>
-    <ResponsiveDrawer />
+    <ResponsiveDrawer id="navbar" />
     <ReactFullpage
       //fullpage options
       // parallax={false}
@@ -34,24 +44,32 @@ const App = () => (
       offsetSections={false} //used to show non full screen section parts
       resetSliders={true}
       // controlArrows={true}
-      // animateAnchor={true}
+      animateAnchor={true}
       keyboardScrolling={true}
       dragAndMove={true}
       // fadingEffect={"slides"}
       menu={"#menu"} // menu for anchors
-      loopBottom={true}
+      loopHorizontal={true}
       licenseKey={"GPLv3"}
       activeClass={"active"} //adds an active class to the correct menu button
       anchors={["firstPage", "secondPage", "thirdPage", "fourthPage"]}
       lockAnchors={true} //anchor feature
       navigation={true} //enables cool dots
       // arrowNavigation={true} //enables arrows for slides
-      // slidesNavigation={true}
+      slidesNavigation={true}
       slidesNavPosition={"bottom"}
-      // navigationTooltips={[]}
+      // navigationTooltips={[]} //tooltips for the navdots
       scrollingSpeed={1000} /* used this for something to work... */
       sectionsColor={[]}
       scrollBar={true}
+      // easing={"easeInOutCubic"}
+      // easingcss3={"ease"}
+      // css3={true}
+      autoScrolling={true}
+      fitToSection={true}
+      // fixedElements={"#navbar"}
+      loopBottom={true}
+      // scrollHorizontally={true}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -86,4 +104,4 @@ const App = () => (
 //   console.log(window.fullpage_api.getActiveSection());
 // }}
 
-export { App, activeSection };
+export default App;

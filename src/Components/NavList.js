@@ -39,14 +39,51 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+// window.fullpage.api.setAllowScrolling(false)
+
 const NavList = () => {
   const classes = useStyles();
+  var coolDown = false;
+  console.log(coolDown);
 
   return (
     <ThemeProvider theme={fontTheme1}>
       <List id="menu">
         <ListItem
+          // role="button"
           onClick={() => window.fullpage_api.moveTo("firstPage")}
+          // onClick={() => {
+          //   if (coolDown === false) {
+          //     console.log(coolDown);
+          //     coolDown = true;
+          //     window.fullpage_api.moveTo("firstPage");
+          //     window.fullpage_api.setAllowScrolling(false, "all");
+          //     window.fullpage_api.setKeyboardScrolling(false, "all");
+
+          //     setTimeout(
+          //       function() {
+          //         window.fullpage_api.setAllowScrolling(true, "all");
+          //         window.fullpage_api.setKeyboardScrolling(true, "all");
+          //         coolDown = false;
+          //       },
+          //       [3000]
+          //     );
+          //   }
+          // }}
+          // onClick={() => {
+          //   if (coolDown === false) {
+          //     coolDown = true;
+          //     window.fullpage_api.moveTo("firstPage");
+          //     window.fullpage_api.afterLoad = () =>
+          //       function(origin, destination, direction) {
+          //         console.log(origin);
+          //         if (destination.anchor == "firstSlide") {
+          //           console.log("Section 1 ended loading");
+          //           coolDown = false;
+          //         }
+          //       };
+          //   }
+          // }}
           data-menuanchor={"firstPage"}
           className={classes.listItems}
           button
@@ -64,6 +101,38 @@ const NavList = () => {
 
         <ListItem
           onClick={() => window.fullpage_api.moveTo("secondPage")}
+          // onClick={() => {
+          //   if (coolDown === false) {
+          //     console.log(coolDown);
+          //     coolDown = true;
+          //     window.fullpage_api.moveTo("secondPage");
+          //     window.fullpage_api.setAllowScrolling(false, "all");
+          //     window.fullpage_api.setKeyboardScrolling(false, "all");
+
+          //     setTimeout(
+          //       function() {
+          //         window.fullpage_api.setAllowScrolling(true, "all");
+          //         window.fullpage_api.setKeyboardScrolling(true, "all");
+          //         coolDown = false;
+          //       },
+          //       [3000]
+          //     );
+          //   }
+          // }}
+          // onClick={() => {
+          //   if (coolDown === false) {
+          //     coolDown = true;
+          //     window.fullpage_api.moveTo("secondPage");
+          //     window.fullpage_api.afterLoad = () =>
+          //       function(origin, destination, direction) {
+          //         console.log(origin);
+          //         if (destination.anchor == "secondSlide") {
+          //           console.log("Section 2 ended loading");
+          //           coolDown = false;
+          //         }
+          //       };
+          //   }
+          // }}
           data-menuanchor={"secondPage"}
           className={classes.listItems}
           button
