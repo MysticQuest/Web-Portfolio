@@ -5,26 +5,30 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 //import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
+// import ListItemText from "@material-ui/core/ListItemText";
 import Toolbar from "@material-ui/core/Toolbar";
 import "./Navigation.css";
-import { activeSection } from "../App";
+// import { activeSection } from "../App";
 //import THEMES
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
-import fontTheme1 from "../Themes/barFonts.js";
+// import { ThemeProvider } from "@material-ui/styles";
+// import fontTheme1 from "../themes/barFonts.js";
 //import ICONS
-import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
-import MailIcon from "@material-ui/icons/Mail";
-import HomeIcon from "@material-ui/icons/Home";
+// import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
+// import MailIcon from "@material-ui/icons/Mail";
+// import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
-import InfoIcon from "@material-ui/icons/Info";
-import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+// import InfoIcon from "@material-ui/icons/Info";
+// import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+// import ListItemIcon from "@material-ui/core/ListItemIcon";
+//components
+import NavList from "./NavList";
+//hooks
+// import { useInterval } from "../hooks/useInterval";
 
 const drawerWidth = 120;
 
@@ -132,20 +136,22 @@ const useStyles = makeStyles(theme => ({
 // const urlHash = window.location.hash;
 // console.log(urlHash);
 
-function pickIcon(text) {
-  switch (text) {
-    case "Home":
-      return <HomeIcon />;
-    case "About":
-      return <InfoIcon />;
-    case "Games":
-      return <VideogameAssetIcon />;
-    case "Projects":
-      return <AccountBalanceIcon />;
-    default:
-      return <MailIcon />;
-  }
-}
+// var x = 0;
+
+// function pickIcon(text) {
+//   switch (text) {
+//     case "Home":
+//       return <HomeIcon />;
+//     case "About":
+//       return <InfoIcon />;
+//     case "Games":
+//       return <VideogameAssetIcon />;
+//     case "Projects":
+//       return <AccountBalanceIcon />;
+//     default:
+//       return <MailIcon />;
+//   }
+// }
 
 function ResponsiveDrawer(props) {
   const { container } = props;
@@ -157,39 +163,49 @@ function ResponsiveDrawer(props) {
     setMobileOpen(!mobileOpen);
   };
 
+  // const coolDown = timer => {
+  //   x = timer;
+  //   const navClickCD = setInterval(function() {
+  //     timer--;
+  //     x = timer;
+  //     if (timer <= 0) {
+  //       clearInterval(navClickCD);
+  //     }
+  //     console.log(timer);
+  //   }, 1000);
+  //   return timer;
+  // };
+
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <ThemeProvider theme={fontTheme1}>
-        <List id="menu">
-          {["Home", "Projects", "Games", "About"].map((text, index) => (
-            <div>
-              <ListItem
-                data-menuanchor={"firstPage"}
-                className={classes.listItems}
-                button
-                key={text}
-                onClick={() => {
-                  window.fullpage_api.moveTo(index + 1);
-                  console.log(activeSection());
-                  console.log(index);
-                }}
-              >
-                <ListItemIcon key={index} className={classes.listIcons}>
-                  {pickIcon(text)}
-                </ListItemIcon>
 
-                <ListItemText
-                  id={index}
-                  className={classes.listText}
-                  wrap="true"
-                  primary={text}
-                />
-              </ListItem>
-            </div>
+      {/* <List id="menu">
+          {["Home", "Projects", "Games", "About"].map((text, index) => (
+            <ListItem
+              data-menuanchor={"firstPage"}
+              className={classes.listItems}
+              button
+              key={text}
+              onClick={() => {
+                console.log("changed section");
+                window.fullpage_api.moveTo(index + 1);
+              }}
+            >
+              <ListItemIcon key={index} className={classes.listIcons}>
+                {pickIcon(text)}
+              </ListItemIcon>
+
+              <ListItemText
+                id={index}
+                className={classes.listText}
+                wrap="true"
+                primary={text}
+              />
+            </ListItem>
           ))}
-        </List>
-      </ThemeProvider>
+        </List> */}
+      <NavList />
     </div>
   );
 
