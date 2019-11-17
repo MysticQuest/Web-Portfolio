@@ -2,14 +2,12 @@ import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "./App.css";
 import ResponsiveDrawer from "./Components/Navigation";
-//import Detector from "./components/Detector";
 
 window.onscroll = function() {
-  // console.log(window.fullpage_api.getActiveSection().index);
   var activeSection = window.fullpage_api.getActiveSection().index;
+  console.log(activeSection);
   return activeSection;
 };
-
 const activeSection = window.onscroll;
 
 //import pic1 from "./pic1.png";
@@ -52,6 +50,7 @@ const App = () => (
       slidesNavPosition={"bottom"}
       // navigationTooltips={[]}
       scrollingSpeed={1000} /* used this for something to work... */
+      sectionsColor={[]}
       scrollBar={true}
       render={({ state, fullpageApi }) => {
         return (

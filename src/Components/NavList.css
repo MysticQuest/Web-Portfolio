@@ -24,9 +24,13 @@ ul .active * {
 
 .MuiListItem-root .MuiListItemText-primary {
   font-family: pacifico;
+  font-weight: 100;
+  color: rgba(250, 250, 250, 0.7);
 }
 
 .MuiListItem-root.active .MuiListItemText-primary {
+  color: rgba(250, 250, 250, 0.9);
+  transition: all 0.8s ease;
 }
 
 .MuiListItem-root.active .MuiListItemIcon-root {

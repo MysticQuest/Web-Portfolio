@@ -1,34 +1,22 @@
 import React from "react";
-// import PropTypes from "prop-types";
-// import AppBar from "@material-ui/core/AppBar";
-// import CssBaseline from "@material-ui/core/CssBaseline";
-//import Divider from "@material-ui/core/Divider";
-// import Drawer from "@material-ui/core/Drawer";
-// import Hidden from "@material-ui/core/Hidden";
+//MUI components
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-// import Toolbar from "@material-ui/core/Toolbar";
-import "./Navigation.css";
-// import { activeSection } from "../App";
-//import THEMES
-// import Typography from "@material-ui/core/Typography";
+//import theming
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import fontTheme1 from "../themes/barFonts.js";
 //import ICONS
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
-// import MailIcon from "@material-ui/icons/Mail";
 import HomeIcon from "@material-ui/icons/Home";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import IconButton from "@material-ui/core/IconButton";
 import InfoIcon from "@material-ui/icons/Info";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 //import css
 import "./NavList.css";
-//active function
-import { activeSection } from "../App";
+//active section function
+//import { activeSection } from "../App";
 
 const useStyles = makeStyles(theme => ({
   listItems: {
@@ -58,6 +46,7 @@ const NavList = () => {
     <ThemeProvider theme={fontTheme1}>
       <List id="menu">
         <ListItem
+          onClick={() => window.fullpage_api.moveTo("firstPage")}
           data-menuanchor={"firstPage"}
           className={classes.listItems}
           button
@@ -67,7 +56,6 @@ const NavList = () => {
             <HomeIcon />
           </ListItemIcon>
           <ListItemText
-            id={"test"}
             className={classes.listText}
             wrap="true"
             primary="Home"
@@ -75,17 +63,17 @@ const NavList = () => {
         </ListItem>
 
         <ListItem
+          onClick={() => window.fullpage_api.moveTo("secondPage")}
           data-menuanchor={"secondPage"}
           className={classes.listItems}
           button
-          key="1b"
+          key="2"
         >
-          <ListItemIcon key={"test"} className={classes.listIcons}>
+          <ListItemIcon key="2a" className={classes.listIcons}>
             <AccountBalanceIcon />
           </ListItemIcon>
 
           <ListItemText
-            id={"test"}
             className={classes.listText}
             wrap="true"
             primary={"Projects"}
@@ -93,17 +81,17 @@ const NavList = () => {
         </ListItem>
 
         <ListItem
+          onClick={() => window.fullpage_api.moveTo("thirdPage")}
           data-menuanchor={"thirdPage"}
           className={classes.listItems}
           button
-          key={"test"}
+          key="3"
         >
-          <ListItemIcon key={"test"} className={classes.listIcons}>
+          <ListItemIcon key="3a" className={classes.listIcons}>
             <VideogameAssetIcon />
           </ListItemIcon>
 
           <ListItemText
-            id={"test"}
             className={classes.listText}
             wrap="true"
             primary={"Games"}
@@ -111,17 +99,17 @@ const NavList = () => {
         </ListItem>
 
         <ListItem
+          onClick={() => window.fullpage_api.moveTo("fourthPage")}
           data-menuanchor={"fourthPage"}
           className={classes.listItems}
           button
-          key={"test"}
+          key="4"
         >
-          <ListItemIcon key={"test"} className={classes.listIcons}>
+          <ListItemIcon key="4a" className={classes.listIcons}>
             <InfoIcon />
           </ListItemIcon>
 
           <ListItemText
-            id={"test"}
             className={classes.listText}
             wrap="true"
             primary={"About"}
