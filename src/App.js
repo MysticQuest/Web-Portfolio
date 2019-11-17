@@ -1,31 +1,43 @@
 import React from "react";
+//import plugins
 import ReactFullpage from "@fullpage/react-fullpage";
+import Particles from "react-particles-js";
+import { params } from "./themes/particlesjs-config";
+//import my components
+import ResponsiveDrawer from "./Components/Navigation/Navigation";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import WebProjects from "./Components/WebProjects/WebProjects";
+import Games from "./Components/Games/Games";
+//import styles
 import "./App.css";
-import ResponsiveDrawer from "./Components/Navigation";
 
-var gCD = false;
-window.onscroll = function() {
-  if (gCD === false) {
-    console.log("scrolled");
-    gCD = true;
-    window.fullpage_api.setAllowScrolling(false, "all");
-    window.fullpage_api.setKeyboardScrolling(false, "all");
+// var gCD = false;
+// window.onscroll = function() {
+//   if (gCD === false) {
+//     console.log("scrolled");
+//     gCD = true;
+//     window.fullpage_api.setAllowScrolling(false, "all");
+//     window.fullpage_api.setKeyboardScrolling(false, "all");
 
-    setTimeout(
-      function() {
-        window.fullpage_api.setAllowScrolling(true, "all");
-        window.fullpage_api.setKeyboardScrolling(true, "all");
-        console.log("timeout ended");
-        gCD = false;
-      },
-      [100]
-    );
-  }
-};
+//     setTimeout(
+//       function() {
+//         window.fullpage_api.setAllowScrolling(true, "all");
+//         window.fullpage_api.setKeyboardScrolling(true, "all");
+//         console.log("timeout ended");
+//         gCD = false;
+//       },
+//       [100]
+//     );
+//   }
+// };
 
 const App = () => (
   <div>
-    <ResponsiveDrawer id="navbar" />
+    <div className="particles-js">
+      <Particles params={params} />
+    </div>
+    <ResponsiveDrawer />
     <ReactFullpage
       //fullpage options
       // parallax={false}

@@ -6,7 +6,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 //import theming
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import fontTheme1 from "../themes/barFonts.js";
+import fontTheme1 from "../../themes/barFonts.js";
 //import ICONS
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
 import HomeIcon from "@material-ui/icons/Home";
@@ -34,8 +34,11 @@ const useStyles = makeStyles(theme => ({
     minWidth: "33px",
     color: "rgba(250, 250, 250, 0.4)",
     transform: "scale(1.5)",
-    paddingLeft: "0.5vh",
+    paddingLeft: "0.7vh",
     paddingBottom: "0.5vh"
+  },
+  videoGameIcon: {
+    transform: "scale(1.1)"
   }
 }));
 
@@ -157,7 +160,7 @@ const NavList = () => {
           key="3"
         >
           <ListItemIcon key="3a" className={classes.listIcons}>
-            <VideogameAssetIcon />
+            <VideogameAssetIcon className={classes.videoGameIcon} />
           </ListItemIcon>
 
           <ListItemText
