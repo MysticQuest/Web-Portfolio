@@ -34,10 +34,8 @@ import "./App.css";
 
 const App = () => (
   <div>
-    <div className="particles-js">
-      <Particles params={params} />
-    </div>
     <ResponsiveDrawer />
+
     <ReactFullpage
       //fullpage options
       // parallax={false}
@@ -86,7 +84,12 @@ const App = () => (
         return (
           <ReactFullpage.Wrapper>
             <div className="section container1 fp-noscroll">
-              <h1>Section 1</h1>
+              <Particles
+                id="particle-effects"
+                className="particles-js"
+                params={params}
+              />
+              <Home />
             </div>
             <div className="section container2 fp-noscroll">
               <h1>Section 2</h1>

@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     padding: "3.5vh 0 1vh 0",
     flexDirection: "column",
     [theme.breakpoints.up("sm")]: {
-      padding: "7.5vh 0 3vh 0"
+      padding: "6.5vh 0 2.5vh 0"
     }
   },
   listText: {
@@ -46,8 +46,8 @@ const useStyles = makeStyles(theme => ({
 
 const NavList = () => {
   const classes = useStyles();
-  var coolDown = false;
-  console.log(coolDown);
+  // var coolDown = false;
+  // console.log(coolDown);
 
   return (
     <ThemeProvider theme={fontTheme1}>

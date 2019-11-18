@@ -6,10 +6,10 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Drawer from "@material-ui/core/Drawer";
 import Hidden from "@material-ui/core/Hidden";
 import Toolbar from "@material-ui/core/Toolbar";
-import "./Navigation.css";
 //import theming
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+// import "./Navigation.css";
 //import ICONS
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
@@ -53,31 +53,13 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     padding: "0 0 0 0"
   },
-  listItems: {
-    margin: "0 0 0 0",
-    padding: "3.5vh 0 1vh 0",
-    flexDirection: "column",
-    [theme.breakpoints.up("sm")]: {
-      padding: "7.5vh 0 3vh 0"
-    }
-  },
-  listText: {
-    padding: "0 0 3vh 0"
-  },
-  listIcons: {
-    minWidth: "33px",
-    color: "rgba(250, 250, 250, 0.4)",
-    transform: "scale(1.5)",
-    paddingLeft: "0.5vh"
-  },
-  customActiveElement: {
-    color: "brown",
-    transform: "scale(1.5)",
-    padding: "15vh",
-    margin: "15vh",
-    flexDirection: "row",
-    maxWidth: "15px",
-    textDecoration: "underline"
+
+  drawerPaperHidden: {
+    width: drawerWidth,
+    color: "white",
+    flexGrow: 1,
+    padding: "0 0 0 0",
+    backgroundColor: "rgba(0, 0, 0, 0.6)"
   }
 }));
 
@@ -141,7 +123,7 @@ function ResponsiveDrawer(props) {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
-              paper: classes.drawerPaper
+              paper: classes.drawerPaperHidden
             }}
             ModalProps={{
               keepMounted: true // Better open performance on mobile.
