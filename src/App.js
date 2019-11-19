@@ -9,6 +9,7 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import WebProjects from "./Components/WebProjects/WebProjects";
 import Games from "./Components/Games/Games";
+import Icons from "./Components/About/MyLinks";
 //import styles
 import "./App.css";
 
@@ -34,8 +35,8 @@ import "./App.css";
 
 const App = () => (
   <div>
+    <Icons />
     <ResponsiveDrawer />
-
     <ReactFullpage
       //fullpage options
       // parallax={false}
@@ -95,7 +96,7 @@ const App = () => (
               <h1>Section 2</h1>
             </div>
             <div className="section container3 fp-noscroll">
-              <h1>Section 3</h1>
+              <Games />
             </div>
             <div className="section container4 fp-noscroll">
               <div className="slide">
