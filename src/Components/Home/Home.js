@@ -6,7 +6,7 @@ import "../../themes/global.css";
 
 const Home = () => {
   return (
-    <div className="full-container">
+    <div className="full-container-1">
       <div className="text-container">
         <h1 className="animated fadeInLeft test delay-1s">Welcome</h1>
         <h4 className="animated fadeInLeft test2 delay-2s">

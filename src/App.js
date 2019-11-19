@@ -1,8 +1,8 @@
 import React from "react";
 //import plugins
+import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
-import Particles from "react-particles-js";
-import { params } from "./themes/particlesjs-config";
+// import ReactFullpage from '@fullpage/react-fullpage/dist/react-fullpage-commonjs'; //commonjs lib for nextjs ssr etc
 //import my components
 import ResponsiveDrawer from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
@@ -12,6 +12,8 @@ import Games from "./Components/Games/Games";
 import Icons from "./Components/About/MyLinks";
 //import styles
 import "./App.css";
+import Particles from "react-particles-js";
+import { params } from "./themes/particlesjs-config";
 
 // var gCD = false;
 // window.onscroll = function() {
@@ -45,7 +47,9 @@ const App = () => (
       //   percentage: 62,
       //   property: "translate"
       // }}
-      // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
+      scrollOverflow={true}
+      scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
+      normalScrollElements={".scroll"}
       // cards={true} //an effect
       // cardsOptions={{
       //   perspective: 50,
@@ -72,15 +76,16 @@ const App = () => (
       // navigationTooltips={[]} //tooltips for the navdots
       scrollingSpeed={1000} /* used this for something to work... */
       sectionsColor={[]}
-      scrollBar={true}
+      scrollBar={false}
       // easing={"easeInOutCubic"}
       // easingcss3={"ease"}
       // css3={true}
       autoScrolling={true}
       fitToSection={true}
-      // fixedElements={"#navbar"}
+      // fixedElements={"ResponsiveDrawer"}
       loopBottom={true}
       // scrollHorizontally={true}
+      bigSectionsDestination={"top"}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -92,11 +97,13 @@ const App = () => (
               />
               <Home />
             </div>
-            <div className="section container2 fp-noscroll">
-              <h1>Section 2</h1>
+            <div className="section container2">
+              <WebProjects />
             </div>
-            <div className="section container3 fp-noscroll">
+            <div className="section container3">
               <Games />
+              {/* fp-auto-height  */}
+              {/* .fp-scrollable */}
             </div>
             <div className="section container4 fp-noscroll">
               <div className="slide">
@@ -114,7 +121,7 @@ const App = () => (
 );
 
 /* <div class="section">Whole viewport</div>
-<div class="section fp-auto-height">Auto height</div> --- this is for scrollable bigger sections*/
+<div class="section fp-auto-height">Auto height</div> --- this auto adjust height for smaller/bigger sections*/
 
 // onScroll={() => {
 //   console.log(window.fullpage_api.getActiveSection());

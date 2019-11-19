@@ -7,11 +7,12 @@
 .container1 {
   text-align: center;
   display: flex;
-  background-image: url("./pic2.png");
+  background-image: url("./images/pic2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center center;
+  background-color: black;
   z-index: -1;
 }
 
@@ -22,31 +23,35 @@
 .container2 {
   text-align: center;
   display: flex;
-  background-image: url("./pic1.jpg");
+  background-image: url("./images/pic1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center center;
+  background-color: black;
 }
 
 .container3 {
   text-align: center;
   display: flex;
-  background-image: url("./pic3.jpg");
+  background-image: url("./images/pic3.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center center;
+  background-color: purple;
 }
 
 .container4 {
   text-align: center;
   display: flex;
-  background-image: url("./pic4.jpg");
+  background-image: url("./images/pic4.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center center;
+  background-color: black;
+  z-index: -1;
 }
 
 .back-img {

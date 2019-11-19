@@ -42,10 +42,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const test = () => {
-  window.fullpage_api.setAllowScrolling(false, "all");
-  window.fullpage_api.setKeyboardScrolling(false, "all");
-};
+// const test = () => {
+//   window.fullpage_api.setAllowScrolling(false, "all");
+//   window.fullpage_api.setKeyboardScrolling(false, "all");
+// };
 
 const NavList = () => {
   const classes = useStyles();
