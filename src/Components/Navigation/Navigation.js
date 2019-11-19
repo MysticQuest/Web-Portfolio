@@ -109,7 +109,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            trash ui
+            Portfolio
           </Typography>
         </Toolbar>
       </AppBar>

@@ -26,13 +26,10 @@ const useStyles = makeStyles(theme => ({
   card: {
     // maxWidth: 250,
     // maxHeight: 345,
-    boxShadow:
-      "10px 10px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.43)",
-    alignContent: "center",
-    justifyContent: "center"
-
-    //display: "block"
-    // width: "10vw",
+    // boxShadow:
+    //   "10px 10px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.43)"
+    // display: "block",
+    // width: "100px"
     // transitionDuration: "0.3s",
     // height: "10vw"
   },

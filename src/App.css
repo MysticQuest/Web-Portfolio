@@ -68,7 +68,7 @@
 .fp-controlArrow {
   position: flex;
   z-index: 4;
-  top: 50%;
+  top: 98.5%;
   cursor: pointer;
   width: 0;
   height: 0;
@@ -76,18 +76,31 @@
   margin-top: -38px;
 }
 .fp-controlArrow.fp-prev {
-  display: none;
-  left: 50vh;
-  width: 0;
-  border-width: 38.5px 34px 38.5px 0;
+  /* display: none; */
+  z-index: 999;
+  left: 43%;
+  border-width: 2vh 2vh 2vh 0;
   border-color: transparent #fff transparent transparent;
 }
+
 .fp-controlArrow.fp-next {
-  display: none;
-  right: 5vh;
-  top: 34.5rem;
-  border-width: 3vh 0 3vh 3vh;
+  /* display: none; */
+  z-index: 999;
+  right: 43%;
+  border-width: 2vh 0 2vh 2vh;
   border-color: transparent transparent transparent #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .fp-controlArrow.fp-next {
+    right: 30%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fp-controlArrow.fp-prev {
+    left: 30%;
+  }
 }
 
 /* #particle-effects {

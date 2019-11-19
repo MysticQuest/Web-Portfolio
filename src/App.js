@@ -83,13 +83,13 @@ const App = () => (
       autoScrolling={true}
       fitToSection={true}
       // fixedElements={"ResponsiveDrawer"}
-      loopBottom={true}
+      loopBottom={false}
       // scrollHorizontally={true}
       bigSectionsDestination={"top"}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
-            <div className="section container1 fp-noscroll">
+            <div className="section container1">
               <Particles
                 id="particle-effects"
                 className="particles-js"
@@ -103,14 +103,13 @@ const App = () => (
             <div className="section container3">
               <Games />
               {/* fp-auto-height  */}
-              {/* .fp-scrollable */}
             </div>
-            <div className="section container4 fp-noscroll">
+            <div className="section container4">
               <div className="slide">
-                <h1>Section 4</h1>
+                <About />
               </div>
               <div className="slide">
-                <h1>Section 4</h1>
+                <About />
               </div>
             </div>
           </ReactFullpage.Wrapper>

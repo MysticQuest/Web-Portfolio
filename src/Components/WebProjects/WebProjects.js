@@ -27,14 +27,12 @@ const useStyles = makeStyles(theme => ({
     // maxWidth: 250,
     // maxHeight: 345,
     boxShadow:
-      "10px 10px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.43)",
-    alignContent: "center",
-    justifyContent: "center"
+      "10px 10px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.43)"
 
-    //display: "block"
-    // width: "10vw",
+    // display: "block",
+    // width: "3vw",
     // transitionDuration: "0.3s",
-    // height: "10vw"
+    // height: "3vh"
   },
   media: {
     height: "auto",
