@@ -12,7 +12,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
 //styles
 import { makeStyles } from "@material-ui/core/styles";
-import "../../themes/animate.css";
+//import "../../themes/animate.css";
 import "../../themes/global.css";
 //import bender from "../../images/bender.png";
 //import bender2 from "../../images/bender.svg";
@@ -64,8 +64,8 @@ const useStyles = makeStyles(theme => ({
       boxShadow:
         "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(255, 255, 255, 0.23)",
       // margin: "-10px auto 0",
-      // transform: "scale(1.01)",
       // boxShadow: "-6px 4px 3px rgba(38, 38, 38, 0.2)",
+      // transform: "scale(1.01)",
       // top: "-4px",
       transition: ["boxShadow", "margin"],
       transitionDuration: 300

@@ -4,7 +4,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import GitHubIcon from "@material-ui/icons/GitHub";
 //import themes
-import "../../themes/animate.css";
+//import "../../themes/animate.css";
 import "../../themes/global.css";
 import "./MyLinks.css";
 import { makeStyles } from "@material-ui/styles";

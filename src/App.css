@@ -7,7 +7,7 @@
 .container1 {
   text-align: center;
   display: flex;
-  background-image: url("./images/pic2.png");
+  background-image: url("./images/naturetheme1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */
@@ -23,7 +23,7 @@
 .container2 {
   text-align: center;
   display: flex;
-  background-image: url("./images/pic7.png");
+  background-image: url("./images/naturetheme11.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */
@@ -34,7 +34,7 @@
 .container3 {
   text-align: center;
   display: flex;
-  background-image: url("./images/pic6.png");
+  background-image: url("./images/naturetheme9.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */
@@ -45,7 +45,7 @@
 .container4 {
   text-align: center;
   display: flex;
-  background-image: url("./images/pic5.png");
+  background-image: url("./images/naturetheme4.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-attachment: fixed; */

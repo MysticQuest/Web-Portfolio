@@ -7,7 +7,9 @@ const About = () => {
   return (
     <div className="full-container-1">
       <div className="text-container">
-        <h1 className="animated fadeInLeft test delay-1s">Welcome</h1>
+        <h1 className="animated fadeInLeft test delay-1s">
+          Thanks for visiting
+        </h1>
         <h4 className="animated fadeInLeft test2 delay-2s">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor
           augue risus, ut tempor dolor tincidunt eu. Suspendisse hendrerit lacus

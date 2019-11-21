@@ -14,6 +14,7 @@ import Icons from "./Components/About/MyLinks";
 import "./App.css";
 import Particles from "react-particles-js";
 import { params } from "./themes/particlesjs-config";
+import { fireflies2 } from "./themes/fireflies2";
 
 // var gCD = false;
 // window.onscroll = function() {
@@ -106,9 +107,19 @@ const App = () => (
             </div>
             <div className="section container4">
               <div className="slide">
+                <Particles
+                  id="particle-effects"
+                  className="particles-js"
+                  params={fireflies2}
+                />
                 <About />
               </div>
               <div className="slide">
+                <Particles
+                  id="particle-effects"
+                  className="particles-js"
+                  params={fireflies2}
+                />
                 <About />
               </div>
             </div>
