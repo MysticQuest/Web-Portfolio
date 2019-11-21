@@ -73,20 +73,6 @@ function ResponsiveDrawer(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  //cooldown timer
-  // const coolDown = timer => {
-  //   x = timer;
-  //   const navClickCD = setInterval(function() {
-  //     timer--;
-  //     x = timer;
-  //     if (timer <= 0) {
-  //       clearInterval(navClickCD);
-  //     }
-  //     console.log(timer);
-  //   }, 1000);
-  //   return timer;
-  // };
-
   const drawer = (
     <div>
       <div className={classes.toolbar} />

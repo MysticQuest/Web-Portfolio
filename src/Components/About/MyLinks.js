@@ -8,6 +8,8 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import "../../themes/global.css";
 import "./MyLinks.css";
 import { makeStyles } from "@material-ui/styles";
+//import active section
+//import { activeIndex } from "../../App";
 
 const useStyles = makeStyles(theme => ({
   LinkedIn: {
@@ -23,6 +25,8 @@ const useStyles = makeStyles(theme => ({
     position: "fixed",
     zIndex: "1",
     color: "white",
+    // mixBlendMode: "difference",
+    // filter: "grayscale(1)",
     top: "5px",
     right: "65px"
   },
@@ -33,18 +37,38 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     top: "9px",
     right: "125px"
+  },
+  linkContainer: {
+    // mixBlendMode: "difference",
+    // zIndex: "999"
   }
 }));
 
+// { transitionDelay: activateAnim ? "3000ms" : "0ms" }
+var activateAnim = false;
+
 const Icons = () => {
   const classes = useStyles();
+
+  // window.fullpage_api.
+  //   console.log(activateAnim);
+  //   if (activeIndex === 2) {
+  //     activateAnim = true;
+  //   } else {
+  //     activateAnim = false;
+  //   }
+  // ;
+
   return (
-    <div>
+    <div className={classes.linkContainer}>
       <LinkedInIcon className={classes.LinkedIn} />
       <AlternateEmailIcon className={classes.Mail} />
 
       <a href="https://github.com/MysticQuest?tab=repositories">
-        <GitHubIcon className={classes.Git} />
+        <GitHubIcon
+          style={{ color: activateAnim ? "black" : "white" }}
+          className={classes.Git}
+        />
       </a>
     </div>
   );

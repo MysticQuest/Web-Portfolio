@@ -17,8 +17,6 @@ import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 //import css
 import "./NavList.css";
-//active section function
-//import { activeSection } from "../App";
 
 const useStyles = makeStyles(theme => ({
   listItems: {

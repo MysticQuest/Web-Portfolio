@@ -13,8 +13,10 @@ import Icons from "./Components/About/MyLinks";
 //import styles
 import "./App.css";
 import Particles from "react-particles-js";
-import { params } from "./themes/particlesjs-config";
+import { humidity } from "./themes/humidity";
 import { fireflies2 } from "./themes/fireflies2";
+//hooks?
+//import { useAnimHandler } from "./hooks/useAnimHandler";
 
 // var gCD = false;
 // window.onscroll = function() {
@@ -36,13 +38,15 @@ import { fireflies2 } from "./themes/fireflies2";
 //   }
 // };
 
+var activeIndex = 0;
+
 const App = () => (
   <div>
     <Icons />
     <ResponsiveDrawer />
     <ReactFullpage
       //fullpage options
-      // parallax={false}
+      // parallax={true}
       // parallaxOptions={{
       //   type: "reveal",
       //   percentage: 62,
@@ -87,6 +91,13 @@ const App = () => (
       loopBottom={false}
       // scrollHorizontally={true}
       bigSectionsDestination={"top"}
+      // some extra afterLoad parameters origin, destination, direction, index
+      afterLoad={(origin, destination, direction) => {
+        // console.log("afterLoad event", destination.index);
+        //alert("Section ended loading");
+        activeIndex = destination.index;
+        // console.log(activeIndex);
+      }}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -94,7 +105,7 @@ const App = () => (
               <Particles
                 id="particle-effects"
                 className="particles-js"
-                params={params}
+                params={humidity}
               />
               <Home />
             </div>
@@ -137,4 +148,4 @@ const App = () => (
 //   console.log(window.fullpage_api.getActiveSection());
 // }}
 
-export default App;
+export { App, activeIndex };

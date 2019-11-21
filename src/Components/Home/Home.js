@@ -1,37 +1,78 @@
 import React from "react";
 //import themes
 import "./Home.css";
-import "../../themes/animate.css";
 import "../../themes/global.css";
+//import Fade from "@material-ui/core/Fade";
+import Slide from "@material-ui/core/Slide";
+//import active section
+import { activeIndex } from "../../App";
+
+var activateAnim = false;
+
+const exitDuration = 1;
 
 const Home = () => {
+  if (activeIndex === 0) {
+    activateAnim = true;
+  } else {
+    activateAnim = false;
+  }
   return (
     <div className="full-container-1">
       <div className="text-container">
-        <h1 className="animated fadeInLeft test delay-1s">Welcome</h1>
-        <h4 className="animated fadeInLeft test2 delay-2s">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor
-          augue risus, ut tempor dolor tincidunt eu. Suspendisse hendrerit lacus
-          enim, a tempus ante sollicitudin eu. Vivamus porta dapibus egestas.
-          Aliquam euismod mauris nec nulla dictum, eget sodales leo faucibus.
-          Morbi et ex neque. Vestibulum gravida aliquet orci vel dapibus.
-        </h4>
-        <h4 className="animated fadeInLeft test2 delay-3s">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor
-          augue risus, ut tempor dolor tincidunt eu. Suspendisse hendrerit lacus
-          enim, a tempus ante sollicitudin eu.
-        </h4>
-        <h4 className="animated fadeInLeft test2 delay-4s">
-          Fusce commodo nibh et pulvinar tincidunt. Interdum et malesuada fames
-          ac ante ipsum primis in faucibus. Phasellus eu erat ac mi vehicula
-          feugiat in eget ligula. Integer non tellus nec felis imperdiet auctor
-          at quis ipsum. Curabitur eget pretium lorem.
-        </h4>
-        <h4 className="animated fadeInLeft test2 delay-5s">
-          Fusce in facilisis arcu. Ut egestas vestibulum est, vitae lacinia ex
-          eleifend sed. Ut rutrum ante turpis. Nullam non libero blandit,
-          bibendum lectus eu, tempor sem.
-        </h4>
+        <div className="header-container">
+          <Slide
+            timeout={{ enter: 1000, exit: exitDuration }}
+            direction="right"
+            in={activateAnim}
+            style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+          >
+            <div>
+              <p className="home1">Welcome</p>
+              <p className="home-subhead">
+                to my <span className="highlight">portfolio</span>
+              </p>
+            </div>
+          </Slide>
+        </div>
+        <Slide
+          timeout={{ enter: 1500, exit: exitDuration }}
+          direction="right"
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <div className="readability-container">
+            <p className="home3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              tempor augue risus, ut tempor dolor tincidunt eu. Suspendisse
+              hendrerit lacus enim, a tempus ante sollicitudin eu. Vivamus porta
+              dapibus egestas.
+            </p>
+          </div>
+        </Slide>
+        <Slide
+          timeout={{ enter: 2000, exit: exitDuration }}
+          direction="right"
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <p className="home2">Site Contents:</p>
+        </Slide>
+        <Slide
+          timeout={{ enter: 2500, exit: exitDuration }}
+          direction="right"
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <div className="readability-container">
+            <ul className="home3">
+              <li>Section 1: Introduction</li>
+              <li>Section 2: Web Projects etc etc etc</li>
+              <li>Section 3: Game Projects with Unity3D</li>
+              <li>Section 4: Information about myself and the site</li>
+            </ul>
+          </div>
+        </Slide>
       </div>
     </div>
   );

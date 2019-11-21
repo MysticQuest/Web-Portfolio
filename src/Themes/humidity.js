@@ -1,4 +1,4 @@
-export const params = {
+export const humidity = {
   particles: {
     number: {
       value: 24,
