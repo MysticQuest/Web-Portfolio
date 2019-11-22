@@ -1,11 +1,10 @@
-.text-container {
+.text-container-home {
   display: flex;
   flex-direction: column;
   font-family: roboto;
   padding-bottom: 5vw;
-  /* padding-left: 20vw; */
   align-items: center;
-
+  /* padding-left: 20vw; */
   /* justify-content: flex-start;
   text-align: top center; */
 }

@@ -19,7 +19,7 @@ const Home = () => {
   }
   return (
     <div className="full-container-1">
-      <div className="text-container">
+      <div className="text-container-home">
         <div className="header-container">
           <Slide
             timeout={{ enter: 2000, exit: exitDuration }}
@@ -74,7 +74,7 @@ const Home = () => {
                 style={{ transitionDelay: activateAnim ? "3500ms" : "0ms" }}
               >
                 <p className="home3">
-                  Or <span className="highlight">Section 1</span> to learn more
+                  Or <span className="highlight">Section 4</span> to learn more
                   about me
                 </p>
               </Fade>

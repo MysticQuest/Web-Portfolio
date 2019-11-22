@@ -119,23 +119,23 @@ const App = () => (
               {/* fp-auto-height  */}
             </div>
             <div className="section container4 ">
-              <div className="slide">
+              {/* <div className="slide">
                 <Particles
                   id="particle-effects"
                   className="particles-js"
                   params={fireflies2}
-                />
-                <About />
-              </div>
-              <div className="slide">
-                <Particles
-                  id="particle-effects"
-                  className="particles-js"
-                  params={fireflies2}
-                />
-                <About />
-              </div>
+                /> */}
+              <About />
             </div>
+            {/* <div className="slide">
+                <Particles
+                  id="particle-effects"
+                  className="particles-js"
+                  params={fireflies2}
+                />
+                <About />
+              </div>
+            </div> */}
           </ReactFullpage.Wrapper>
         );
       }}
