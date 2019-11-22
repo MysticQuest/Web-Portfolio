@@ -64,7 +64,11 @@ const Icons = () => {
       <LinkedInIcon className={classes.LinkedIn} />
       <AlternateEmailIcon className={classes.Mail} />
 
-      <a href="https://github.com/MysticQuest?tab=repositories">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/MysticQuest?tab=repositories"
+      >
         <GitHubIcon
           style={{ color: activateAnim ? "black" : "white" }}
           className={classes.Git}
