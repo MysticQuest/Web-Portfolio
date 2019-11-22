@@ -22,7 +22,7 @@ const Home = () => {
       <div className="text-container">
         <div className="header-container">
           <Slide
-            timeout={{ enter: 1000, exit: exitDuration }}
+            timeout={{ enter: 2000, exit: exitDuration }}
             direction="right"
             in={activateAnim}
             style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
@@ -30,22 +30,23 @@ const Home = () => {
             <p className="home1">Welcome</p>
           </Slide>
           <Slide
-            timeout={{ enter: 1200, exit: exitDuration }}
-            direction="right"
+            timeout={{ enter: 1500, exit: exitDuration }}
+            direction="left"
             in={activateAnim}
-            style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+            style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
           >
             <p className="home-subhead">
               to my <span className="highlight">portfolio</span>
             </p>
           </Slide>
         </div>
-        <div className="subtext-container">
+        {/* <div className="subtext-container"> */}
+        <div className="misc-text">
           <Fade
             timeout={{ enter: 2000, exit: exitDuration }}
             direction="right"
             in={activateAnim}
-            style={{ transitionDelay: activateAnim ? "800ms" : "0ms" }}
+            style={{ transitionDelay: activateAnim ? "2000ms" : "0ms" }}
           >
             <div className="readability-container1">
               <p className="home3">
@@ -54,9 +55,33 @@ const Home = () => {
                 hendrerit lacus enim, a tempus ante sollicitudin eu. Vivamus
                 porta dapibus egestas.
               </p>
+              <Fade
+                timeout={{ enter: 2000, exit: exitDuration }}
+                direction="right"
+                in={activateAnim}
+                style={{ transitionDelay: activateAnim ? "3000ms" : "0ms" }}
+              >
+                <p className="home3">
+                  <br />
+                  Visit <span className="highlight">Section 2 & 3 </span> to
+                  view my projects
+                </p>
+              </Fade>
+              <Fade
+                timeout={{ enter: 2000, exit: exitDuration }}
+                direction="right"
+                in={activateAnim}
+                style={{ transitionDelay: activateAnim ? "3500ms" : "0ms" }}
+              >
+                <p className="home3">
+                  Or <span className="highlight">Section 1</span> to learn more
+                  about me
+                </p>
+              </Fade>
             </div>
           </Fade>
-          <Slide
+        </div>
+        {/* <Slide
             timeout={{ enter: 2000, exit: exitDuration }}
             direction="right"
             in={activateAnim}
@@ -119,8 +144,8 @@ const Home = () => {
                 </Fade>
               </ul>
             </div>
-          </Fade>
-        </div>
+          </Fade> */}
+        {/* </div> */}
       </div>
     </div>
   );
