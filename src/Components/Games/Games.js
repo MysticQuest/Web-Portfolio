@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
+//import Fade from "@material-ui/core/Fade";
 //styles
 import { makeStyles } from "@material-ui/core/styles";
 //import "../../themes/animate.css";
@@ -25,8 +26,8 @@ import { faWindows } from "@fortawesome/free-brands-svg-icons";
 import { faLinux } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-
-// library.add(faCoffee);
+//import active section
+import { activeIndex } from "../../App";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,13 +67,21 @@ const useStyles = makeStyles(theme => ({
       // margin: "-10px auto 0",
       // boxShadow: "-6px 4px 3px rgba(38, 38, 38, 0.2)",
       // transform: "scale(1.01)",
-      // top: "-4px",
-      transition: ["boxShadow", "margin"],
+
+      top: "-15px",
+      transform: "translate3d(0, 1, 0)",
+      transition: ["boxShadow", "margin", "transform", "top"],
       transitionDuration: 300
     },
     display: "flex",
     flexFlow: "column",
-    flexGrow: 1
+    flexGrow: 1,
+    borderRadius: "25px",
+    marginLeft: "1vw",
+    marginRight: "1vw",
+    position: "relative",
+    top: 0,
+    transition: "top ease 0.5s"
 
     // flexDirection: "column",
     // justifyContent: "space-between",
@@ -100,7 +109,8 @@ const useStyles = makeStyles(theme => ({
     // zIndex: 1000
   },
   content: {
-    background: "linear-gradient(to right, #ee9ca7, #ffdde1)",
+    background: "linear-gradient(to bottom, #f5f5e4, #abb6c2)",
+    // background: "linear-gradient(to right, #ee9ca7, #ffdde1)",
     padding: "10px",
     flexGrow: 1,
     display: "flex",
@@ -150,420 +160,525 @@ const useStyles = makeStyles(theme => ({
     }
   },
   toolTipsCard: {
-    fontSize: theme.typography.pxToRem(20)
+    fontSize: theme.typography.pxToRem(20),
+    backgroundColor: "#c96b34"
   }
 }));
+
+var activateAnim = false;
+const exitDuration = 1;
 
 //Tooltip info
 const rpgTT = "A time-based rpg created for a bachelor thesis";
 
 const Games = () => {
   const classes = useStyles();
+  if (activeIndex === 2) {
+    activateAnim = true;
+  } else {
+    activateAnim = false;
+  }
 
   return (
     <div className="full-container-2">
       <div className={classes.root}>
         <Grid className={classes.grid} container spacing={3}>
-          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea className={classes.cardActionArea}>
-                  <CardMedia className={classes.media} image={pic1} />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      Game Title
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      This is a small string
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
-
+          <Zoom
+            timeout={{ enter: 300, exit: exitDuration }}
+            in={activateAnim}
+            style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+          >
+            <Grid
+              className={classes.gridItem}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+            >
+              <Card className={classes.card}>
                 <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
+                  classes={{ tooltip: classes.toolTipsCard }}
                   TransitionComponent={Zoom}
-                  title={rpgTT}
-                  placement="bottom"
+                  title="Play"
+                  placement="top"
                 >
+                  <CardActionArea className={classes.cardActionArea}>
+                    <CardMedia className={classes.media} image={pic1} />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        Game Title
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        This is a small string
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Tooltip>
+                <CardActions className={classes.buttonArea}>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faWindows}
+                    />
+                  </Button>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faLinux}
+                    />
+                  </Button>
                   <Button className={classes.buttons}>
                     <FontAwesomeIcon
                       className={classes.icons}
-                      icon={faInfoCircle}
+                      icon={faGithub}
                     />
                   </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea className={classes.CardActionArea}>
-                  <CardMedia className={classes.media} image={pic1} />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      Game Title
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      This is a game This is a game This is a game This is a
-                      game This is a game This is a game This is a game This is
-                      a game
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
 
+                  <Tooltip
+                    classes={{ tooltip: classes.toolTips }}
+                    TransitionComponent={Zoom}
+                    title={rpgTT}
+                    placement="bottom"
+                  >
+                    <Button className={classes.buttons}>
+                      <FontAwesomeIcon
+                        className={classes.icons}
+                        icon={faInfoCircle}
+                      />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Zoom>
+          <Zoom
+            timeout={{ enter: 300, exit: exitDuration }}
+            in={activateAnim}
+            style={{ transitionDelay: activateAnim ? "100ms" : "0ms" }}
+          >
+            <Grid
+              className={classes.gridItem}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+            >
+              <Card className={classes.card}>
                 <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
+                  classes={{ tooltip: classes.toolTipsCard }}
                   TransitionComponent={Zoom}
-                  title={rpgTT}
-                  placement="bottom"
+                  title="Play"
+                  placement="top"
                 >
+                  <CardActionArea className={classes.CardActionArea}>
+                    <CardMedia className={classes.media} image={pic1} />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        Game Title
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        This is a game This is a game This is a game This is a
+                        game This is a game This is a game This is a game This
+                        is a game
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Tooltip>
+                <CardActions className={classes.buttonArea}>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faWindows}
+                    />
+                  </Button>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faLinux}
+                    />
+                  </Button>
                   <Button className={classes.buttons}>
                     <FontAwesomeIcon
                       className={classes.icons}
-                      icon={faInfoCircle}
+                      icon={faGithub}
                     />
                   </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea>
-                  <CardMedia className={classes.media} image={pic1} />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      Game Title
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      This is a game This is a game This is a game This is a
-                      game This is a game This is a game This is a game This is
-                      a game
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
 
+                  <Tooltip
+                    classes={{ tooltip: classes.toolTips }}
+                    TransitionComponent={Zoom}
+                    title={rpgTT}
+                    placement="bottom"
+                  >
+                    <Button className={classes.buttons}>
+                      <FontAwesomeIcon
+                        className={classes.icons}
+                        icon={faInfoCircle}
+                      />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Zoom>
+          <Zoom
+            timeout={{ enter: 300, exit: exitDuration }}
+            in={activateAnim}
+            style={{ transitionDelay: activateAnim ? "200ms" : "0ms" }}
+          >
+            <Grid
+              className={classes.gridItem}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+            >
+              <Card className={classes.card}>
                 <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
+                  classes={{ tooltip: classes.toolTipsCard }}
                   TransitionComponent={Zoom}
-                  title={rpgTT}
-                  placement="bottom"
+                  title="Play"
+                  placement="top"
                 >
+                  <CardActionArea>
+                    <CardMedia className={classes.media} image={pic1} />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        Game Title
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        This is a game This is a game This is a game This is a
+                        game This is a game This is a game This is a game This
+                        is a game
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Tooltip>
+                <CardActions className={classes.buttonArea}>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faWindows}
+                    />
+                  </Button>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faLinux}
+                    />
+                  </Button>
                   <Button className={classes.buttons}>
                     <FontAwesomeIcon
                       className={classes.icons}
-                      icon={faInfoCircle}
+                      icon={faGithub}
                     />
                   </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea>
-                  <CardMedia className={classes.media} image={pic1} />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      Game Title
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      This is a game This is a game This is a game This is a
-                      game This is a game This is a game This is a game This is
-                      a game
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
 
+                  <Tooltip
+                    classes={{ tooltip: classes.toolTips }}
+                    TransitionComponent={Zoom}
+                    title={rpgTT}
+                    placement="bottom"
+                  >
+                    <Button className={classes.buttons}>
+                      <FontAwesomeIcon
+                        className={classes.icons}
+                        icon={faInfoCircle}
+                      />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Zoom>
+          <Zoom
+            timeout={{ enter: 300, exit: exitDuration }}
+            in={activateAnim}
+            style={{ transitionDelay: activateAnim ? "300ms" : "0ms" }}
+          >
+            <Grid
+              className={classes.gridItem}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+            >
+              <Card className={classes.card}>
                 <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
+                  classes={{ tooltip: classes.toolTipsCard }}
                   TransitionComponent={Zoom}
-                  title={rpgTT}
-                  placement="bottom"
+                  title="Play"
+                  placement="top"
                 >
+                  <CardActionArea>
+                    <CardMedia className={classes.media} image={pic1} />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        Game Title
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        This is a game This is a game This is a game This is a
+                        game This is a game This is a game This is a game This
+                        is a game
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Tooltip>
+                <CardActions className={classes.buttonArea}>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faWindows}
+                    />
+                  </Button>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faLinux}
+                    />
+                  </Button>
                   <Button className={classes.buttons}>
                     <FontAwesomeIcon
                       className={classes.icons}
-                      icon={faInfoCircle}
+                      icon={faGithub}
                     />
                   </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea>
-                  <CardMedia className={classes.media} image={pic1} />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      Game Title
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      This is a game This is a game This is a game This is a
-                      game This is a game This is a game This is a game This is
-                      a game
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
 
+                  <Tooltip
+                    classes={{ tooltip: classes.toolTips }}
+                    TransitionComponent={Zoom}
+                    title={rpgTT}
+                    placement="bottom"
+                  >
+                    <Button className={classes.buttons}>
+                      <FontAwesomeIcon
+                        className={classes.icons}
+                        icon={faInfoCircle}
+                      />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Zoom>
+          <Zoom
+            timeout={{ enter: 300, exit: exitDuration }}
+            in={activateAnim}
+            style={{ transitionDelay: activateAnim ? "400ms" : "0ms" }}
+          >
+            <Grid
+              className={classes.gridItem}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+            >
+              <Card className={classes.card}>
                 <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
+                  classes={{ tooltip: classes.toolTipsCard }}
                   TransitionComponent={Zoom}
-                  title={rpgTT}
-                  placement="bottom"
+                  title="Play"
+                  placement="top"
                 >
+                  <CardActionArea>
+                    <CardMedia className={classes.media} image={pic1} />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        Game Title
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        This is a game This is a game This is a game This is a
+                        game This is a game This is a game This is a game This
+                        is a game
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Tooltip>
+                <CardActions className={classes.buttonArea}>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faWindows}
+                    />
+                  </Button>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faLinux}
+                    />
+                  </Button>
                   <Button className={classes.buttons}>
                     <FontAwesomeIcon
                       className={classes.icons}
-                      icon={faInfoCircle}
+                      icon={faGithub}
                     />
                   </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea>
-                  <CardMedia className={classes.media} image={pic1} />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      Game Title
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      This is a game This is a game This is a game This is a
-                      game This is a game This is a game This is a game This is
-                      a game
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
 
+                  <Tooltip
+                    classes={{ tooltip: classes.toolTips }}
+                    TransitionComponent={Zoom}
+                    title={rpgTT}
+                    placement="bottom"
+                  >
+                    <Button className={classes.buttons}>
+                      <FontAwesomeIcon
+                        className={classes.icons}
+                        icon={faInfoCircle}
+                      />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Zoom>
+          <Zoom
+            timeout={{ enter: 300, exit: exitDuration }}
+            in={activateAnim}
+            style={{ transitionDelay: activateAnim ? "500ms" : "0ms" }}
+          >
+            <Grid
+              className={classes.gridItem}
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+            >
+              <Card className={classes.card}>
                 <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
+                  classes={{ tooltip: classes.toolTipsCard }}
                   TransitionComponent={Zoom}
-                  title={rpgTT}
-                  placement="bottom"
+                  title="Play"
+                  placement="top"
                 >
+                  <CardActionArea>
+                    <CardMedia className={classes.media} image={pic1} />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        Game Title
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        This is a game This is a game This is a game This is a
+                        game This is a game This is a game This is a game This
+                        is a game
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Tooltip>
+                <CardActions className={classes.buttonArea}>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faWindows}
+                    />
+                  </Button>
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      title="Not Available Yet"
+                      className={classes.iconsTBA}
+                      icon={faLinux}
+                    />
+                  </Button>
                   <Button className={classes.buttons}>
                     <FontAwesomeIcon
                       className={classes.icons}
-                      icon={faInfoCircle}
+                      icon={faGithub}
                     />
                   </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
+
+                  <Tooltip
+                    classes={{ tooltip: classes.toolTips }}
+                    TransitionComponent={Zoom}
+                    title={rpgTT}
+                    placement="bottom"
+                  >
+                    <Button className={classes.buttons}>
+                      <FontAwesomeIcon
+                        className={classes.icons}
+                        icon={faInfoCircle}
+                      />
+                    </Button>
+                  </Tooltip>
+                </CardActions>
+              </Card>
+            </Grid>
+          </Zoom>
         </Grid>
       </div>
     </div>

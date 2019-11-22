@@ -46,7 +46,7 @@ const App = () => (
     <ResponsiveDrawer />
     <ReactFullpage
       //fullpage options
-      // parallax={true}
+      parallax={true}
       // parallaxOptions={{
       //   type: "reveal",
       //   percentage: 62,
@@ -54,7 +54,6 @@ const App = () => (
       // }}
       scrollOverflow={true}
       scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
-      normalScrollElements={".scroll"}
       // cards={true} //an effect
       // cardsOptions={{
       //   perspective: 50,
@@ -91,6 +90,9 @@ const App = () => (
       loopBottom={false}
       // scrollHorizontally={true}
       bigSectionsDestination={"top"}
+      normalScrollElements={".scroll"}
+      normalScrollElementTouchThreshold={1}
+      touchSensitivity={5}
       // some extra afterLoad parameters origin, destination, direction, index
       afterLoad={(origin, destination, direction) => {
         // console.log("afterLoad event", destination.index);
@@ -109,14 +111,14 @@ const App = () => (
               />
               <Home />
             </div>
-            <div className="section container2">
+            <div className="section container2 ">
               <WebProjects />
             </div>
-            <div className="section container3">
+            <div className="section container3 ">
               <Games />
               {/* fp-auto-height  */}
             </div>
-            <div className="section container4">
+            <div className="section container4 ">
               <div className="slide">
                 <Particles
                   id="particle-effects"

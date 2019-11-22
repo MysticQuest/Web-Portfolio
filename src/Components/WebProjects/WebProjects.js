@@ -66,13 +66,19 @@ const useStyles = makeStyles(theme => ({
       // margin: "-10px auto 0",
       // transform: "scale(1.01)",
       // boxShadow: "-6px 4px 3px rgba(38, 38, 38, 0.2)",
-      // top: "-4px",
-      transition: ["boxShadow", "margin"],
+      top: "-15px",
+      transition: ["boxShadow", "margin", "top"],
       transitionDuration: 300
     },
     display: "flex",
     flexFlow: "column",
-    flexGrow: 1
+    flexGrow: 1,
+    borderRadius: "25px",
+    marginLeft: "1vw",
+    marginRight: "1vw",
+    position: "relative",
+    top: 0,
+    transition: "top ease 0.5s"
     // flexDirection: "column",
     // justifyContent: "space-between",
     // alignItems: "stretch",
