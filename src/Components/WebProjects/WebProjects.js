@@ -99,7 +99,7 @@ const useStyles = makeStyles(theme => ({
     // zIndex: 1000
   },
   content: {
-    background: "linear-gradient(to right, #ee9ca7, #ffdde1)",
+    background: "linear-gradient(to bottom, #9abfe3, #e5e5be)",
     padding: "10px",
     flexGrow: 1,
     display: "flex",
@@ -149,7 +149,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   toolTipsCard: {
-    fontSize: theme.typography.pxToRem(20)
+    fontSize: theme.typography.pxToRem(20),
+    backgroundColor: "#003973"
   }
 }));
 

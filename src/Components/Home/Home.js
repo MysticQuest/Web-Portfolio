@@ -47,7 +47,7 @@ const Home = () => {
             in={activateAnim}
             style={{ transitionDelay: activateAnim ? "800ms" : "0ms" }}
           >
-            <div className="readability-container">
+            <div className="readability-container1">
               <p className="home3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
                 tempor augue risus, ut tempor dolor tincidunt eu. Suspendisse
@@ -62,7 +62,9 @@ const Home = () => {
             in={activateAnim}
             style={{ transitionDelay: activateAnim ? "3000ms" : "0ms" }}
           >
-            <p className="home2">Site Contents:</p>
+            <div className="slider-bugfix">
+              <p className="home2">Site Contents:</p>
+            </div>
           </Slide>
           <Fade
             timeout={{ enter: 3000, exit: exitDuration }}
@@ -70,7 +72,7 @@ const Home = () => {
             in={activateAnim}
             style={{ transitionDelay: activateAnim ? "4500ms" : "0ms" }}
           >
-            <div className="readability-container">
+            <div className="readability-container2">
               <ul className="home3">
                 <Fade
                   timeout={{ enter: 2000, exit: exitDuration }}

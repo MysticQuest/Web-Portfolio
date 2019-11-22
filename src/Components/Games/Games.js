@@ -73,6 +73,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexFlow: "column",
     flexGrow: 1
+
     // flexDirection: "column",
     // justifyContent: "space-between",
     // alignItems: "stretch",
