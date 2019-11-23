@@ -15,7 +15,6 @@ import Zoom from "@material-ui/core/Zoom";
 import { makeStyles } from "@material-ui/core/styles";
 //import "../../themes/animate.css";
 import "../../themes/global.css";
-import "./Games.css";
 //import bender from "../../images/bender.png";
 //import bender2 from "../../images/bender.svg";
 //icons
@@ -31,6 +30,12 @@ import { activeIndex } from "../../App";
 //import image and media
 import pic1 from "../../images/pic1.png";
 import gif1 from "../../images/tenor.gif";
+import rpgGif from "../../images/rpg.gif";
+import rpgPic from "../../images/rpg.png";
+import blockPic from "../../images/block.png";
+import blockGif from "../../images/block.gif";
+import tdPic from "../../images/td.png";
+import tdGif from "../../images/td.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,15 +71,15 @@ const useStyles = makeStyles(theme => ({
   card: {
     "&:hover": {
       "& $media1": {
-        backgroundImage: `url(${gif1}) !important`,
+        backgroundImage: `url(${rpgGif}) !important`,
         transition: "background-image 0.3s ease-in-out"
       },
       "& $media2": {
-        backgroundImage: `url(${gif1}) !important`,
+        backgroundImage: `url(${blockGif}) !important`,
         transition: "background-image 0.3s ease-in-out"
       },
       "& $media3": {
-        backgroundImage: `url(${gif1}) !important`,
+        backgroundImage: `url(${tdGif}) !important`,
         transition: "background-image 0.3s ease-in-out"
       },
       "& $media4": {
@@ -200,12 +205,36 @@ const exitDuration = 1;
 //   media1: { backgroundImage: `url(${pic1}) !important` }
 // };
 
+// Titles
+const rpgTi = "Shillda";
+const blockTi = "";
+const tdTi = "";
+const shootTi = "";
+const platTi = "";
 // Descriptions
 const rpgDes = "A time-based rpg created for a bachelor thesis";
+const blockDes = "";
+const tdDes = "";
+const shootDes = "";
+const platDes = "";
 // Tooltip info
 const rpgTT = "This is the tooltip";
-// Links
+const blockTT = "";
+const tdTT = "";
+const shootTI = "";
+const platTT = "";
+// Play links
 const rpgLi = "./webgl/rpgThesis/index.html";
+const blockLi = "./webgl/block-breaker/index.html";
+const tdLi = "./webgl/td/index.html";
+const shootLi = "";
+const platLi = "";
+// Source links
+const rpgSo = "https://github.com/MysticQuest/Unity-Project_Thesis";
+const blockSo = "https://github.com/MysticQuest/Unity-Block_Breaker";
+const tdSo = "https://github.com/MysticQuest/Unity-Tower_Defense_V1";
+const shootSo = "https://github.com/MysticQuest/Unity-Generic_Shmup";
+const platSo = "https://github.com/MysticQuest/Unity-Platformer_Adventure";
 
 const Games = () => {
   const classes = useStyles();
@@ -240,36 +269,34 @@ const Games = () => {
                   title="Play"
                   placement="top"
                 >
-                  <CardActionArea className={classes.cardActionArea}>
-                    <a
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={rpgLi}
-                    >
-                      <CardMedia
-                        className={`${classes.media} ${classes.media1}`}
-                        image={pic1}
-                      />
-                      <CardContent className={classes.content}>
-                        <Typography
-                          className={classes.contHead}
-                          gutterBottom
-                          variant="h5"
-                          component="h2"
-                        >
-                          RPG Thesis
-                        </Typography>
-                        <Typography
-                          className={classes.contText}
-                          variant="body2"
-                          color="textSecondary"
-                          component="p"
-                        >
-                          {rpgDes}
-                        </Typography>
-                      </CardContent>
-                    </a>
+                  <CardActionArea
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={rpgLi}
+                    className={classes.cardActionArea}
+                  >
+                    <CardMedia
+                      className={`${classes.media} ${classes.media1}`}
+                      image={rpgPic}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {rpgTi}
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {rpgDes}
+                      </Typography>
+                    </CardContent>
                   </CardActionArea>
                 </Tooltip>
                 <CardActions className={classes.buttonArea}>
@@ -287,7 +314,12 @@ const Games = () => {
                       icon={faLinux}
                     />
                   </Button>
-                  <Button className={classes.buttons}>
+                  <Button
+                    href={rpgSo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.buttons}
+                  >
                     <FontAwesomeIcon
                       className={classes.icons}
                       icon={faGithub}
@@ -310,7 +342,7 @@ const Games = () => {
                 </CardActions>
               </Card>
             </Grid>
-          </Zoom>
+          </Zoom>{" "}
           <Zoom
             timeout={{ enter: 300, exit: exitDuration }}
             in={activateAnim}
@@ -331,36 +363,34 @@ const Games = () => {
                   title="Play"
                   placement="top"
                 >
-                  <CardActionArea className={classes.cardActionArea}>
-                    <a
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={rpgLi}
-                    >
-                      <CardMedia
-                        className={`${classes.media} ${classes.media1}`}
-                        image={pic1}
-                      />
-                      <CardContent className={classes.content}>
-                        <Typography
-                          className={classes.contHead}
-                          gutterBottom
-                          variant="h5"
-                          component="h2"
-                        >
-                          RPG Thesis
-                        </Typography>
-                        <Typography
-                          className={classes.contText}
-                          variant="body2"
-                          color="textSecondary"
-                          component="p"
-                        >
-                          {rpgDes}
-                        </Typography>
-                      </CardContent>
-                    </a>
+                  <CardActionArea
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={blockLi}
+                    className={classes.cardActionArea}
+                  >
+                    <CardMedia
+                      className={`${classes.media} ${classes.media2}`}
+                      image={blockPic}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {blockTi}
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {blockDes}
+                      </Typography>
+                    </CardContent>
                   </CardActionArea>
                 </Tooltip>
                 <CardActions className={classes.buttonArea}>
@@ -378,7 +408,12 @@ const Games = () => {
                       icon={faLinux}
                     />
                   </Button>
-                  <Button className={classes.buttons}>
+                  <Button
+                    href={blockSo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.buttons}
+                  >
                     <FontAwesomeIcon
                       className={classes.icons}
                       icon={faGithub}
@@ -388,7 +423,7 @@ const Games = () => {
                   <Tooltip
                     classes={{ tooltip: classes.toolTips }}
                     TransitionComponent={Zoom}
-                    title={rpgTT}
+                    title={blockTT}
                     placement="bottom"
                   >
                     <Button className={classes.buttons}>
@@ -422,36 +457,34 @@ const Games = () => {
                   title="Play"
                   placement="top"
                 >
-                  <CardActionArea className={classes.cardActionArea}>
-                    <a
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={rpgLi}
-                    >
-                      <CardMedia
-                        className={`${classes.media} ${classes.media1}`}
-                        image={pic1}
-                      />
-                      <CardContent className={classes.content}>
-                        <Typography
-                          className={classes.contHead}
-                          gutterBottom
-                          variant="h5"
-                          component="h2"
-                        >
-                          RPG Thesis
-                        </Typography>
-                        <Typography
-                          className={classes.contText}
-                          variant="body2"
-                          color="textSecondary"
-                          component="p"
-                        >
-                          {rpgDes}
-                        </Typography>
-                      </CardContent>
-                    </a>
+                  <CardActionArea
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={tdLi}
+                    className={classes.cardActionArea}
+                  >
+                    <CardMedia
+                      className={`${classes.media} ${classes.media3}`}
+                      image={tdPic}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {tdTi}
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {tdDes}
+                      </Typography>
+                    </CardContent>
                   </CardActionArea>
                 </Tooltip>
                 <CardActions className={classes.buttonArea}>
@@ -469,7 +502,12 @@ const Games = () => {
                       icon={faLinux}
                     />
                   </Button>
-                  <Button className={classes.buttons}>
+                  <Button
+                    href={tdSo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.buttons}
+                  >
                     <FontAwesomeIcon
                       className={classes.icons}
                       icon={faGithub}
@@ -479,7 +517,7 @@ const Games = () => {
                   <Tooltip
                     classes={{ tooltip: classes.toolTips }}
                     TransitionComponent={Zoom}
-                    title={rpgTT}
+                    title={tdTT}
                     placement="bottom"
                   >
                     <Button className={classes.buttons}>
@@ -513,36 +551,34 @@ const Games = () => {
                   title="Play"
                   placement="top"
                 >
-                  <CardActionArea className={classes.cardActionArea}>
-                    <a
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={rpgLi}
-                    >
-                      <CardMedia
-                        className={`${classes.media} ${classes.media1}`}
-                        image={pic1}
-                      />
-                      <CardContent className={classes.content}>
-                        <Typography
-                          className={classes.contHead}
-                          gutterBottom
-                          variant="h5"
-                          component="h2"
-                        >
-                          RPG Thesis
-                        </Typography>
-                        <Typography
-                          className={classes.contText}
-                          variant="body2"
-                          color="textSecondary"
-                          component="p"
-                        >
-                          {rpgDes}
-                        </Typography>
-                      </CardContent>
-                    </a>
+                  <CardActionArea
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={tdLi}
+                    className={classes.cardActionArea}
+                  >
+                    <CardMedia
+                      className={`${classes.media} ${classes.media3}`}
+                      image={pic1}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {tdTi}
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {tdDes}
+                      </Typography>
+                    </CardContent>
                   </CardActionArea>
                 </Tooltip>
                 <CardActions className={classes.buttonArea}>
@@ -560,7 +596,12 @@ const Games = () => {
                       icon={faLinux}
                     />
                   </Button>
-                  <Button className={classes.buttons}>
+                  <Button
+                    href={tdSo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.buttons}
+                  >
                     <FontAwesomeIcon
                       className={classes.icons}
                       icon={faGithub}
@@ -570,7 +611,7 @@ const Games = () => {
                   <Tooltip
                     classes={{ tooltip: classes.toolTips }}
                     TransitionComponent={Zoom}
-                    title={rpgTT}
+                    title={tdTT}
                     placement="bottom"
                   >
                     <Button className={classes.buttons}>
@@ -604,36 +645,34 @@ const Games = () => {
                   title="Play"
                   placement="top"
                 >
-                  <CardActionArea className={classes.cardActionArea}>
-                    <a
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={rpgLi}
-                    >
-                      <CardMedia
-                        className={`${classes.media} ${classes.media1}`}
-                        image={pic1}
-                      />
-                      <CardContent className={classes.content}>
-                        <Typography
-                          className={classes.contHead}
-                          gutterBottom
-                          variant="h5"
-                          component="h2"
-                        >
-                          RPG Thesis
-                        </Typography>
-                        <Typography
-                          className={classes.contText}
-                          variant="body2"
-                          color="textSecondary"
-                          component="p"
-                        >
-                          {rpgDes}
-                        </Typography>
-                      </CardContent>
-                    </a>
+                  <CardActionArea
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={rpgLi}
+                    className={classes.cardActionArea}
+                  >
+                    <CardMedia
+                      className={`${classes.media} ${classes.media1}`}
+                      image={rpgPic}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {rpgTi}
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {rpgDes}
+                      </Typography>
+                    </CardContent>
                   </CardActionArea>
                 </Tooltip>
                 <CardActions className={classes.buttonArea}>
@@ -651,7 +690,12 @@ const Games = () => {
                       icon={faLinux}
                     />
                   </Button>
-                  <Button className={classes.buttons}>
+                  <Button
+                    href={rpgSo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.buttons}
+                  >
                     <FontAwesomeIcon
                       className={classes.icons}
                       icon={faGithub}
@@ -695,36 +739,34 @@ const Games = () => {
                   title="Play"
                   placement="top"
                 >
-                  <CardActionArea className={classes.cardActionArea}>
-                    <a
-                      className="card-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={rpgLi}
-                    >
-                      <CardMedia
-                        className={`${classes.media} ${classes.media1}`}
-                        image={pic1}
-                      />
-                      <CardContent className={classes.content}>
-                        <Typography
-                          className={classes.contHead}
-                          gutterBottom
-                          variant="h5"
-                          component="h2"
-                        >
-                          RPG Thesis
-                        </Typography>
-                        <Typography
-                          className={classes.contText}
-                          variant="body2"
-                          color="textSecondary"
-                          component="p"
-                        >
-                          {rpgDes}
-                        </Typography>
-                      </CardContent>
-                    </a>
+                  <CardActionArea
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={rpgLi}
+                    className={classes.cardActionArea}
+                  >
+                    <CardMedia
+                      className={`${classes.media} ${classes.media1}`}
+                      image={rpgPic}
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography
+                        className={classes.contHead}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
+                        {rpgTi}
+                      </Typography>
+                      <Typography
+                        className={classes.contText}
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {rpgDes}
+                      </Typography>
+                    </CardContent>
                   </CardActionArea>
                 </Tooltip>
                 <CardActions className={classes.buttonArea}>
@@ -742,7 +784,12 @@ const Games = () => {
                       icon={faLinux}
                     />
                   </Button>
-                  <Button className={classes.buttons}>
+                  <Button
+                    href={rpgSo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.buttons}
+                  >
                     <FontAwesomeIcon
                       className={classes.icons}
                       icon={faGithub}
