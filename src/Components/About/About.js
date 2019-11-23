@@ -149,7 +149,7 @@ const Home = () => {
         <Zoom
           timeout={{ enter: 300, exit: exitDuration }}
           in={activateAnim}
-          style={{ transitionDelay: activateAnim ? "500ms" : "0ms" }}
+          style={{ transitionDelay: activateAnim ? "200ms" : "0ms" }}
         >
           <div className="tacky-container-2">
             <div className="subtext-info">
@@ -208,7 +208,6 @@ const Home = () => {
                     <p className="mini-header-about">Source code:</p>
                     <p className="about3">
                       <IconButton
-                        linkButton={true}
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"

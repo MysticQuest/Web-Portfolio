@@ -171,6 +171,8 @@ const exitDuration = 1;
 //Tooltip info
 const rpgTT = "A time-based rpg created for a bachelor thesis";
 
+const linkRpgThesis = "./webgl/rpgThesis/index.html";
+
 const Games = () => {
   const classes = useStyles();
   if (activeIndex === 2) {
@@ -205,25 +207,32 @@ const Games = () => {
                   placement="top"
                 >
                   <CardActionArea className={classes.cardActionArea}>
-                    <CardMedia className={classes.media} image={pic1} />
-                    <CardContent className={classes.content}>
-                      <Typography
-                        className={classes.contHead}
-                        gutterBottom
-                        variant="h5"
-                        component="h2"
-                      >
-                        Game Title
-                      </Typography>
-                      <Typography
-                        className={classes.contText}
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                      >
-                        This is a small string
-                      </Typography>
-                    </CardContent>
+                    <a
+                      className={classes.cardActionArea}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={linkRpgThesis}
+                    >
+                      <CardMedia className={classes.media} image={pic1} />
+                      <CardContent className={classes.content}>
+                        <Typography
+                          className={classes.contHead}
+                          gutterBottom
+                          variant="h5"
+                          component="h2"
+                        >
+                          Game Title
+                        </Typography>
+                        <Typography
+                          className={classes.contText}
+                          variant="body2"
+                          color="textSecondary"
+                          component="p"
+                        >
+                          This is a small string
+                        </Typography>
+                      </CardContent>
+                    </a>
                   </CardActionArea>
                 </Tooltip>
                 <CardActions className={classes.buttonArea}>
