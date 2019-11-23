@@ -18,7 +18,12 @@ const useStyles = makeStyles(theme => ({
     zIndex: "1",
     color: "white",
     top: "5px",
-    right: "10px"
+    right: "10px",
+    transition: "all 0.2s ease-in-out",
+    "&:hover": {
+      filter: "drop-shadow(0 1px 2px black)",
+      color: "lightblue"
+    }
   },
   Mail: {
     fontSize: "3rem",
@@ -28,7 +33,12 @@ const useStyles = makeStyles(theme => ({
     // mixBlendMode: "difference",
     // filter: "grayscale(1)",
     top: "5px",
-    right: "65px"
+    right: "65px",
+    transition: "all 0.2s ease-in-out",
+    "&:hover": {
+      filter: "drop-shadow(1px 1px 2px black)",
+      color: "lightblue"
+    }
   },
   Git: {
     fontSize: "2.5rem",
@@ -36,7 +46,12 @@ const useStyles = makeStyles(theme => ({
     zIndex: "1",
     color: "white",
     top: "9px",
-    right: "125px"
+    right: "125px",
+    transition: "all 0.2s ease-in-out",
+    "&:hover": {
+      filter: "drop-shadow(1px 1px 2px black)",
+      color: "lightblue"
+    }
   },
   linkContainer: {
     // mixBlendMode: "difference",
@@ -44,35 +59,18 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-// { transitionDelay: activateAnim ? "3000ms" : "0ms" }
-var activateAnim = false;
+const gitLink = "https://github.com/MysticQuest?tab=repositories";
 
 const Icons = () => {
   const classes = useStyles();
-
-  // window.fullpage_api.
-  //   console.log(activateAnim);
-  //   if (activeIndex === 2) {
-  //     activateAnim = true;
-  //   } else {
-  //     activateAnim = false;
-  //   }
-  // ;
 
   return (
     <div className={classes.linkContainer}>
       <LinkedInIcon className={classes.LinkedIn} />
       <AlternateEmailIcon className={classes.Mail} />
 
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/MysticQuest?tab=repositories"
-      >
-        <GitHubIcon
-          style={{ color: activateAnim ? "black" : "white" }}
-          className={classes.Git}
-        />
+      <a target="_blank" rel="noopener noreferrer" href={gitLink}>
+        <GitHubIcon className={classes.Git} />
       </a>
     </div>
   );

@@ -158,3 +158,13 @@
   font-weight: bolder;
   font-size: x-large;
 }
+
+.bye {
+  font-size: calc(16px + 2vh);
+  color: white;
+  text-align: center;
+  font-family: pacifico;
+  flex: auto;
+  margin-left: -7vh;
+  display: none;
+}

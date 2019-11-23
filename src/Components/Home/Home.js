@@ -21,24 +21,42 @@ const Home = () => {
     <div className="full-container-1">
       <div className="text-container-home">
         <div className="header-container">
-          <Slide
-            timeout={{ enter: 2000, exit: exitDuration }}
+          <Fade
+            timeout={{ enter: 4000, exit: exitDuration }}
             direction="right"
             in={activateAnim}
             style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
           >
-            <p className="home1">Welcome</p>
-          </Slide>
-          <Slide
-            timeout={{ enter: 1500, exit: exitDuration }}
-            direction="left"
+            <div>
+              <Slide
+                timeout={{ enter: 2500, exit: exitDuration }}
+                direction="right"
+                in={activateAnim}
+                style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+              >
+                <p className="home1">Welcome</p>
+              </Slide>
+            </div>
+          </Fade>
+          <Fade
+            timeout={{ enter: 4000, exit: exitDuration }}
+            direction="right"
             in={activateAnim}
-            style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
+            style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
           >
-            <p className="home-subhead">
-              to my <span className="highlight">portfolio</span>
-            </p>
-          </Slide>
+            <div>
+              <Slide
+                timeout={{ enter: 2500, exit: exitDuration }}
+                direction="left"
+                in={activateAnim}
+                style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+              >
+                <p className="home-subhead">
+                  to my <span className="highlight">portfolio</span>
+                </p>
+              </Slide>
+            </div>
+          </Fade>
         </div>
         {/* <div className="subtext-container"> */}
         <div className="misc-text">
@@ -46,7 +64,7 @@ const Home = () => {
             timeout={{ enter: 2000, exit: exitDuration }}
             direction="right"
             in={activateAnim}
-            style={{ transitionDelay: activateAnim ? "2000ms" : "0ms" }}
+            style={{ transitionDelay: activateAnim ? "2500ms" : "0ms" }}
           >
             <div className="readability-container1">
               <p className="home3">
@@ -59,7 +77,7 @@ const Home = () => {
                 timeout={{ enter: 2000, exit: exitDuration }}
                 direction="right"
                 in={activateAnim}
-                style={{ transitionDelay: activateAnim ? "3000ms" : "0ms" }}
+                style={{ transitionDelay: activateAnim ? "3500ms" : "0ms" }}
               >
                 <p className="home3">
                   <br />
@@ -71,7 +89,7 @@ const Home = () => {
                 timeout={{ enter: 2000, exit: exitDuration }}
                 direction="right"
                 in={activateAnim}
-                style={{ transitionDelay: activateAnim ? "3500ms" : "0ms" }}
+                style={{ transitionDelay: activateAnim ? "4000ms" : "0ms" }}
               >
                 <p className="home3">
                   Or <span className="highlight">Section 4</span> to learn more

@@ -2,6 +2,7 @@ import React from "react";
 //import plugins
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
+//import { Parallax, Background } from "react-parallax";
 // import ReactFullpage from '@fullpage/react-fullpage/dist/react-fullpage-commonjs'; //commonjs lib for nextjs ssr etc
 //import my components
 import ResponsiveDrawer from "./Components/Navigation/Navigation";
@@ -18,26 +19,6 @@ import { fireflies2 } from "./themes/fireflies2";
 //hooks?
 //import { useAnimHandler } from "./hooks/useAnimHandler";
 
-// var gCD = false;
-// window.onscroll = function() {
-//   if (gCD === false) {
-//     console.log("scrolled");
-//     gCD = true;
-//     window.fullpage_api.setAllowScrolling(false, "all");
-//     window.fullpage_api.setKeyboardScrolling(false, "all");
-
-//     setTimeout(
-//       function() {
-//         window.fullpage_api.setAllowScrolling(true, "all");
-//         window.fullpage_api.setKeyboardScrolling(true, "all");
-//         console.log("timeout ended");
-//         gCD = false;
-//       },
-//       [100]
-//     );
-//   }
-// };
-
 var activeIndex = 0;
 
 const App = () => (
@@ -46,27 +27,27 @@ const App = () => (
     <ResponsiveDrawer />
     <ReactFullpage
       //fullpage options
-      parallax={true}
+      // parallax={true}
       // parallaxOptions={{
-      //   type: "reveal",
-      //   percentage: 62,
+      //   type: "cover",
+      //   percentage: 69,
       //   property: "translate"
       // }}
-      scrollOverflow={true}
-      scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
+      // scrollOverflow={true}
+      // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
       // cards={true} //an effect
       // cardsOptions={{
       //   perspective: 50,
       //   fadeContent: true,
       //   fadeBackground: true
       // }}
+      // fadingEffect={"sections"}
       offsetSections={false} //used to show non full screen section parts
-      resetSliders={true}
+      resetSliders={false}
       // controlArrows={true}
       animateAnchor={true}
       keyboardScrolling={true}
       dragAndMove={true}
-      // fadingEffect={"slides"}
       menu={"#menu"} // menu for anchors
       loopHorizontal={true}
       licenseKey={"GPLv3"}
@@ -79,7 +60,7 @@ const App = () => (
       slidesNavPosition={"bottom"}
       // navigationTooltips={[]} //tooltips for the navdots
       scrollingSpeed={1000} /* used this for something to work... */
-      sectionsColor={[]}
+      sectionsColor={["black", "black", "black", "black"]}
       scrollBar={false}
       // easing={"easeInOutCubic"}
       // easingcss3={"ease"}
@@ -89,9 +70,9 @@ const App = () => (
       // fixedElements={"ResponsiveDrawer"}
       loopBottom={false}
       // scrollHorizontally={true}
-      bigSectionsDestination={"top"}
+      // bigSectionsDestination={"top"}
       normalScrollElements={".scroll"}
-      normalScrollElementTouchThreshold={1}
+      // normalScrollElementTouchThreshold={1}
       touchSensitivity={5}
       // some extra afterLoad parameters origin, destination, direction, index
       afterLoad={(origin, destination, direction) => {
@@ -103,14 +84,16 @@ const App = () => (
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
-            <div className="section container1">
+            <div className="section container1 fp-content">
               <Particles
                 id="particle-effects"
                 className="particles-js"
                 params={humidity}
               />
+
               <Home />
             </div>
+
             <div className="section container2 ">
               <WebProjects />
             </div>

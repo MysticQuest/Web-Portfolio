@@ -223,6 +223,9 @@ const Home = () => {
             </div>
           </div>
         </Zoom>
+        <div className="bye">
+          <p>Thanks for visiting!</p>
+        </div>
       </div>
     </div>
   );

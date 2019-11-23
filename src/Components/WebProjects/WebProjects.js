@@ -14,9 +14,6 @@ import Zoom from "@material-ui/core/Zoom";
 import { makeStyles } from "@material-ui/core/styles";
 //import "../../themes/animate.css";
 import "../../themes/global.css";
-//import bender from "../../images/bender.png";
-//import bender2 from "../../images/bender.svg";
-import pic1 from "../../images/pic1.png";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { library } from "@fortawesome/fontawesome-svg-core";
@@ -28,6 +25,8 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import active section
 import { activeIndex } from "../../App";
 // library.add(faCoffee);
+//import images and media
+import pic1 from "../../images/pic1.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
