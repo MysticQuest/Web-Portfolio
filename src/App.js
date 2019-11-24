@@ -27,13 +27,13 @@ const App = () => (
     <ResponsiveDrawer />
     <ReactFullpage
       //fullpage options
-      // parallax={true}
-      // parallaxOptions={{
-      //   type: "cover",
-      //   percentage: 69,
-      //   property: "translate"
-      // }}
-      // scrollOverflow={true}
+      parallax={true}
+      parallaxOptions={{
+        type: "cover",
+        percentage: 69,
+        property: "translate"
+      }}
+      scrollOverflow={true}
       // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
       // cards={true} //an effect
       // cardsOptions={{
@@ -60,7 +60,7 @@ const App = () => (
       slidesNavPosition={"bottom"}
       // navigationTooltips={[]} //tooltips for the navdots
       scrollingSpeed={1000} /* used this for something to work... */
-      sectionsColor={["black", "black", "black", "black"]}
+      // sectionsColor={["black", "black", "black", "black"]}
       scrollBar={false}
       // easing={"easeInOutCubic"}
       // easingcss3={"ease"}

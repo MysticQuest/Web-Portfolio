@@ -28,7 +28,7 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import active section
 import { activeIndex } from "../../App";
 //import image and media
-import pic1 from "../../images/pic1.png";
+//import pic1 from "../../images/pic1.png";
 import gif1 from "../../images/tenor.gif";
 import rpgGif from "../../images/rpg.gif";
 import rpgPic from "../../images/rpg.png";
@@ -99,9 +99,7 @@ const useStyles = makeStyles(theme => ({
         transition: "background-image 0.3s ease-in-out"
       },
       boxShadow: "-3px 3px 9px 0 rgba(0, 0, 0, 0.69)",
-      // top: "-3px",
-      transition: ["boxShadow", "top"],
-      transitionDuration: 500
+      transition: "box-shadow 0.3s ease-in-out"
       // filter: "grayscale(0%)"
     },
     // filter: "grayscale(50%)",
@@ -113,11 +111,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: "1vw",
     position: "relative",
     top: 0,
-    transition: ["boxShadow", "top"],
-    transitionDuration: 500,
-    "& a": {
-      textDecoration: "none"
-    }
+    transition: "box-shadow 0.3s ease-in-out"
   },
   media: {
     height: "auto",
@@ -125,11 +119,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: "56.25%",
     objectFit: "cover",
     transition: "background-image 0.3s ease-in-out"
-    // background: { pic1 },
-    // backgroundImage: "url(../../images/pic1.png)",
-    // "&:hover": {
-    //   background: "url('../../images/tenor.gif')"
-    // }
+
     // background: { pic2 }
     // margin: "-70px auto 0",
     // width: "80%",
@@ -146,8 +136,13 @@ const useStyles = makeStyles(theme => ({
   media5: {},
   media6: {},
   content: {
-    background: "linear-gradient(to bottom, #f5f5e4, #abb6c2)",
-    // background: "linear-gradient(to right, #ee9ca7, #ffdde1)",
+    background:
+      "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
+    // background:
+    //   "linear-gradient(to right, #406483, #42728f, #46809a, #4b8ea3, #539cac)", // lighter bluish grad
+    // background:
+    //   "linear-gradient(to right, #1f3f5b, #1e4e6c, #195e7d, #106f8d, #00809b)", //darker bluish grad
+    // background: "linear-gradient(to right, #ee9ca7, #ffdde1)", //old light gradient
     padding: "10px",
     flexGrow: 1,
     display: "flex",
@@ -157,11 +152,11 @@ const useStyles = makeStyles(theme => ({
     // height: "100%"
   },
   contHead: {
-    color: "black",
+    color: "white",
     marginBottom: "3px"
   },
   contText: {
-    color: "black"
+    color: "white"
   },
   buttonArea: {
     background: "linear-gradient(to right, #000000, #434343)",
@@ -210,23 +205,23 @@ const exitDuration = 1;
 // };
 
 // Titles
-const rpgTi = "Shillda";
-const blockTi = "";
-const tdTi = "";
-const shootTi = "";
-const platTi = "";
+const rpgTi = "Zulda";
+const blockTi = "Block Breaker";
+const tdTi = "Lane Defense";
+const shootTi = "Generic Shooter";
+const platTi = "Platformer";
 // Descriptions
-const rpgDes = "A time-based rpg created for a bachelor thesis";
-const blockDes = "";
-const tdDes = "";
-const shootDes = "";
-const platDes = "";
+const rpgDes = "A time-based 12 minute rpg, created for a bachelor thesis.";
+const blockDes = "The classic block breaker game, just a tad harder.";
+const tdDes = "A tower/lane defense game. Only for TD veterans. ";
+const shootDes = "A generic shoot-em-up game.";
+const platDes = "Like Super Mario, but not really.";
 // Tooltip info
-const rpgTT = "This is the tooltip";
-const blockTT = "";
-const tdTT = "";
-const shootTT = "";
-const platTT = "";
+const rpgTT = "Made with Unity and free assets.";
+const blockTT = "Made with Unity and free assets.";
+const tdTT = "Made with Unity and free assets.";
+const shootTT = "Made with Unity and free assets.";
+const platTT = "Made with Unity and free assets.";
 // Play links
 const rpgLi = "./webgl/rpgThesis/index.html";
 const blockLi = "./webgl/block-breaker/index.html";
@@ -723,7 +718,7 @@ const Games = () => {
               </Card>
             </Grid>
           </Zoom>
-          <Zoom
+          {/* <Zoom
             timeout={{ enter: 300, exit: exitDuration }}
             in={activateAnim}
             style={{ transitionDelay: activateAnim ? "250ms" : "0ms" }}
@@ -814,9 +809,9 @@ const Games = () => {
                     </Button>
                   </Tooltip>
                 </CardActions>
-              </Card>
-            </Grid>
-          </Zoom>
+              </Card> */}
+          {/* </Grid>
+          </Zoom> */}
         </Grid>
       </div>
     </div>
