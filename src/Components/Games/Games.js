@@ -36,6 +36,10 @@ import blockPic from "../../images/block.png";
 import blockGif from "../../images/block.gif";
 import tdPic from "../../images/td.png";
 import tdGif from "../../images/td.gif";
+import shootPic from "../../images/shoot.png";
+import shootGif from "../../images/shoot.gif";
+import platPic from "../../images/plat.png";
+import platGif from "../../images/plat.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -83,11 +87,11 @@ const useStyles = makeStyles(theme => ({
         transition: "background-image 0.3s ease-in-out"
       },
       "& $media4": {
-        backgroundImage: `url(${gif1}) !important`,
+        backgroundImage: `url(${shootGif}) !important`,
         transition: "background-image 0.3s ease-in-out"
       },
       "& $media5": {
-        backgroundImage: `url(${gif1}) !important`,
+        backgroundImage: `url(${platGif}) !important`,
         transition: "background-image 0.3s ease-in-out"
       },
       "& $media6": {
@@ -221,14 +225,14 @@ const platDes = "";
 const rpgTT = "This is the tooltip";
 const blockTT = "";
 const tdTT = "";
-const shootTI = "";
+const shootTT = "";
 const platTT = "";
 // Play links
 const rpgLi = "./webgl/rpgThesis/index.html";
 const blockLi = "./webgl/block-breaker/index.html";
 const tdLi = "./webgl/td/index.html";
-const shootLi = "";
-const platLi = "";
+const shootLi = "./webgl/shoot/index.html";
+const platLi = "./webgl/plat/index.html";
 // Source links
 const rpgSo = "https://github.com/MysticQuest/Unity-Project_Thesis";
 const blockSo = "https://github.com/MysticQuest/Unity-Block_Breaker";
@@ -554,12 +558,12 @@ const Games = () => {
                   <CardActionArea
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={tdLi}
+                    href={shootLi}
                     className={classes.cardActionArea}
                   >
                     <CardMedia
-                      className={`${classes.media} ${classes.media3}`}
-                      image={pic1}
+                      className={`${classes.media} ${classes.media4}`}
+                      image={shootPic}
                     />
                     <CardContent className={classes.content}>
                       <Typography
@@ -568,7 +572,7 @@ const Games = () => {
                         variant="h5"
                         component="h2"
                       >
-                        {tdTi}
+                        {shootTi}
                       </Typography>
                       <Typography
                         className={classes.contText}
@@ -576,7 +580,7 @@ const Games = () => {
                         color="textSecondary"
                         component="p"
                       >
-                        {tdDes}
+                        {shootDes}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
@@ -597,7 +601,7 @@ const Games = () => {
                     />
                   </Button>
                   <Button
-                    href={tdSo}
+                    href={shootSo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={classes.buttons}
@@ -611,7 +615,7 @@ const Games = () => {
                   <Tooltip
                     classes={{ tooltip: classes.toolTips }}
                     TransitionComponent={Zoom}
-                    title={tdTT}
+                    title={shootTT}
                     placement="bottom"
                   >
                     <Button className={classes.buttons}>
@@ -648,12 +652,12 @@ const Games = () => {
                   <CardActionArea
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={rpgLi}
+                    href={platLi}
                     className={classes.cardActionArea}
                   >
                     <CardMedia
-                      className={`${classes.media} ${classes.media1}`}
-                      image={rpgPic}
+                      className={`${classes.media} ${classes.media5}`}
+                      image={platPic}
                     />
                     <CardContent className={classes.content}>
                       <Typography
@@ -662,7 +666,7 @@ const Games = () => {
                         variant="h5"
                         component="h2"
                       >
-                        {rpgTi}
+                        {platTi}
                       </Typography>
                       <Typography
                         className={classes.contText}
@@ -670,7 +674,7 @@ const Games = () => {
                         color="textSecondary"
                         component="p"
                       >
-                        {rpgDes}
+                        {platDes}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
@@ -691,7 +695,7 @@ const Games = () => {
                     />
                   </Button>
                   <Button
-                    href={rpgSo}
+                    href={platSo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={classes.buttons}
@@ -705,7 +709,7 @@ const Games = () => {
                   <Tooltip
                     classes={{ tooltip: classes.toolTips }}
                     TransitionComponent={Zoom}
-                    title={rpgTT}
+                    title={platTT}
                     placement="bottom"
                   >
                     <Button className={classes.buttons}>
