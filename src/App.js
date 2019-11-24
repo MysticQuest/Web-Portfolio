@@ -10,6 +10,7 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import WebProjects from "./Components/WebProjects/WebProjects";
 import Games from "./Components/Games/Games";
+import Misc from "./Components/Games/Misc";
 import Icons from "./Components/About/MyLinks";
 //import styles
 import "./App.css";
@@ -98,25 +99,20 @@ const App = () => (
               <WebProjects />
             </div>
             <div className="section container3 ">
-              <Games />
-              {/* fp-auto-height  */}
+              <div className="slide" data-anchor="slide1">
+                <Games />
+              </div>
+              <div className="slide" data-anchor="slide2">
+                <Misc />
+              </div>
             </div>
             <div className="section container4 ">
-              <div className="slide">
-                <Particles
-                  id="particle-effects"
-                  className="particles-js"
-                  params={fireflies2}
-                />
-                <About />
-              </div>
-              <div className="slide">
-                {/* <Particles
-                  id="particle-effects"
-                  className="particles-js"
-                  params={fireflies2}
-                /> */}
-              </div>
+              <Particles
+                id="particle-effects"
+                className="particles-js"
+                params={fireflies2}
+              />
+              <About />
             </div>
           </ReactFullpage.Wrapper>
         );
@@ -125,11 +121,6 @@ const App = () => (
   </div>
 );
 
-/* <div class="section">Whole viewport</div>
-<div class="section fp-auto-height">Auto height</div> --- this auto adjust height for smaller/bigger sections*/
-
-// onScroll={() => {
-//   console.log(window.fullpage_api.getActiveSection());
-// }}
+/* <div class="section fp-auto-height">Auto height</div> --- this auto adjust height for smaller/bigger sections*/
 
 export { App, activeIndex };

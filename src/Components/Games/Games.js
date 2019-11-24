@@ -15,6 +15,7 @@ import Zoom from "@material-ui/core/Zoom";
 import { makeStyles } from "@material-ui/core/styles";
 //import "../../themes/animate.css";
 import "../../themes/global.css";
+import "./Games.css";
 //import bender from "../../images/bender.png";
 //import bender2 from "../../images/bender.svg";
 //icons
@@ -194,6 +195,25 @@ const useStyles = makeStyles(theme => ({
   toolTipsCard: {
     fontSize: theme.typography.pxToRem(20),
     backgroundColor: "#c96b34"
+  },
+  extra: {
+    // display: "inline-flex",
+    // pointerEvents: "auto",
+    // zIndex: "999 !important",
+    textTransform: "none",
+    textAlign: "end",
+    // float: "right",
+    // margin: "3vh",
+    [theme.breakpoints.down("sm")]: {
+      float: "none !important",
+      margin: "5vh",
+      textAlign: "center"
+      // bottom: "calc(100px + 3vh);",
+      // position: "sticky"
+      // position: "fixed",
+      // display: "flex"
+      // marginTop: "calc(-80px - 8vh);"
+    }
   }
 }));
 
@@ -718,100 +738,25 @@ const Games = () => {
               </Card>
             </Grid>
           </Zoom>
-          {/* <Zoom
-            timeout={{ enter: 300, exit: exitDuration }}
-            in={activateAnim}
-            style={{ transitionDelay: activateAnim ? "250ms" : "0ms" }}
+          <Grid
+            className={classes.gridItem}
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
           >
-            <Grid
-              className={classes.gridItem}
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              lg={4}
-            >
-              <Card className={classes.card}>
-                <Tooltip
-                  classes={{ tooltip: classes.toolTipsCard }}
-                  TransitionComponent={Zoom}
-                  title="Play"
-                  placement="top"
-                >
-                  <CardActionArea
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={rpgLi}
-                    className={classes.cardActionArea}
-                  >
-                    <CardMedia
-                      className={`${classes.media} ${classes.media1}`}
-                      image={rpgPic}
-                    />
-                    <CardContent className={classes.content}>
-                      <Typography
-                        className={classes.contHead}
-                        gutterBottom
-                        variant="h5"
-                        component="h2"
-                      >
-                        {rpgTi}
-                      </Typography>
-                      <Typography
-                        className={classes.contText}
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                      >
-                        {rpgDes}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Tooltip>
-                <CardActions className={classes.buttonArea}>
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      title="Not Available Yet"
-                      className={classes.iconsTBA}
-                      icon={faWindows}
-                    />
-                  </Button>
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      title="Not Available Yet"
-                      className={classes.iconsTBA}
-                      icon={faLinux}
-                    />
-                  </Button>
-                  <Button
-                    href={rpgSo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={classes.buttons}
-                  >
-                    <FontAwesomeIcon
-                      className={classes.icons}
-                      icon={faGithub}
-                    />
-                  </Button>
-
-                  <Tooltip
-                    classes={{ tooltip: classes.toolTips }}
-                    TransitionComponent={Zoom}
-                    title={rpgTT}
-                    placement="bottom"
-                  >
-                    <Button className={classes.buttons}>
-                      <FontAwesomeIcon
-                        className={classes.icons}
-                        icon={faInfoCircle}
-                      />
-                    </Button>
-                  </Tooltip>
-                </CardActions>
-              </Card> */}
-          {/* </Grid>
-          </Zoom> */}
+            <div className={classes.extra}>
+              <Button
+                className={classes.extraButton}
+                onClick={() => {
+                  window.fullpage_api.moveSlideRight();
+                }}
+              >
+                <p className="extra-text">Extras -></p>
+              </Button>
+            </div>
+          </Grid>
         </Grid>
       </div>
     </div>

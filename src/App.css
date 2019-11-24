@@ -74,6 +74,7 @@
   height: 0;
   border-style: solid;
   margin-top: -38px;
+  display: none;
 }
 .fp-controlArrow.fp-prev {
   /* display: none; */
