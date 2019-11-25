@@ -31,7 +31,9 @@ import { activeIndex } from "../../App";
 //import image and media
 //import pic1 from "../../images/pic1.png";
 //import gif1 from "../../images/tenor.gif";
-import mapPic from "../../images/map.png";
+import mapPic1 from "../../images/map.png";
+import mapPic2 from "../../images/map2.png";
+import uniGif from "../../images/uni.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,10 +68,10 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     "&:hover": {
-      //   "& $media1": {
-      //     backgroundImage: `url(${rpgGif}) !important`,
-      //     transition: "background-image 0.3s ease-in-out"
-      //   },
+      "& $media1": {
+        backgroundImage: `url(${mapPic2}) !important`,
+        transition: "background-image 0.3s ease-in-out"
+      },
       //   "& $media2": {
       //     backgroundImage: `url(${blockGif}) !important`,
       //     transition: "background-image 0.3s ease-in-out"
@@ -237,7 +239,7 @@ const Misc = () => {
   // }
 
   return (
-    <div className="full-container-2">
+    <div className="full-container-games">
       <div className={classes.root}>
         <Grid className={classes.grid} container spacing={3}>
           <Zoom
@@ -268,7 +270,7 @@ const Misc = () => {
                   >
                     <CardMedia
                       className={`${classes.media} ${classes.media1}`}
-                      image={mapPic}
+                      image={mapPic1}
                     />
                     <CardContent className={classes.content}>
                       <Typography
@@ -358,8 +360,9 @@ const Misc = () => {
                     className={classes.cardActionArea}
                   >
                     <CardMedia
-                      className={`${classes.media} ${classes.media1}`}
-                      image={mapPic}
+                      //   className={`${classes.media} ${classes.media1}`}
+                      className={classes.media}
+                      image={uniGif}
                     />
                     <CardContent className={classes.content}>
                       <Typography

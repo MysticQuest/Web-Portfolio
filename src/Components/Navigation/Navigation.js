@@ -49,6 +49,12 @@ const useStyles = makeStyles(theme => ({
   drawerPaper: {
     width: drawerWidth,
     backgroundColor: "rgba(0, 0, 0, 0.05)",
+    // background:
+    //   "linear-gradient(to right, rgba(0, 57, 115, 0.3), rgba(229, 229, 190, 0.03))",
+    // background:
+    //   "linear-gradient(90deg, rgba(9,7,42,0.5) 0%, rgba(45,23,142,0.1) 22%, rgba(255,184,0,0.03) 100%)",
+    // background:
+    //   "linear-gradient(90deg, rgba(9,0,149,0.1) 0%, rgba(255,129,65,0.01) 100%)",
     color: "white",
     flexGrow: 1,
     padding: "0 0 0 0"

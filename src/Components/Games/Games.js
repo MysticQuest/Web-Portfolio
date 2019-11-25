@@ -44,13 +44,15 @@ import platGif from "../../images/plat.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    flexShrink: 1
   },
   grid: {},
   gridItem: {
     [theme.breakpoints.up("md")]: {
-      padding: "32px !important"
+      padding: "24px !important"
     },
+    flexShrink: 1,
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
@@ -66,7 +68,9 @@ const useStyles = makeStyles(theme => ({
     //   padding: theme.spacing(0)
     // }
   },
+  gridItemMenu: {},
   cardActionArea: {
+    flexShrink: 1,
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
@@ -106,13 +110,15 @@ const useStyles = makeStyles(theme => ({
     // filter: "grayscale(50%)",
     display: "flex",
     flexFlow: "column",
+    flexShrink: 1,
     flexGrow: 1,
     borderRadius: "20px",
-    marginLeft: "1vw",
-    marginRight: "1vw",
+    // marginLeft: "1vw",
+    // marginRight: "1vw",
     position: "relative",
     top: 0,
     transition: "box-shadow 0.3s ease-in-out"
+    // margin: "30px"
   },
   media: {
     height: "auto",
@@ -146,6 +152,7 @@ const useStyles = makeStyles(theme => ({
     // background: "linear-gradient(to right, #ee9ca7, #ffdde1)", //old light gradient
     padding: "10px",
     flexGrow: 1,
+    flexShrink: 1,
     display: "flex",
     flexDirection: "column"
     // justifyContent: "space-between"
@@ -163,12 +170,16 @@ const useStyles = makeStyles(theme => ({
     background: "linear-gradient(to right, #000000, #434343)",
 
     // display: "flex", //card has flex by default
+    flexGrow: 1,
+    flexShrink: 1,
     flexFlow: "wrap",
     justifyContent: "center",
     padding: "0"
   },
   buttons: {
     // backgroundColor: "white",
+    flexGrow: 1,
+    flexShrink: 1,
     padding: "0",
     minHeight: "29px",
     marginLeft: "0 !important",
@@ -265,7 +276,7 @@ const Games = () => {
   // }
 
   return (
-    <div className="full-container-2">
+    <div className="full-container-games">
       <div className={classes.root}>
         <Grid className={classes.grid} container spacing={3}>
           <Zoom

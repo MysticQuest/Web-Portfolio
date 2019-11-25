@@ -8,7 +8,9 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import ResponsiveDrawer from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
-import WebProjects from "./Components/WebProjects/WebProjects";
+import Categories from "./Components/Projects/Categories";
+//import Projects from "./Components/Projects/Projects";
+//import WebProjects from "./Components/WebProjects/WebProjects";
 import Games from "./Components/Games/Games";
 import Misc from "./Components/Games/Misc";
 import Icons from "./Components/About/MyLinks";
@@ -31,7 +33,7 @@ const App = () => (
       parallax={true}
       parallaxOptions={{
         type: "cover",
-        percentage: 69,
+        percentage: 62,
         property: "translate"
       }}
       scrollOverflow={true}
@@ -96,13 +98,13 @@ const App = () => (
             </div>
 
             <div className="section container2 ">
-              <WebProjects />
+              <Categories />
             </div>
             <div className="section container3 ">
               <div className="slide" data-anchor="slide1">
                 <Games />
               </div>
-              <div className="slide" data-anchor="slide2">
+              <div className="slide sec3sli2" data-anchor="slide2">
                 <Misc />
               </div>
             </div>

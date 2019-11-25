@@ -16,6 +16,8 @@
     "react-parallax": "^2.2.4",
     "react-particles-js": "^2.7.0",
     "react-scripts": "3.2.0",
+    "react-swipeable-views": "^0.13.3",
+    "typeface-acme": "0.0.72",
     "typeface-pacifico": "0.0.76"
   },
   "scripts": {
