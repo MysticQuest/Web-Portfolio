@@ -44,20 +44,19 @@ import platGif from "../../images/plat.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    flexShrink: 1
+    flexGrow: 1
   },
-  grid: { textAlign: "-webkit-center" },
+  // grid: { textAlign: "-webkit-center" },
   gridItem: {
     [theme.breakpoints.up("md")]: {
       padding: "24px !important"
-    },
-    flexShrink: 1,
-    flexGrow: 1,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    alignItems: "stretch"
+    }
+    // flexShrink: 1,
+    // flexGrow: 1,
+    // display: "flex",
+    // flexDirection: "column",
+    // justifyContent: "space-between",
+    // alignItems: "stretch"
     // height: "100%",
     // flexWrap: "wrap"
     // display: "flex",
@@ -70,7 +69,7 @@ const useStyles = makeStyles(theme => ({
   },
   gridItemMenu: {},
   cardActionArea: {
-    flexShrink: 1,
+    // flexShrink: 1,
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
@@ -111,8 +110,6 @@ const useStyles = makeStyles(theme => ({
       // filter: "grayscale(0%)"
     },
     // filter: "grayscale(50%)",
-    // display: "flex",
-    // flexFlow: "column",
     // flexShrink: 1,
     // flexGrow: 1,
     borderRadius: "20px",
@@ -120,6 +117,9 @@ const useStyles = makeStyles(theme => ({
     marginRight: "1vw",
     // position: "relative",
     // top: 0,
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
     transition: "box-shadow 0.3s ease-in-out",
     // maxWidth: "300px",
     maxHeight: "400px"
@@ -146,6 +146,7 @@ const useStyles = makeStyles(theme => ({
   media4: {},
   media5: {},
   media6: {},
+
   content: {
     background:
       "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
@@ -155,18 +156,19 @@ const useStyles = makeStyles(theme => ({
     // background:
     //   "linear-gradient(to right, #1f3f5b, #1e4e6c, #195e7d, #106f8d, #00809b)", //darker bluish grad
     // background: "linear-gradient(to right, #ee9ca7, #ffdde1)", //old light gradient
-    padding: "10px"
-    // flexGrow: 1,
+    padding: "10px",
     // flexShrink: 1,
-    // display: "flex",
-    // flexDirection: "column"
+    flexGrow: 1,
+    display: "flex",
+    flexDirection: "column"
     // justifyContent: "space-between"
     // alignItems: "stretch",
     // height: "100%"
   },
   contHead: {
     color: "white",
-    marginBottom: "3px"
+    fontFamily: "Acme"
+    // marginBottom: "3px"
   },
   contText: {
     color: "white"
@@ -174,22 +176,23 @@ const useStyles = makeStyles(theme => ({
   buttonArea: {
     background: "linear-gradient(to right, #000000, #434343)",
     backgroundColor: "#393f47", //test color for firefox bug
-    // display: "flex", //card has flex by default
-    flexGrow: 1,
-    flexShrink: 1,
-    flexFlow: "wrap",
-    justifyContent: "center",
+    display: "block",
     padding: "0"
+    // display: "flex", //card has flex by default
+    // flexGrow: 1,
+    // flexShrink: 1,
+    // flexFlow: "wrap",
+    // justifyContent: "center",
   },
   buttons: {
     // backgroundColor: "white",
-    flexGrow: 1,
-    flexShrink: 1,
-    padding: "0",
-    minHeight: "29px",
-    marginLeft: "0 !important",
-    marginTop: "5px",
-    marginBottom: "5px"
+    // flexGrow: 1,
+    // flexShrink: 1,
+    // padding: "0",
+    // minHeight: "25px",
+    marginLeft: "0 !important"
+    // marginTop: "5px",
+    // marginBottom: "5px"
   },
   icons: { color: "white", fontSize: "1.8rem" },
   iconsTBA: { color: "#9c7e82", fontSize: "1.3rem" },

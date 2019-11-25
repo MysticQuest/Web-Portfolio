@@ -64,9 +64,10 @@ const useStyles = makeStyles(theme => ({
     //   paddingLeft: "1vh",
     //   paddingRight: "1vh"
     // },
-    minHeight: "760px",
+    // minHeight: "760px",
     // display: "table",
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
+    marginTop: "8vh",
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     borderRadius: "0 0 10px 10px"
 

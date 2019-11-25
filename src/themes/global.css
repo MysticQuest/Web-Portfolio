@@ -59,10 +59,11 @@
 
 .full-container-projects {
   margin: 60px 60px 30px 120px;
-  padding-left: 15vh;
-  padding-right: 35vh;
-  padding-top: 3vh;
-  padding-bottom: 6vh;
+  padding-left: 20vh;
+  padding-right: 30vh;
+  height: 100%;
+  /* padding-top: 5vh;
+  padding-bottom: 5vh; */
   word-wrap: break-word;
 
   /* height: -webkit-fill-available; */
@@ -164,3 +165,15 @@
 }
 
 /* calc(100px + 7vw) */
+
+.fp-slidesNav.fp-bottom {
+  visibility: hidden;
+}
+
+.fp-slidesNav ul li {
+  visibility: visible !important;
+}
+
+/* .MuiPaper-root {
+  background-color: rgba(0, 0, 0, 1) !important;
+} */
