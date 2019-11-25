@@ -1,75 +1,87 @@
-.App {
+/* .App {
   text-align: center;
-  /* display: flex;
-  color: "rgba(0, 0, 0, 0)"; */
+  display: flex;
+  color: "rgba(0, 0, 0, 0)";
+} */
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+/* parallax testing */
+
+.bg1 {
+  background-image: url("./images/naturetheme1.jpg");
+}
+
+.bg2 {
+  background-image: url("./images/nthemeScaled11.jpg");
+}
+
+.bg3 {
+  background-image: url("./images/nthemeScaled6.jpg");
+}
+
+.bg4 {
+  background-image: url("./images/nthemeScaled4.png");
 }
 
 .container1 {
   text-align: center;
-  display: flex;
-  background-image: url("./images/naturetheme1.jpg");
+  /* display: flex; */
+  /* background-image: url("./images/naturetheme1.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center center;
+  /* background-attachment: fixed; */
   /* background-color: black; */
-  z-index: -1;
-}
-
-::-webkit-scrollbar {
-  display: none;
+  /* z-index: -1; */
 }
 
 .container2 {
   text-align: center;
-  display: flex;
-  background-image: url("./images/naturetheme11.jpg");
+  /* display: flex; */
+  /* background-image: url("./images/naturetheme11.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center center;
   /* background-color: black; */
+  /* background-attachment: fixed; */
 }
 
 .container3 {
   text-align: center;
-  display: flex;
-  background-image: url("./images/naturetheme6.jpg");
+  /* display: flex; */
+  /* background-image: url("./images/naturetheme6.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center center;
   /* background-color: black; */
+  /* background-attachment: fixed; */
 }
 
-.sec3sli2 {
+.container4 {
+  text-align: center;
+  /* display: flex; */
+  /* background-image: url("./images/naturetheme4.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* background-attachment: fixed; */
+  /* background-color: black; */
+  /* z-index: -1; */
+}
+
+/* .sec3sli2 {
   text-align: center;
   display: flex;
   background-image: url("./images/naturetheme5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center center;
-  /* background-color: black; */
-}
-
-.container4 {
-  text-align: center;
-  display: flex;
-  background-image: url("./images/naturetheme4.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-attachment: fixed; */
-  background-position: center center;
-  /* background-color: black; */
-  z-index: -1;
-}
-
-.back-img {
-  display: block;
-  max-width: 10%;
-  height: auto;
-}
+  background-color: black;
+  background-attachment: fixed;
+} */
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -129,6 +141,7 @@
   z-index: 999 !important;
   top: 0;
   left: 0;
+
   /* pointer-events: none; */
 }
 
@@ -139,25 +152,65 @@
   background: rgba(241, 180, 87, 0.2); /* Gecko Browsers */
 }
 
-/* .fullpage-wrapper {
+/* CUSTOM SCROLL EFFECT */
+
+.fullpage-wrapper {
   width: 100% !important;
-  transform: none !important;
+  /* transform: none !important; */
 }
 
 .fp-section {
   width: 100% !important;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   top: 0;
-  visibility: hidden;
-  transition: all 0.7s ease-in-out;
 
-  opacity: 0;
+  transition: all 1s ease-in-out;
+  /* transition: all 1s linear; */
+  /* transition: all 1s ease-out; */
+
+  /* CARD */
+  /* transform: translateZ(-10rem) scale(0.8); */
+  /* transform: translateX(50rem); */
+  /* transform: translateY(10rem); */
+
+  /* SCALE + CIRCLE  */
+  /* border-radius: 50%; */
+  /* transform: scale(0.1); */
+
+  /* FADE */
+  visibility: hidden;
+  opacity: 0.5;
+
+  /* PAGE */
+  /* transform: rotateY(90deg);
+  transform-origin: 0% 100%; */
 }
 
 .fp-section.active {
+  /* FADE */
   visibility: visible;
   opacity: 1;
+
+  /* CARD */
+  /* transform: translateZ(10rem) scale(1); */
+  /* transform: translateX(0rem); */
+  /* transform: translateY(0rem); */
+
+  /* SCALE + CIRCLE  */
+  /* border-radius: 0%; */
+  /* transform: scale(1); */
+
+  /* transform: rotateZ(0deg);
+  transform-origin: 0% 50%; */
+}
+
+/*COMPATIBILITY EXAMPEL
+ .example {
+  -webkit-transition: background-color 500ms ease-out 1s;
+  -moz-transition: background-color 500ms ease-out 1s;
+  -o-transition: background-color 500ms ease-out 1s;
+  transition: background-color 500ms ease-out 1s;
 } */
 
 /* mix-blend-mode: multiply; */

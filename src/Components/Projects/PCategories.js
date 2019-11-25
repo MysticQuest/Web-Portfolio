@@ -56,13 +56,15 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    [theme.breakpoints.up("md")]: {
-      paddingLeft: "1vh",
-      paddingRight: "1vh"
-    },
+    // [theme.breakpoints.up("md")]: {
+    //   paddingLeft: "1vh",
+    //   paddingRight: "1vh"
+    // },
+    // display: "table",
+    minHeight: "760px",
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
     backgroundColor: "rgba(0, 0, 0, 0.05)",
-    borderRadius: "10px"
+    borderRadius: "0 0 10px 10px"
   },
   tabBar: {
     backgroundColor: "rgba(0, 0, 0, 0.01)",
@@ -76,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
   tab1: {
-    fontSize: "calc(15px + 0.4vw)",
+    fontSize: "calc(17px + 0.4vw)",
     fontFamily: "Acme",
     // fontStyle: "oblique",
     textTransform: "none !important",
@@ -85,7 +87,7 @@ const useStyles = makeStyles(theme => ({
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
   tab2: {
-    fontSize: "calc(15px + 0.4vw)",
+    fontSize: "calc(17px + 0.4vw)",
     fontFamily: "Acme",
     fontStyle: "oblique",
     textTransform: "none !important",
@@ -93,7 +95,7 @@ const useStyles = makeStyles(theme => ({
     filter: "drop-shadow(-2px 2px 2px black)"
   },
   tab3: {
-    fontSize: "calc(15px + 0.4vw)",
+    fontSize: "calc(17px + 0.4vw)",
     fontFamily: "Acme",
     fontStyle: "oblique",
     textTransform: "none !important",

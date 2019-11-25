@@ -3,7 +3,6 @@ import React from "react";
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
 //import { Parallax, Background } from "react-parallax";
-//import Plx from "react-plx";
 // import ReactFullpage from '@fullpage/react-fullpage/dist/react-fullpage-commonjs'; //commonjs lib for nextjs ssr etc
 //import my components
 import ResponsiveDrawer from "./Components/Navigation/Navigation";
@@ -28,14 +27,14 @@ const App = () => (
     <ResponsiveDrawer />
     <ReactFullpage
       //fullpage options
-      //PARALLAX EFFECT
       parallax={true}
       parallaxOptions={{
-        type: "reveal",
+        type: "cover",
         percentage: 62,
         property: "translate"
       }}
-      // CARDS EFFECT
+      scrollOverflow={true}
+      // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
       // cards={true} //an effect
       // cardsOptions={{
       //   perspective: 50,
@@ -43,7 +42,6 @@ const App = () => (
       //   fadeBackground: true
       // }}
       // fadingEffect={"sections"}
-      //fp-bg fp-content these are class NOT options for fadeContent or fadeBackgrounds card options
       offsetSections={false} //used to show non full screen section parts
       resetSliders={false}
       // controlArrows={true}
@@ -77,8 +75,6 @@ const App = () => (
       // normalScrollElementTouchThreshold={1}
       touchSensitivity={5}
       // some extra afterLoad parameters origin, destination, direction, index
-      scrollOverflow={true}
-      // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
       afterLoad={(origin, destination, direction) => {
         // console.log("afterLoad event", destination.index);
         //alert("Section ended loading");
@@ -87,24 +83,24 @@ const App = () => (
       }}
       render={({ state, fullpageApi }) => {
         return (
-          <ReactFullpage.Wrapper className="wrapper">
-            <div className="section container1  bg1">
+          <ReactFullpage.Wrapper>
+            <div className="section container1 fp-content">
               <Particles
                 id="particle-effects"
                 className="particles-js"
                 params={humidity}
               />
+
               <Home />
             </div>
 
-            <div className="section container2 bg2">
+            <div className="section container2 ">
               <ProjectCategories />
             </div>
-
-            <div className="section container3 bg3">
+            <div className="section container3 ">
               <GameCategories />
             </div>
-            <div className="section container4  bg4">
+            <div className="section container4 ">
               <Particles
                 id="particle-effects"
                 className="particles-js"

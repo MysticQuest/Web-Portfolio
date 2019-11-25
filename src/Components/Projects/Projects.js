@@ -284,7 +284,7 @@ const Projects = () => {
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
         >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={4} lg={4}>
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <Tooltip
                 classes={{ tooltip: classes.toolTipsCard }}
@@ -368,7 +368,7 @@ const Projects = () => {
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "50ms" : "0ms" }}
         >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={4} lg={4}>
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <Tooltip
                 classes={{ tooltip: classes.toolTipsCard }}
@@ -452,7 +452,7 @@ const Projects = () => {
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "100ms" : "0ms" }}
         >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={4} lg={4}>
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <Tooltip
                 classes={{ tooltip: classes.toolTipsCard }}
@@ -536,7 +536,7 @@ const Projects = () => {
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "150ms" : "0ms" }}
         >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={4} lg={4}>
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <Tooltip
                 classes={{ tooltip: classes.toolTipsCard }}
@@ -620,7 +620,7 @@ const Projects = () => {
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "200ms" : "0ms" }}
         >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={4} lg={4}>
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
             <Card className={classes.card}>
               <Tooltip
                 classes={{ tooltip: classes.toolTipsCard }}

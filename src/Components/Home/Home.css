@@ -25,6 +25,7 @@
 .header-container {
   padding-top: 2vh;
   padding-bottom: 7.5vh;
+  z-index: 1;
 }
 
 .home1 {
@@ -72,7 +73,7 @@
 .misc-text {
   position: relative;
   margin-top: -16vh;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 @media only screen and (max-width: 600px) {
