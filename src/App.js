@@ -8,11 +8,8 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import ResponsiveDrawer from "./Components/Navigation/Navigation";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
-import Categories from "./Components/Projects/Categories";
-//import Projects from "./Components/Projects/Projects";
-//import WebProjects from "./Components/WebProjects/WebProjects";
-import Games from "./Components/Games/Games";
-import Misc from "./Components/Games/Misc";
+import ProjectCategories from "./Components/Projects/PCategories";
+import GameCategories from "./Components/Games/GCategories";
 import Icons from "./Components/About/MyLinks";
 //import styles
 import "./App.css";
@@ -98,15 +95,10 @@ const App = () => (
             </div>
 
             <div className="section container2 ">
-              <Categories />
+              <ProjectCategories />
             </div>
             <div className="section container3 ">
-              <div className="slide" data-anchor="slide1">
-                <Games />
-              </div>
-              <div className="slide sec3sli2" data-anchor="slide2">
-                <Misc />
-              </div>
+              <GameCategories />
             </div>
             <div className="section container4 ">
               <Particles

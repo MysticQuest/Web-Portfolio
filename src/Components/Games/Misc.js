@@ -37,13 +37,15 @@ import uniGif from "../../images/uni.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    flexShrink: 1
   },
-  grid: {},
+  grid: { textAlign: "-webkit-center" },
   gridItem: {
     [theme.breakpoints.up("md")]: {
-      padding: "32px !important"
+      padding: "24px !important"
     },
+    flexShrink: 1,
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
@@ -59,7 +61,9 @@ const useStyles = makeStyles(theme => ({
     //   padding: theme.spacing(0)
     // }
   },
+  gridItemMenu: {},
   cardActionArea: {
+    flexShrink: 1,
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
@@ -239,213 +243,190 @@ const Misc = () => {
   // }
 
   return (
-    <div className="full-container-games">
-      <div className={classes.root}>
-        <Grid className={classes.grid} container spacing={3}>
-          <Zoom
-            timeout={{ enter: 300, exit: exitDuration }}
-            in={activateAnim}
-            style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
-          >
-            <Grid
-              className={classes.gridItem}
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              lg={4}
-            >
-              <Card className={classes.card}>
-                <Tooltip
-                  classes={{ tooltip: classes.toolTipsCard }}
-                  TransitionComponent={Zoom}
-                  title="View Album"
-                  placement="top"
-                >
-                  <CardActionArea
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={mcLi}
-                    className={classes.cardActionArea}
-                  >
-                    <CardMedia
-                      className={`${classes.media} ${classes.media1}`}
-                      image={mapPic1}
-                    />
-                    <CardContent className={classes.content}>
-                      <Typography
-                        className={classes.contHead}
-                        gutterBottom
-                        variant="h5"
-                        component="h2"
-                      >
-                        {mcTi}
-                      </Typography>
-                      <Typography
-                        className={classes.contText}
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                      >
-                        {mcDes}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Tooltip>
-                <CardActions className={classes.buttonArea}>
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faWindows}
-                    />
-                  </Button>
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faLinux}
-                    />
-                  </Button>
-                  <Button
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={classes.buttons}
-                  >
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faGithub}
-                    />
-                  </Button>
-
-                  <Tooltip
-                    classes={{ tooltip: classes.toolTips }}
-                    TransitionComponent={Zoom}
-                    title={mcTT}
-                    placement="bottom"
-                  >
-                    <Button className={classes.buttons}>
-                      <FontAwesomeIcon
-                        className={classes.iconsTBA}
-                        icon={faInfoCircle}
-                      />
-                    </Button>
-                  </Tooltip>
-                </CardActions>
-              </Card>
-            </Grid>
-          </Zoom>
-          <Zoom
-            timeout={{ enter: 300, exit: exitDuration }}
-            in={activateAnim}
-            style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
-          >
-            <Grid
-              className={classes.gridItem}
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              lg={4}
-            >
-              <Card className={classes.card}>
-                <Tooltip
-                  classes={{ tooltip: classes.toolTipsCard }}
-                  TransitionComponent={Zoom}
-                  title=""
-                  placement="top"
-                >
-                  <CardActionArea
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={assetLi}
-                    className={classes.cardActionArea}
-                  >
-                    <CardMedia
-                      //   className={`${classes.media} ${classes.media1}`}
-                      className={classes.media}
-                      image={uniGif}
-                    />
-                    <CardContent className={classes.content}>
-                      <Typography
-                        className={classes.contHead}
-                        gutterBottom
-                        variant="h5"
-                        component="h2"
-                      >
-                        {assetTi}
-                      </Typography>
-                      <Typography
-                        className={classes.contText}
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                      >
-                        {assetDes}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Tooltip>
-                <CardActions className={classes.buttonArea}>
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faWindows}
-                    />
-                  </Button>
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faLinux}
-                    />
-                  </Button>
-                  <Button
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={classes.buttons}
-                  >
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faGithub}
-                    />
-                  </Button>
-
-                  <Tooltip
-                    classes={{ tooltip: classes.toolTips }}
-                    TransitionComponent={Zoom}
-                    title={assetTT}
-                    placement="bottom"
-                  >
-                    <Button className={classes.buttons}>
-                      <FontAwesomeIcon
-                        className={classes.iconsTBA}
-                        icon={faInfoCircle}
-                      />
-                    </Button>
-                  </Tooltip>
-                </CardActions>
-              </Card>
-            </Grid>
-          </Zoom>
-          <Grid
-            className={classes.gridItem}
-            item
-            xs={12}
-            sm={12}
-            md={12}
-            lg={12}
-          >
-            <div className={classes.extra}>
-              <Button
-                className={classes.extraButton}
-                onClick={() => {
-                  window.fullpage_api.moveSlideRight();
-                }}
+    <div className={classes.root}>
+      <Grid className={classes.grid} container spacing={3}>
+        <Zoom
+          timeout={{ enter: 300, exit: exitDuration }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
+            <Card className={classes.card}>
+              <Tooltip
+                classes={{ tooltip: classes.toolTipsCard }}
+                TransitionComponent={Zoom}
+                title="View Album"
+                placement="top"
               >
-                <p className="extra-text">Back</p>
-              </Button>
-            </div>
+                <CardActionArea
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={mcLi}
+                  className={classes.cardActionArea}
+                >
+                  <CardMedia
+                    className={`${classes.media} ${classes.media1}`}
+                    image={mapPic1}
+                  />
+                  <CardContent className={classes.content}>
+                    <Typography
+                      className={classes.contHead}
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
+                      {mcTi}
+                    </Typography>
+                    <Typography
+                      className={classes.contText}
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {mcDes}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Tooltip>
+              <CardActions className={classes.buttonArea}>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faWindows}
+                  />
+                </Button>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faLinux}
+                  />
+                </Button>
+                <Button
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.buttons}
+                >
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faGithub}
+                  />
+                </Button>
+
+                <Tooltip
+                  classes={{ tooltip: classes.toolTips }}
+                  TransitionComponent={Zoom}
+                  title={mcTT}
+                  placement="bottom"
+                >
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      className={classes.iconsTBA}
+                      icon={faInfoCircle}
+                    />
+                  </Button>
+                </Tooltip>
+              </CardActions>
+            </Card>
           </Grid>
-        </Grid>
-      </div>
+        </Zoom>
+        <Zoom
+          timeout={{ enter: 300, exit: exitDuration }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
+            <Card className={classes.card}>
+              <Tooltip
+                classes={{ tooltip: classes.toolTipsCard }}
+                TransitionComponent={Zoom}
+                title=""
+                placement="top"
+              >
+                <CardActionArea
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={assetLi}
+                  className={classes.cardActionArea}
+                >
+                  <CardMedia
+                    //   className={`${classes.media} ${classes.media1}`}
+                    className={classes.media}
+                    image={uniGif}
+                  />
+                  <CardContent className={classes.content}>
+                    <Typography
+                      className={classes.contHead}
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
+                      {assetTi}
+                    </Typography>
+                    <Typography
+                      className={classes.contText}
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {assetDes}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Tooltip>
+              <CardActions className={classes.buttonArea}>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faWindows}
+                  />
+                </Button>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faLinux}
+                  />
+                </Button>
+                <Button
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.buttons}
+                >
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faGithub}
+                  />
+                </Button>
+
+                <Tooltip
+                  classes={{ tooltip: classes.toolTips }}
+                  TransitionComponent={Zoom}
+                  title={assetTT}
+                  placement="bottom"
+                >
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      className={classes.iconsTBA}
+                      icon={faInfoCircle}
+                    />
+                  </Button>
+                </Tooltip>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Zoom>
+        {/* <Grid className={classes.gridItem} item xs={12} sm={12} md={12} lg={12}>
+          <div className={classes.extra}>
+            <Button
+              className={classes.extraButton}
+              onClick={() => {
+                window.fullpage_api.moveSlideRight();
+              }}
+            >
+              <p className="extra-text">Back</p>
+            </Button>
+          </div>
+        </Grid> */}
+      </Grid>
     </div>
   );
 };

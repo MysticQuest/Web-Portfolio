@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     flexShrink: 1
   },
-  grid: { textAlign: "-webkit-center" },
+  grid: {},
   gridItem: {
     [theme.breakpoints.up("md")]: {
       padding: "24px !important"
@@ -117,9 +117,8 @@ const useStyles = makeStyles(theme => ({
     // marginRight: "1vw",
     position: "relative",
     top: 0,
-    transition: "box-shadow 0.3s ease-in-out",
-    maxWidth: "300px",
-    maxHeight: "400px"
+    transition: "box-shadow 0.3s ease-in-out"
+    // margin: "30px"
   },
   media: {
     height: "auto",

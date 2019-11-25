@@ -9,20 +9,22 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Fade from "@material-ui/core/Fade";
 //import my components
-import Projects from "./Projects";
+import Games from "./Games";
+import Misc from "./Misc";
 //import active section
 import { activeIndex } from "../../App";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faJsSquare,
-  faPython,
-  faGitAlt,
-  faCss3,
-  faReact,
-  faNodeJs
-} from "@fortawesome/free-brands-svg-icons";
+import //   faHtml5,
+// faJsSquare,
+// faPython,
+// faGitAlt,
+// faCss3,
+//   faReact,
+//   faNodeJs
+"@fortawesome/free-brands-svg-icons";
+import { faPalette } from "@fortawesome/free-solid-svg-icons";
+import uniIcon from "../../images/uniIcon.png";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,6 +58,10 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(theme => ({
   root: {
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "1vh",
+      paddingRight: "1vh"
+    },
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     borderRadius: "10px"
@@ -96,12 +102,13 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     filter: "drop-shadow(-2px 2px 2px black)"
   }
+  //   uniIcon: { marginTop: "5px", height: "40px", width: "40px" }
 }));
 
 const exitDuration = 1;
 var activateAnim = false;
 
-export default function Categories() {
+export default function GameCategories() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -114,7 +121,7 @@ export default function Categories() {
     setValue(index);
   };
 
-  if (activeIndex === 1) {
+  if (activeIndex === 2) {
     activateAnim = true;
   }
 
@@ -143,8 +150,17 @@ export default function Categories() {
                 className={classes.tab1}
                 label={
                   <span>
-                    <FontAwesomeIcon icon={faReact} />
-                    <span>&nbsp;</span>React
+                    <img
+                      className={uniIcon}
+                      style={{
+                        height: "30px",
+                        width: "30px",
+                        verticalAlign: "bottom"
+                      }}
+                      src={uniIcon}
+                      alt="unity3d"
+                    />
+                    <span>&nbsp;</span>Unity
                   </span>
                 }
                 {...a11yProps(0)}
@@ -153,13 +169,13 @@ export default function Categories() {
                 className={classes.tab2}
                 label={
                   <span>
-                    <FontAwesomeIcon icon={faNodeJs} />
-                    <span>&nbsp;</span>Back End
+                    <FontAwesomeIcon icon={faPalette} />
+                    <span>&nbsp;</span>Extras
                   </span>
                 }
                 {...a11yProps(1)}
               />
-              <Tab
+              {/* <Tab
                 className={classes.tab3}
                 label={
                   <span>
@@ -168,7 +184,7 @@ export default function Categories() {
                   </span>
                 }
                 {...a11yProps(2)}
-              />
+              /> */}
             </Tabs>
           </AppBar>
           <SwipeableViews
@@ -177,14 +193,14 @@ export default function Categories() {
             onChangeIndex={handleChangeIndex}
           >
             <TabPanel value={value} index={0} dir={theme.direction}>
-              <Projects />
+              <Games />
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-              <Projects />
+              <Misc />
             </TabPanel>
-            <TabPanel value={value} index={2} dir={theme.direction}>
-              <Projects />
-            </TabPanel>
+            {/* <TabPanel value={value} index={2} dir={theme.direction}>
+              <Games />
+            </TabPanel> */}
           </SwipeableViews>
         </div>
       </Fade>
