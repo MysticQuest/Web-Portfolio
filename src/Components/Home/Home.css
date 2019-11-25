@@ -88,12 +88,35 @@
   align-self: center;
   width: fit-content;
   height: fit-content;
+
   background-color: rgba(8, 8, 119, 0.42);
+  /* background: linear-gradient(
+    -45deg,
+    rgba(0, 21, 66, 0.4) 0%,
+    rgba(4, 34, 124, 0.4) 26%,
+    rgba(8, 8, 119, 0.4) 57%,
+    rgba(0, 3, 49, 0.4) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite; */
+
   position: relative;
   padding: 4vh;
   padding-top: 10vh;
   border-radius: 80%;
   max-width: 700px;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -28,9 +28,11 @@ import uniIcon from "../../images/uniIcon.png";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+  const classes = useStyles();
 
   return (
     <Typography
+      className={classes.tabPanel}
       component="div"
       role="tabpanel"
       hidden={value !== index}
@@ -67,6 +69,9 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     borderRadius: "0 0 10px 10px"
+
+    // boxShadow: "inset 0 0 0 200px rgba(255,255,255,0.05)",
+    // filter: "blur(10px)"
   },
   tabBar: {
     backgroundColor: "rgba(0, 0, 0, 0.01)",
@@ -74,7 +79,11 @@ const useStyles = makeStyles(theme => ({
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.2), rgba(229, 229, 190, 0.2))",
     color: "white"
   },
-  tab: { textTransform: "none !important" },
+  tabPanel: {
+    // boxShadow: "inset 0 0 0 200px rgba(255,255,255,0.05)"
+    // filter: "blur(10px)",
+  },
+  tabs: { textTransform: "none !important" },
   indicator: {
     backgroundColor: " rgba(5,45,129,0.6)"
     // filter: "drop-shadow(-6px 4px 2px black)"
@@ -137,7 +146,7 @@ export default function GameCategories() {
         <div className={classes.root}>
           <AppBar className={classes.tabBar} position="static" color="default">
             <Tabs
-              className={classes.tab}
+              className={classes.tabs}
               value={value}
               onChange={handleChange}
               indicatorColor="primary"

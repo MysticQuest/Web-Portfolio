@@ -81,7 +81,10 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       "& $media1": {
         backgroundImage: `url(${rpgGif}) !important`,
-        transition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out",
+        webkitTransition: "background-image 0.3s ease-in-out",
+        mozTransition: "background-image 0.3s ease-in-out",
+        oTransition: "background-image 0.3s ease-in-out"
       },
       "& $media2": {
         backgroundImage: `url(${blockGif}) !important`,
@@ -108,17 +111,17 @@ const useStyles = makeStyles(theme => ({
       // filter: "grayscale(0%)"
     },
     // filter: "grayscale(50%)",
-    display: "flex",
-    flexFlow: "column",
-    flexShrink: 1,
-    flexGrow: 1,
+    // display: "flex",
+    // flexFlow: "column",
+    // flexShrink: 1,
+    // flexGrow: 1,
     borderRadius: "20px",
-    // marginLeft: "1vw",
-    // marginRight: "1vw",
-    position: "relative",
-    top: 0,
+    marginLeft: "1vw",
+    marginRight: "1vw",
+    // position: "relative",
+    // top: 0,
     transition: "box-shadow 0.3s ease-in-out",
-    maxWidth: "300px",
+    // maxWidth: "300px",
     maxHeight: "400px"
   },
   media: {
@@ -146,16 +149,17 @@ const useStyles = makeStyles(theme => ({
   content: {
     background:
       "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
+    backgroundColor: "#393f47", //test color for firefox bug
     // background:
     //   "linear-gradient(to right, #406483, #42728f, #46809a, #4b8ea3, #539cac)", // lighter bluish grad
     // background:
     //   "linear-gradient(to right, #1f3f5b, #1e4e6c, #195e7d, #106f8d, #00809b)", //darker bluish grad
     // background: "linear-gradient(to right, #ee9ca7, #ffdde1)", //old light gradient
-    padding: "10px",
-    flexGrow: 1,
-    flexShrink: 1,
-    display: "flex",
-    flexDirection: "column"
+    padding: "10px"
+    // flexGrow: 1,
+    // flexShrink: 1,
+    // display: "flex",
+    // flexDirection: "column"
     // justifyContent: "space-between"
     // alignItems: "stretch",
     // height: "100%"
@@ -169,7 +173,7 @@ const useStyles = makeStyles(theme => ({
   },
   buttonArea: {
     background: "linear-gradient(to right, #000000, #434343)",
-
+    backgroundColor: "#393f47", //test color for firefox bug
     // display: "flex", //card has flex by default
     flexGrow: 1,
     flexShrink: 1,

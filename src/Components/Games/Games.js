@@ -113,12 +113,12 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 1,
     flexGrow: 1,
     borderRadius: "20px",
-    // marginLeft: "1vw",
-    // marginRight: "1vw",
+    marginLeft: "1vw",
+    marginRight: "1vw",
     position: "relative",
     top: 0,
     transition: "box-shadow 0.3s ease-in-out",
-    maxWidth: "300px",
+    // maxWidth: "300px",
     maxHeight: "400px"
   },
   media: {

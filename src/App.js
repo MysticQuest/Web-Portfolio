@@ -13,6 +13,7 @@ import ProjectCategories from "./Components/Projects/PCategories";
 import GameCategories from "./Components/Games/GCategories";
 import Icons from "./Components/About/MyLinks";
 //import styles
+import "./scrollEffect.css";
 import "./App.css";
 import Particles from "react-particles-js";
 import { humidity } from "./themes/humidity";
