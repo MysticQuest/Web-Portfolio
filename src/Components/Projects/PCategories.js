@@ -13,6 +13,7 @@ import Slide from "@material-ui/core/Slide";
 import WebReact from "./WebReact";
 import WebBack from "./WebBack";
 import WebMisc from "./WebMisc";
+import Extras from "./Extras";
 //import active section
 import { preActiveIndex } from "../../App";
 //icons
@@ -195,7 +196,7 @@ export default function ProjectCategories() {
                 label={
                   <span>
                     <FontAwesomeIcon icon={faPython} />
-                    <span>&nbsp;</span>Python
+                    <span>&nbsp;</span>Extras
                   </span>
                 }
                 {...a11yProps(2)}
@@ -217,7 +218,7 @@ export default function ProjectCategories() {
               <WebMisc />
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-              <WebMisc />
+              <Extras />
             </TabPanel>
           </SwipeableViews>
         </div>

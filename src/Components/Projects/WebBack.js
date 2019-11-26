@@ -21,20 +21,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import active section
-import { activeIndex } from "../../App";
+//import { activeIndex } from "../../App";
 
 //import images and media
 import blogPic from "../../images/projImages/blog.png";
 import cryptoPic from "../../images/projImages/crypto.png";
-import drumPic from "../../images/projImages/drum.png";
 import listPic from "../../images/projImages/list.png";
-import memPic from "../../images/projImages/mem.png";
-import mockPic from "../../images/projImages/mock.png";
 import newsPic from "../../images/projImages/news.png";
-import portPic from "../../images/projImages/port.png";
-import recPic from "../../images/projImages/rec.png";
-import tetrisPic from "../../images/projImages/tetris.png";
-import tetrisGif from "../../images/projImages/tetris.gif";
 import whispPic from "../../images/projImages/whisp.png";
 import wikiPic from "../../images/projImages/wiki.png";
 
@@ -81,10 +74,10 @@ const useStyles = makeStyles(theme => ({
       //   mozTransition: "background-image 0.3s ease-in-out",
       //   oTransition: "background-image 0.3s ease-in-out"
       // },
-      "& $media2": {
-        backgroundImage: `url(${tetrisGif}) !important`,
-        transition: "background-image 0.3s ease-in-out"
-      },
+      // "& $media2": {
+      //   backgroundImage: `url(${tetrisGif}) !important`,
+      //   transition: "background-image 0.3s ease-in-out"
+      // },
       // "& $media3": {
       //   backgroundImage: `url(${tdGif}) !important`,
       //   transition: "background-image 0.3s ease-in-out"
@@ -123,7 +116,7 @@ const useStyles = makeStyles(theme => ({
   media: {
     height: "auto",
     width: "100%",
-    paddingTop: "56.25%",
+    paddingTop: "50.25%",
     objectFit: "cover",
     transition: "background-image 0.3s ease-in-out"
 
@@ -216,44 +209,62 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-var activateAnim = false;
-const exitDuration = 1;
+// var activateAnim = false;
+// const exitDuration = 1;
 
 // const styles = {
 //   media1: { backgroundImage: `url(${pic1}) !important` }
 // };
 
 // Titles
-const portTi = "This Portfolio";
-const recTi = "Face Recognition App";
-const tetrisTi = "React Tetris";
+const blogTi = "Blog";
+const newsTi = "Newsletter Sub";
+const listTi = "To-Do List";
+const whispTi = "Whisper App clone";
+const wikiTi = "Wiki API";
+const cryptoTi = "Cryptocurrency Converter";
 
 // Descriptions
-const portDes = "A casual-themed portfolio made with React and Material UI.";
-const recDes =
-  "An app that detectes faces in pictures and sets - in the current iteration - a bordered box around them.";
-const tetrisDes = "A tetris game solely made with ReactJs.";
+const blogDes = "A Blog, using NodeJS, Express and MongoDB.";
+const newsDes =
+  "A newsletter subscription service that stores subscribers through Mailchimp's API - using NodeJs and Express.";
+const listDes = "A simple to-do list using NodeJS, Express and MongoDB.";
+const whispDes =
+  "An exercise on authentication with a 'whisper app' clone (using OAuth and local auth methods) with NodeJs, Express and MongoDB.";
+const cryptoDes =
+  "A cryptocurrency converter with some conventional currency options, via the 'Bitcoin Average' API - with NodeJs and Express. ";
+const wikiDes =
+  "An exercise on RESTful APIs (without html), using NodeJs, Express and MongoDB.";
 
 // Tooltip info
-const portTT = "";
-const recTT = "";
-const tetrisTT = "";
+const blogTT = "";
+const newsTT = "";
+const listTT = "";
+const whispTT = "";
+const cryptoTT = "";
+const wikiTT = "";
 
 // Play links
-const portLi = "";
-const recLi = "";
-const tetrisLi = "";
+const blogLi = "";
+const newsLi = "";
+const listLi = "";
+const whispLi = "";
+const cryptoLi = "";
+const wikiLi = "";
 
 // Source links
-const portSo = "https://github.com/MysticQuest/Web-Portfolio";
-const recSo = "https://github.com/MysticQuest/Unity-Project_Thesis";
-const tetrisSo = "https://github.com/MysticQuest/Unity-Block_Breaker";
+const blogSo = "https://github.com/MysticQuest/Web-Blog";
+const newsSo = "https://github.com/MysticQuest/Web-Newsletter_Signup";
+const listSo = "https://github.com/MysticQuest/Web-To_Do_List";
+const whispSo = "https://github.com/MysticQuest/Web-Whisper_app_clone";
+const cryptoSo = "https://github.com/MysticQuest/Web-Crypto_Converter";
+const wikiSo = "https://github.com/MysticQuest/Web-Wiki_API";
 
 const WebReact = () => {
   const classes = useStyles();
-  if (activeIndex === 1) {
-    activateAnim = true;
-  }
+  // if (activeIndex === 1) {
+  //   activateAnim = true;
+  // }
   // else {
   //   activateAnim = false;
   // }
@@ -261,216 +272,395 @@ const WebReact = () => {
   return (
     <div className={classes.root}>
       <Grid className={classes.grid} container spacing={3}>
-        <Zoom
-          timeout={{ enter: 300, exit: exitDuration }}
-          in={activateAnim}
-          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
-        >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
+        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+          <Card className={classes.card}>
+            <Tooltip
+              classes={{ tooltip: classes.toolTipsCard }}
+              TransitionComponent={Zoom}
+              title="Play"
+              placement="top"
+            >
+              <CardActionArea
+                target="_blank"
+                rel="noopener noreferrer"
+                href={blogLi}
+                className={classes.cardActionArea}
               >
-                <CardActionArea
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={portLi}
-                  className={classes.cardActionArea}
-                >
-                  <CardMedia
-                    className={`${classes.media} ${classes.media1}`}
-                    image={portPic}
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {portTi}
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      {portDes}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button
-                  href={portSo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.buttons}
-                >
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
-
-                <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
-                  TransitionComponent={Zoom}
-                  title={portTT}
-                  placement="bottom"
-                >
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faInfoCircle}
-                    />
-                  </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Zoom>
-        <Zoom
-          timeout={{ enter: 300, exit: exitDuration }}
-          in={activateAnim}
-          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
-        >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
+                <CardMedia
+                  className={`${classes.media} ${classes.media1}`}
+                  image={blogPic}
+                />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={classes.contHead}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {blogTi}
+                  </Typography>
+                  <Typography
+                    className={classes.contText}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {blogDes}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Tooltip>
+            <CardActions className={classes.buttonArea}>
+              <Button
+                href={blogSo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.buttons}
               >
-                <CardActionArea
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={recLi}
-                  className={classes.cardActionArea}
-                >
-                  <CardMedia
-                    className={`${classes.media} ${classes.media1}`}
-                    image={recPic}
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {recTi}
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      {recDes}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button
-                  href={recSo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.buttons}
-                >
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
+                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+              </Button>
 
-                <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
-                  TransitionComponent={Zoom}
-                  title={recTT}
-                  placement="bottom"
-                >
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faInfoCircle}
-                    />
-                  </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Zoom>
-        <Zoom
-          timeout={{ enter: 300, exit: exitDuration }}
-          in={activateAnim}
-          style={{ transitionDelay: activateAnim ? "50ms" : "0ms" }}
-        >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
-            <Card className={classes.card}>
               <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
+                classes={{ tooltip: classes.toolTips }}
                 TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
+                title={blogTT}
+                placement="bottom"
               >
-                <CardActionArea
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={tetrisLi}
-                  className={classes.cardActionArea}
-                >
-                  <CardMedia
-                    className={`${classes.media} ${classes.media2}`}
-                    image={tetrisPic}
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faInfoCircle}
                   />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {tetrisTi}
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      {tetrisDes}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button
-                  href={tetrisSo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.buttons}
-                >
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
                 </Button>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
 
-                <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
-                  TransitionComponent={Zoom}
-                  title={tetrisTT}
-                  placement="bottom"
-                >
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.iconsTBA}
-                      icon={faInfoCircle}
-                    />
-                  </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Zoom>
+        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+          <Card className={classes.card}>
+            <Tooltip
+              classes={{ tooltip: classes.toolTipsCard }}
+              TransitionComponent={Zoom}
+              title="Play"
+              placement="top"
+            >
+              <CardActionArea
+                target="_blank"
+                rel="noopener noreferrer"
+                href={newsLi}
+                className={classes.cardActionArea}
+              >
+                <CardMedia
+                  className={`${classes.media} ${classes.media1}`}
+                  image={newsPic}
+                />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={classes.contHead}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {newsTi}
+                  </Typography>
+                  <Typography
+                    className={classes.contText}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {newsDes}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Tooltip>
+            <CardActions className={classes.buttonArea}>
+              <Button
+                href={newsSo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.buttons}
+              >
+                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+              </Button>
+
+              <Tooltip
+                classes={{ tooltip: classes.toolTips }}
+                TransitionComponent={Zoom}
+                title={newsTT}
+                placement="bottom"
+              >
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faInfoCircle}
+                  />
+                </Button>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+          <Card className={classes.card}>
+            <Tooltip
+              classes={{ tooltip: classes.toolTipsCard }}
+              TransitionComponent={Zoom}
+              title="Play"
+              placement="top"
+            >
+              <CardActionArea
+                target="_blank"
+                rel="noopener noreferrer"
+                href={listLi}
+                className={classes.cardActionArea}
+              >
+                <CardMedia
+                  className={`${classes.media} ${classes.media2}`}
+                  image={listPic}
+                />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={classes.contHead}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {listTi}
+                  </Typography>
+                  <Typography
+                    className={classes.contText}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {listDes}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Tooltip>
+            <CardActions className={classes.buttonArea}>
+              <Button
+                href={listSo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.buttons}
+              >
+                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+              </Button>
+
+              <Tooltip
+                classes={{ tooltip: classes.toolTips }}
+                TransitionComponent={Zoom}
+                title={listTT}
+                placement="bottom"
+              >
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faInfoCircle}
+                  />
+                </Button>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+          <Card className={classes.card}>
+            <Tooltip
+              classes={{ tooltip: classes.toolTipsCard }}
+              TransitionComponent={Zoom}
+              title="Play"
+              placement="top"
+            >
+              <CardActionArea
+                target="_blank"
+                rel="noopener noreferrer"
+                href={whispLi}
+                className={classes.cardActionArea}
+              >
+                <CardMedia
+                  className={`${classes.media} ${classes.media2}`}
+                  image={whispPic}
+                />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={classes.contHead}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {whispTi}
+                  </Typography>
+                  <Typography
+                    className={classes.contText}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {whispDes}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Tooltip>
+            <CardActions className={classes.buttonArea}>
+              <Button
+                href={whispSo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.buttons}
+              >
+                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+              </Button>
+
+              <Tooltip
+                classes={{ tooltip: classes.toolTips }}
+                TransitionComponent={Zoom}
+                title={whispTT}
+                placement="bottom"
+              >
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faInfoCircle}
+                  />
+                </Button>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+          <Card className={classes.card}>
+            <Tooltip
+              classes={{ tooltip: classes.toolTipsCard }}
+              TransitionComponent={Zoom}
+              title="Play"
+              placement="top"
+            >
+              <CardActionArea
+                target="_blank"
+                rel="noopener noreferrer"
+                href={cryptoLi}
+                className={classes.cardActionArea}
+              >
+                <CardMedia
+                  className={`${classes.media} ${classes.media2}`}
+                  image={cryptoPic}
+                />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={classes.contHead}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {cryptoTi}
+                  </Typography>
+                  <Typography
+                    className={classes.contText}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {cryptoDes}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Tooltip>
+            <CardActions className={classes.buttonArea}>
+              <Button
+                href={cryptoSo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.buttons}
+              >
+                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+              </Button>
+
+              <Tooltip
+                classes={{ tooltip: classes.toolTips }}
+                TransitionComponent={Zoom}
+                title={cryptoTT}
+                placement="bottom"
+              >
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faInfoCircle}
+                  />
+                </Button>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+          <Card className={classes.card}>
+            <Tooltip
+              classes={{ tooltip: classes.toolTipsCard }}
+              TransitionComponent={Zoom}
+              title="Play"
+              placement="top"
+            >
+              <CardActionArea
+                target="_blank"
+                rel="noopener noreferrer"
+                href={wikiLi}
+                className={classes.cardActionArea}
+              >
+                <CardMedia
+                  className={`${classes.media} ${classes.media2}`}
+                  image={wikiPic}
+                />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={classes.contHead}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {wikiTi}
+                  </Typography>
+                  <Typography
+                    className={classes.contText}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {wikiDes}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Tooltip>
+            <CardActions className={classes.buttonArea}>
+              <Button
+                href={wikiSo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.buttons}
+              >
+                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+              </Button>
+
+              <Tooltip
+                classes={{ tooltip: classes.toolTips }}
+                TransitionComponent={Zoom}
+                title={wikiTT}
+                placement="bottom"
+              >
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faInfoCircle}
+                  />
+                </Button>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
       </Grid>
     </div>
   );

@@ -24,19 +24,10 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { activeIndex } from "../../App";
 
 //import images and media
-import blogPic from "../../images/projImages/blog.png";
-import cryptoPic from "../../images/projImages/crypto.png";
-import drumPic from "../../images/projImages/drum.png";
-import listPic from "../../images/projImages/list.png";
-import memPic from "../../images/projImages/mem.png";
-import mockPic from "../../images/projImages/mock.png";
-import newsPic from "../../images/projImages/news.png";
 import portPic from "../../images/projImages/port.png";
 import recPic from "../../images/projImages/rec.png";
 import tetrisPic from "../../images/projImages/tetris.png";
 import tetrisGif from "../../images/projImages/tetris.gif";
-import whispPic from "../../images/projImages/whisp.png";
-import wikiPic from "../../images/projImages/wiki.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -231,7 +222,7 @@ const tetrisTi = "React Tetris";
 // Descriptions
 const portDes = "A casual-themed portfolio made with React and Material UI.";
 const recDes =
-  "An app that detectes faces in pictures and sets - in the current iteration - a bordered box around them.";
+  "An app that uses Clarifai's API to detect faces in pictures and sets - in the current iteration - a bordered box around them.";
 const tetrisDes = "A tetris game solely made with ReactJs.";
 
 // Tooltip info

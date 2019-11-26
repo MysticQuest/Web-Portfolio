@@ -24,10 +24,7 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import { activeIndex } from "../../App";
 
 //import images and media
-import drumPic from "../../images/projImages/drum.png";
-import dicePic from "../../images/projImages/dice.png";
-import memPic from "../../images/projImages/mem.png";
-import mockPic from "../../images/projImages/mock.png";
+import pricePic from "../../images/projImages/price.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -215,40 +212,26 @@ const useStyles = makeStyles(theme => ({
 // };
 
 // Titles
-const memTi = "Memory Game";
-const drumTi = "Drum Kit Soundboard";
-const diceTi = "Dice";
-const mockTi = "A Startup Mockup Page";
+const priceTi = "ML Price Predictor";
 
 // Descriptions
-const memDes = "A classic memory/'Simon says' game made with JQuery.";
-const drumDes = "A soundboard page made with Javascript.";
-const diceDes = "A dice-throwing page with Javascript.";
-const mockDes = "A startup company product page made with Bootstrap.";
+const priceDes =
+  "An exercise on neural networks, with an app that gets data from a spreadsheet, trains and predicts house prices.";
 
 // Tooltip info
-const memTT = "";
-const drumTT = "";
-const diceTT = "";
-const mockTT = "";
+const priceTT = "";
 
 // Play links
-const memLi = "";
-const drumLi = "";
-const diceLi = "";
-const mockLi = "";
+const priceLi = "";
 
 // Source links
-const memSo = "https://github.com/MysticQuest/Web-Memory_Game";
-const drumSo = "https://github.com/MysticQuest/Web-Drum_Kit";
-const diceSo = "https://github.com/MysticQuest/Web-Dice_Game";
-const mockSo = "https://github.com/MysticQuest/Web-Startup_mockup_page";
+const priceSo = "https://github.com/MysticQuest/MLearningVM_V1";
 
-const WebMisc = () => {
+const Extras = () => {
   const classes = useStyles();
-  // if (activeIndex === 1) {
-  //   activateAnim = true;
-  // }
+  //   if (activeIndex === 1) {
+  //     activateAnim = true;
+  //   }
   // else {
   //   activateAnim = false;
   // }
@@ -267,12 +250,12 @@ const WebMisc = () => {
               <CardActionArea
                 target="_blank"
                 rel="noopener noreferrer"
-                href={memLi}
+                href={priceLi}
                 className={classes.cardActionArea}
               >
                 <CardMedia
                   className={`${classes.media} ${classes.media1}`}
-                  image={memPic}
+                  image={pricePic}
                 />
                 <CardContent className={classes.content}>
                   <Typography
@@ -281,7 +264,7 @@ const WebMisc = () => {
                     variant="h5"
                     component="h2"
                   >
-                    {memTi}
+                    {priceTi}
                   </Typography>
                   <Typography
                     className={classes.contText}
@@ -289,14 +272,14 @@ const WebMisc = () => {
                     color="textSecondary"
                     component="p"
                   >
-                    {memDes}
+                    {priceDes}
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Tooltip>
             <CardActions className={classes.buttonArea}>
               <Button
-                href={memSo}
+                href={priceSo}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={classes.buttons}
@@ -307,202 +290,7 @@ const WebMisc = () => {
               <Tooltip
                 classes={{ tooltip: classes.toolTips }}
                 TransitionComponent={Zoom}
-                title={memTT}
-                placement="bottom"
-              >
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    className={classes.iconsTBA}
-                    icon={faInfoCircle}
-                  />
-                </Button>
-              </Tooltip>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
-          <Card className={classes.card}>
-            <Tooltip
-              classes={{ tooltip: classes.toolTipsCard }}
-              TransitionComponent={Zoom}
-              title="Play"
-              placement="top"
-            >
-              <CardActionArea
-                target="_blank"
-                rel="noopener noreferrer"
-                href={drumLi}
-                className={classes.cardActionArea}
-              >
-                <CardMedia
-                  className={`${classes.media} ${classes.media1}`}
-                  image={drumPic}
-                />
-                <CardContent className={classes.content}>
-                  <Typography
-                    className={classes.contHead}
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  >
-                    {drumTi}
-                  </Typography>
-                  <Typography
-                    className={classes.contText}
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {drumDes}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Tooltip>
-            <CardActions className={classes.buttonArea}>
-              <Button
-                href={drumSo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.buttons}
-              >
-                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-              </Button>
-
-              <Tooltip
-                classes={{ tooltip: classes.toolTips }}
-                TransitionComponent={Zoom}
-                title={drumTT}
-                placement="bottom"
-              >
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    className={classes.iconsTBA}
-                    icon={faInfoCircle}
-                  />
-                </Button>
-              </Tooltip>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
-          <Card className={classes.card}>
-            <Tooltip
-              classes={{ tooltip: classes.toolTipsCard }}
-              TransitionComponent={Zoom}
-              title="Play"
-              placement="top"
-            >
-              <CardActionArea
-                target="_blank"
-                rel="noopener noreferrer"
-                href={diceLi}
-                className={classes.cardActionArea}
-              >
-                <CardMedia
-                  className={`${classes.media} ${classes.media1}`}
-                  image={dicePic}
-                />
-                <CardContent className={classes.content}>
-                  <Typography
-                    className={classes.contHead}
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  >
-                    {diceTi}
-                  </Typography>
-                  <Typography
-                    className={classes.contText}
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {diceDes}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Tooltip>
-            <CardActions className={classes.buttonArea}>
-              <Button
-                href={diceSo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.buttons}
-              >
-                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-              </Button>
-
-              <Tooltip
-                classes={{ tooltip: classes.toolTips }}
-                TransitionComponent={Zoom}
-                title={diceTT}
-                placement="bottom"
-              >
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    className={classes.iconsTBA}
-                    icon={faInfoCircle}
-                  />
-                </Button>
-              </Tooltip>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
-          <Card className={classes.card}>
-            <Tooltip
-              classes={{ tooltip: classes.toolTipsCard }}
-              TransitionComponent={Zoom}
-              title="Play"
-              placement="top"
-            >
-              <CardActionArea
-                target="_blank"
-                rel="noopener noreferrer"
-                href={mockLi}
-                className={classes.cardActionArea}
-              >
-                <CardMedia
-                  className={`${classes.media} ${classes.media2}`}
-                  image={mockPic}
-                />
-                <CardContent className={classes.content}>
-                  <Typography
-                    className={classes.contHead}
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  >
-                    {mockTi}
-                  </Typography>
-                  <Typography
-                    className={classes.contText}
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {mockDes}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Tooltip>
-            <CardActions className={classes.buttonArea}>
-              <Button
-                href={mockSo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.buttons}
-              >
-                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-              </Button>
-
-              <Tooltip
-                classes={{ tooltip: classes.toolTips }}
-                TransitionComponent={Zoom}
-                title={mockTT}
+                title={priceTT}
                 placement="bottom"
               >
                 <Button className={classes.buttons}>
@@ -520,4 +308,4 @@ const WebMisc = () => {
   );
 };
 
-export default WebMisc;
+export default Extras;
