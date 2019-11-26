@@ -114,12 +114,13 @@ const App = () => (
             <div className="section container3 bg3">
               <GameCategories />
             </div>
-            <div className="section container4  bg4">
+            <div className="section container4 bg4">
               <Particles
                 id="particle-effects"
                 className="particles-js"
                 params={fireflies2}
               />
+
               <About />
             </div>
           </ReactFullpage.Wrapper>

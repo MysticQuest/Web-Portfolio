@@ -1,6 +1,8 @@
 export const mouseEffect = () => {
   const bg = document.querySelector(".bg1");
 
+  console.log(bg);
+
   var lFollowX = 0,
     lFollowY = 0,
     x = 0,

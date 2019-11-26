@@ -10,7 +10,9 @@ import Box from "@material-ui/core/Box";
 // import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 //import my components
-import Projects from "./Projects";
+import WebReact from "./WebReact";
+import WebBack from "./WebBack";
+import WebMisc from "./WebMisc";
 //import active section
 import { preActiveIndex } from "../../App";
 //icons
@@ -18,7 +20,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
   // faJsSquare,
-  // faPython,
+  faPython,
   // faGitAlt,
   // faCss3,
   faReact,
@@ -104,6 +106,14 @@ const useStyles = makeStyles(theme => ({
     textTransform: "none !important",
     fontWeight: "bold",
     filter: "drop-shadow(-2px 2px 2px black)"
+  },
+  tab4: {
+    fontSize: "calc(17px + 0.4vw)",
+    fontFamily: "Acme",
+    fontStyle: "oblique",
+    textTransform: "none !important",
+    fontWeight: "bold",
+    filter: "drop-shadow(-2px 2px 2px black)"
   }
 }));
 
@@ -180,6 +190,16 @@ export default function ProjectCategories() {
                 }
                 {...a11yProps(2)}
               />
+              <Tab
+                className={classes.tab4}
+                label={
+                  <span>
+                    <FontAwesomeIcon icon={faPython} />
+                    <span>&nbsp;</span>Python
+                  </span>
+                }
+                {...a11yProps(2)}
+              />
             </Tabs>
           </AppBar>
           <SwipeableViews
@@ -188,13 +208,16 @@ export default function ProjectCategories() {
             onChangeIndex={handleChangeIndex}
           >
             <TabPanel value={value} index={0} dir={theme.direction}>
-              <Projects />
+              <WebReact />
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-              <Projects />
+              <WebBack />
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-              <Projects />
+              <WebMisc />
+            </TabPanel>
+            <TabPanel value={value} index={3} dir={theme.direction}>
+              <WebMisc />
             </TabPanel>
           </SwipeableViews>
         </div>

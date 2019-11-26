@@ -209,7 +209,8 @@ const useStyles = makeStyles(theme => ({
   },
   toolTipsCard: {
     fontSize: theme.typography.pxToRem(20),
-    backgroundColor: "#c96b34"
+    backgroundColor: "#c96b34",
+    margin: "0"
   }
 }));
 
@@ -234,11 +235,11 @@ const shootDes = "A generic shoot-em-up game.";
 const platDes = "Like Super Mario, but not really.";
 // Tooltip info
 const rpgTT =
-  "Made with Unity and free assets. Music by Theodore Konstantinides.";
-const blockTT = "Made with Unity and free assets.";
-const tdTT = "Made with Unity and free assets.";
-const shootTT = "Made with Unity and free assets.";
-const platTT = "Made with Unity and free assets.";
+  "Made with Unity, VS and free assets. Music by Theodore Konstantinides.";
+const blockTT = "Made with Unity, VS, and free assets.";
+const tdTT = "Made with Unity, VS, and free assets.";
+const shootTT = "Made with Unity, VS, and free assets.";
+const platTT = "Made with Unity, VS, and free assets.";
 // Play links
 const rpgLi = "./webgl/rpgThesis/index.html";
 const blockLi = "./webgl/block-breaker/index.html";
