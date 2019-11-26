@@ -49,7 +49,7 @@ const Home = () => {
         <Slide
           direction="left"
           timeout={{ enter: 400, exit: 0 }}
-          in={activateAnim}
+          in={permaAnim}
           style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
         >
           <div>
@@ -160,7 +160,7 @@ const Home = () => {
         <Slide
           direction="right"
           timeout={{ enter: 400, exit: 900 }}
-          in={activateAnim}
+          in={permaAnim}
           style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
         >
           <div>

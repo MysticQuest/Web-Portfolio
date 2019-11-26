@@ -195,7 +195,7 @@ const useStyles = makeStyles(theme => ({
   toolTips: {
     // backgroundColor: "#f5f5f9",
     backgroundColor: "rgba(0, 0, 0, 1)",
-    maxWidth: 350,
+    maxWidth: 250,
     // // maxHeight: 100,
     fontSize: theme.typography.pxToRem(14),
     // border: "1px solid #dadde9",
@@ -204,7 +204,7 @@ const useStyles = makeStyles(theme => ({
     // marginLeft: "23vw",
     // marginTop: "90vh",
     [theme.breakpoints.down("sm")]: {
-      marginBottom: "35vh"
+      marginBottom: "30vh"
     }
   },
   toolTipsCard: {
@@ -233,7 +233,8 @@ const tdDes = "A tower/lane defense game. Only for TD veterans. ";
 const shootDes = "A generic shoot-em-up game.";
 const platDes = "Like Super Mario, but not really.";
 // Tooltip info
-const rpgTT = "Made with Unity and free assets.";
+const rpgTT =
+  "Made with Unity and free assets. Music by Theodore Konstantinides.";
 const blockTT = "Made with Unity and free assets.";
 const tdTT = "Made with Unity and free assets.";
 const shootTT = "Made with Unity and free assets.";

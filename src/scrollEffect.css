@@ -16,8 +16,18 @@
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   -ms-transition: opacity 1s ease-in-out;
+
   /* transition: all 1s linear; */
   /* transition: all 1s ease-out; */
+  /* 
+  transform: translateX(0);
+  transform: translateY(0);
+
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out; */
 
   /* CARD */
   /* transform: translateZ(-10rem) scale(0.8); */

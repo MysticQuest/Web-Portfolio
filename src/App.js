@@ -20,7 +20,7 @@ import { humidity } from "./themes/humidity";
 import { fireflies2 } from "./themes/fireflies2";
 //hooks?
 //import { useAnimHandler } from "./hooks/useAnimHandler";
-
+import { mouseEffect } from "./mouseEffect";
 var activeIndex = 0;
 var preActiveIndex = 0;
 
@@ -88,14 +88,17 @@ const App = () => (
         preActiveIndex = destination.index;
       }}
       render={({ state, fullpageApi }) => {
+        mouseEffect();
         return (
           <ReactFullpage.Wrapper className="wrapper">
-            <div className="section container1  bg1">
-              <Particles
-                id="particle-effects"
-                className="particles-js"
-                params={humidity}
-              />
+            <div className="section container1 fp-table">
+              <div className="bg1">
+                <Particles
+                  id="particle-effects"
+                  className="particles-js"
+                  params={humidity}
+                />
+              </div>
               <Home />
             </div>
 
