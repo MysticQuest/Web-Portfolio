@@ -7,12 +7,13 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Fade from "@material-ui/core/Fade";
+// import Fade from "@material-ui/core/Fade";
+import Slide from "@material-ui/core/Slide";
 //import my components
 import Games from "./Games";
 import Misc from "./Misc";
 //import active section
-import { activeIndex } from "../../App";
+import { preActiveIndex } from "../../App";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import //   faHtml5,
@@ -117,7 +118,6 @@ const useStyles = makeStyles(theme => ({
   //   uniIcon: { marginTop: "5px", height: "40px", width: "40px" }
 }));
 
-const exitDuration = 1;
 var activateAnim = false;
 
 export default function GameCategories() {
@@ -133,14 +133,17 @@ export default function GameCategories() {
     setValue(index);
   };
 
-  if (activeIndex === 2) {
+  if (preActiveIndex === 2) {
     activateAnim = true;
+  } else {
+    activateAnim = false;
   }
 
   return (
     <div className="full-container-projects">
-      <Fade
-        timeout={{ enter: 300, exit: exitDuration }}
+      <Slide
+        direction="left"
+        timeout={{ enter: 900, exit: 900 }}
         in={activateAnim}
         style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
       >
@@ -215,7 +218,7 @@ export default function GameCategories() {
             </TabPanel> */}
           </SwipeableViews>
         </div>
-      </Fade>
+      </Slide>
     </div>
   );
 }

@@ -22,6 +22,7 @@ import { fireflies2 } from "./themes/fireflies2";
 //import { useAnimHandler } from "./hooks/useAnimHandler";
 
 var activeIndex = 0;
+var preActiveIndex = 0;
 
 const App = () => (
   <div>
@@ -81,10 +82,10 @@ const App = () => (
       scrollOverflow={true}
       // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
       afterLoad={(origin, destination, direction) => {
-        // console.log("afterLoad event", destination.index);
-        //alert("Section ended loading");
         activeIndex = destination.index;
-        // console.log(activeIndex);
+      }}
+      onLeave={(origin, destination, direction) => {
+        preActiveIndex = destination.index;
       }}
       render={({ state, fullpageApi }) => {
         return (
@@ -122,4 +123,4 @@ const App = () => (
 
 /* <div class="section fp-auto-height">Auto height</div> --- this auto adjust height for smaller/bigger sections*/
 
-export { App, activeIndex };
+export { App, activeIndex, preActiveIndex };

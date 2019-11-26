@@ -7,11 +7,12 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Fade from "@material-ui/core/Fade";
+// import Fade from "@material-ui/core/Fade";
+import Slide from "@material-ui/core/Slide";
 //import my components
 import Projects from "./Projects";
 //import active section
-import { activeIndex } from "../../App";
+import { preActiveIndex } from "../../App";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -105,7 +106,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const exitDuration = 1;
 var activateAnim = false;
 
 export default function ProjectCategories() {
@@ -121,14 +121,17 @@ export default function ProjectCategories() {
     setValue(index);
   };
 
-  if (activeIndex === 1) {
+  if (preActiveIndex === 1) {
     activateAnim = true;
+  } else {
+    activateAnim = false;
   }
 
   return (
     <div className="full-container-projects">
-      <Fade
-        timeout={{ enter: 300, exit: exitDuration }}
+      <Slide
+        direction="left"
+        timeout={{ enter: 900, exit: 900 }}
         in={activateAnim}
         style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
       >
@@ -194,7 +197,7 @@ export default function ProjectCategories() {
             </TabPanel>
           </SwipeableViews>
         </div>
-      </Fade>
+      </Slide>
     </div>
   );
 }
