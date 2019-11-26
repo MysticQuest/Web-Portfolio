@@ -65,6 +65,7 @@ const useStyles = makeStyles(theme => ({
     // minHeight: "760px",
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
     marginTop: "8vh",
+    // marginTop: "10vw",
     backgroundColor: "rgba(0, 0, 0, 0.05)",
     borderRadius: "0 0 10px 10px"
   },

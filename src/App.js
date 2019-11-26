@@ -21,8 +21,10 @@ import { fireflies2 } from "./themes/fireflies2";
 //hooks?
 //import { useAnimHandler } from "./hooks/useAnimHandler";
 import { mouseEffect } from "./mouseEffect";
+
 var activeIndex = 0;
 var preActiveIndex = 0;
+var onLeaveIndexOrigin = null;
 
 const App = () => (
   <div>
@@ -31,12 +33,12 @@ const App = () => (
     <ReactFullpage
       //fullpage options
       //PARALLAX EFFECT
-      parallax={true}
-      parallaxOptions={{
-        type: "reveal",
-        percentage: 62,
-        property: "translate"
-      }}
+      // parallax={true}
+      // parallaxOptions={{
+      //   type: "reveal",
+      //   percentage: 62,
+      //   property: "translate"
+      // }}
       // CARDS EFFECT
       // cards={true} //an effect
       // cardsOptions={{
@@ -86,12 +88,15 @@ const App = () => (
       }}
       onLeave={(origin, destination, direction) => {
         preActiveIndex = destination.index;
+        onLeaveIndexOrigin = origin.index;
+      }}
+      afterRender={() => {
+        mouseEffect();
       }}
       render={({ state, fullpageApi }) => {
-        mouseEffect();
         return (
           <ReactFullpage.Wrapper className="wrapper">
-            <div className="section container1 fp-table">
+            <div className="section container1">
               <div className="bg1">
                 <Particles
                   id="particle-effects"
@@ -126,4 +131,4 @@ const App = () => (
 
 /* <div class="section fp-auto-height">Auto height</div> --- this auto adjust height for smaller/bigger sections*/
 
-export { App, activeIndex, preActiveIndex };
+export { App, activeIndex, preActiveIndex, onLeaveIndexOrigin };

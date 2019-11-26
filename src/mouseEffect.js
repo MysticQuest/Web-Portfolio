@@ -17,8 +17,8 @@ export const mouseEffect = () => {
         -100,
         Math.min(100, window.innerHeight / 2 - e.clientY)
       );
-      lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-      lFollowY = (10 * lMouseY) / 100;
+      lFollowX = (30 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+      lFollowY = (15 * lMouseY) / 100;
     });
   }
 
@@ -27,15 +27,17 @@ export const mouseEffect = () => {
     y += (lFollowY - y) * friction;
 
     if (bg) {
-      // bg.style.transform = `translate3d(-${x}%, -${y}%, 0)`;
-      bg.style.transform = "translate3d(" + x + "px, " + y + "px, 0) ";
+      bg.style.transform =
+        "translate3d(" + x + "px, " + y + "px, 0) scale(1.1)";
     }
+
+    // console.log(x, y);
+
     // add out of translate 3d
     //scale(1.1)
 
     window.requestAnimationFrame(moveBackground);
   }
+
   moveBackground();
 };
-
-//
