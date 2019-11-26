@@ -150,12 +150,32 @@
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .full-container-1 {
+    /* margin: 130px 60px 120px 30px; */
+    padding-left: 15vh;
+    padding-right: 15vh;
+    padding-top: 6vh;
+    padding-bottom: 1vh;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .full-container-2,
   .full-container-projects,
   .full-container-games,
   .full-container-OFsafe,
   .full-container-grid {
+    margin: 130px 45px 120px 20px;
+    padding-left: 0;
+    padding-top: 6vh;
+    padding-right: 0;
+    padding-bottom: 8vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .full-container-1 {
     margin: 130px 45px 120px 20px;
     padding-left: 0;
     padding-top: 6vh;
