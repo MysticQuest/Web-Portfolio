@@ -223,7 +223,7 @@ const tetrisTi = "React Tetris";
 const portDes = "A casual-themed portfolio made with React and Material UI.";
 const recDes =
   "An app that uses Clarifai's API to detect faces in pictures and sets - in the current iteration - a bordered box around them.";
-const tetrisDes = "A tetris game solely made with ReactJs.";
+const tetrisDes = "A tetris game made with React.";
 
 // Tooltip info
 const portTT = "";
@@ -237,8 +237,8 @@ const tetrisLi = "";
 
 // Source links
 const portSo = "https://github.com/MysticQuest/Web-Portfolio";
-const recSo = "https://github.com/MysticQuest/Unity-Project_Thesis";
-const tetrisSo = "https://github.com/MysticQuest/Unity-Block_Breaker";
+const recSo = "https://github.com/MysticQuest/Web-Face_Recon";
+const tetrisSo = "https://github.com/MysticQuest/Web-Tetris";
 
 const WebReact = () => {
   const classes = useStyles();

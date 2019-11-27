@@ -233,10 +233,10 @@ const diceTT = "";
 const mockTT = "";
 
 // Play links
-const memLi = "";
-const drumLi = "";
-const diceLi = "";
-const mockLi = "";
+const memLi = "./webPages/Memory-Game/index.html";
+const drumLi = "./webPages/Drumkit/index.html";
+const diceLi = "./webPages/Dice-Game/index.html";
+const mockLi = "./webPages/Startup-Page/index.html";
 
 // Source links
 const memSo = "https://github.com/MysticQuest/Web-Memory_Game";
