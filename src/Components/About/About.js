@@ -11,7 +11,8 @@ import Zoom from "@material-ui/core/Zoom";
 import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 //import active section
-import { activeIndex } from "../../App";
+//import { activeIndex } from "../../App";
+import { preActiveIndex } from "../../App";
 //import icons or images
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,6 +27,7 @@ import {
   faNodeJs
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import EmailIcon from "@material-ui/icons/Email";
 
 var activateAnim = false;
 var permaAnim = false;
@@ -33,14 +35,11 @@ const link = "https://github.com/MysticQuest/Web-Portfolio";
 const exitDuration = 1;
 
 const Home = () => {
-  if (activeIndex === 3) {
+  if (preActiveIndex === 3) {
     activateAnim = true;
     permaAnim = activateAnim;
   } else {
     activateAnim = false;
-  }
-  if (activeIndex === 3) {
-    permaAnim = true;
   }
 
   return (
@@ -48,15 +47,15 @@ const Home = () => {
       <div className="text-container-about">
         <Slide
           direction="left"
-          timeout={{ enter: 400, exit: 0 }}
-          in={permaAnim}
-          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+          timeout={{ enter: 500, exit: 500 }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "350ms" : "0ms" }}
         >
           <div>
             <Zoom
-              timeout={{ enter: 450, exit: 0 }}
+              timeout={{ enter: 400, exit: 250 }}
               in={activateAnim}
-              style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+              style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
             >
               <div className="tacky-container-1">
                 <Fade
@@ -158,25 +157,69 @@ const Home = () => {
         </Slide>
 
         <Slide
-          direction="right"
-          timeout={{ enter: 400, exit: 900 }}
-          in={permaAnim}
-          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+          direction="top"
+          timeout={{ enter: 500, exit: 500 }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "350ms" : "0ms" }}
         >
           <div>
             <Zoom
-              timeout={{ enter: 450, exit: exitDuration }}
+              timeout={{ enter: 400, exit: 250 }}
               in={activateAnim}
-              style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+              style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
+            >
+              <div className="tacky-container-3">
+                <Grid container spacing={1}>
+                  <Fade
+                    timeout={{ enter: 1000, exit: exitDuration }}
+                    in={permaAnim}
+                    style={{ transitionDelay: permaAnim ? "1000ms" : "0ms" }}
+                  >
+                    <div className="subtext-info">
+                      <Grid item xs={12} sm={12}>
+                        <p className="mini-header-about">Get in touch:</p>
+                      </Grid>
+                      <Grid item xs={12} sm={12}>
+                        <p>
+                          <IconButton
+                            className="get-in-touch"
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            color="inherit"
+                          >
+                            <EmailIcon />
+                          </IconButton>
+                        </p>
+                      </Grid>
+                    </div>
+                  </Fade>
+                </Grid>
+              </div>
+            </Zoom>
+          </div>
+        </Slide>
+
+        <Slide
+          direction="right"
+          timeout={{ enter: 500, exit: 500 }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "350ms" : "0ms" }}
+        >
+          <div>
+            <Zoom
+              timeout={{ enter: 400, exit: 250 }}
+              in={activateAnim}
+              style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
             >
               <div className="tacky-container-2">
                 <div className="subtext-info">
-                  <Grid container spacing={1}>
-                    <Fade
-                      timeout={{ enter: 2000, exit: exitDuration }}
-                      in={permaAnim}
-                      style={{ transitionDelay: permaAnim ? "300ms" : "0ms" }}
-                    >
+                  <Fade
+                    timeout={{ enter: 1000, exit: exitDuration }}
+                    in={permaAnim}
+                    style={{ transitionDelay: permaAnim ? "1000ms" : "0ms" }}
+                  >
+                    <Grid container spacing={1}>
                       <Grid item xs={12} sm={12}>
                         <p className="mini-header-about">
                           This site was built with:
@@ -184,44 +227,24 @@ const Home = () => {
                         <p className="about3">ReactJs</p>
                         <p className="about3">Material UI</p>
                       </Grid>
-                    </Fade>
-                    <Fade
-                      timeout={{ enter: 2000, exit: exitDuration }}
-                      in={permaAnim}
-                      style={{ transitionDelay: permaAnim ? "1000ms" : "0ms" }}
-                    >
+
                       <Grid item xs={6} sm={6}>
                         <p className="mini-header-about">Plugins:</p>
                         <p className="about3">FullpageJs</p>
                         <p className="about3">ParticlesJs</p>
                       </Grid>
-                    </Fade>
-                    <Fade
-                      timeout={{ enter: 2000, exit: exitDuration }}
-                      in={permaAnim}
-                      style={{ transitionDelay: permaAnim ? "1300ms" : "0ms" }}
-                    >
+
                       <Grid item xs={6} sm={6}>
                         <p className="mini-header-about">Icons:</p>
                         <p className="about3">Font Awesome</p>
                         <p className="about3">MUI</p>
                       </Grid>
-                    </Fade>
-                    <Fade
-                      timeout={{ enter: 2000, exit: exitDuration }}
-                      in={permaAnim}
-                      style={{ transitionDelay: permaAnim ? "1600ms" : "0ms" }}
-                    >
+
                       <Grid item xs={6} sm={6}>
                         <p className="mini-header-about">Background art:</p>
                         <p className="about3">Firewatch</p>
                       </Grid>
-                    </Fade>
-                    <Fade
-                      timeout={{ enter: 2000, exit: exitDuration }}
-                      in={permaAnim}
-                      style={{ transitionDelay: permaAnim ? "1900ms" : "0ms" }}
-                    >
+
                       <Grid item xs={6} sm={6}>
                         <p className="mini-header-about">Source code:</p>
                         <p className="about3">
@@ -236,38 +259,8 @@ const Home = () => {
                           </IconButton>
                         </p>
                       </Grid>
-                    </Fade>
-                  </Grid>
-                </div>
-              </div>
-            </Zoom>
-          </div>
-        </Slide>
-        <Slide
-          direction="right"
-          timeout={{ enter: 400, exit: 900 }}
-          in={permaAnim}
-          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
-        >
-          <div>
-            <Zoom
-              timeout={{ enter: 450, exit: exitDuration }}
-              in={activateAnim}
-              style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
-            >
-              <div className="tacky-container-2">
-                <div className="subtext-info">
-                  <Grid container spacing={1}>
-                    <Fade
-                      timeout={{ enter: 2000, exit: exitDuration }}
-                      in={permaAnim}
-                      style={{ transitionDelay: permaAnim ? "300ms" : "0ms" }}
-                    >
-                      <Grid item xs={12} sm={6}>
-                        <p className="mini-header-about">Get in touch:</p>
-                      </Grid>
-                    </Fade>
-                  </Grid>
+                    </Grid>
+                  </Fade>
                 </div>
               </div>
             </Zoom>

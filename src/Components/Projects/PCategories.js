@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
     marginTop: "8vh",
     backgroundColor: "rgba(0, 0, 0, 0.0)",
-    borderRadius: "20px 20px 20px 20px"
+    borderRadius: "10px 10px 10px 10px"
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
     //0.5
   },
@@ -99,15 +99,21 @@ const useStyles = makeStyles(theme => ({
     // background:
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.2), rgba(229, 229, 190, 0.2))",
     color: "white",
-    borderRadius: "20px 20px 20px 20px"
+    borderRadius: "10px 10px 10px 10px"
   },
-  tab: { textTransform: "none !important" },
+  tab: {},
   indicator: {
-    backgroundColor: " rgba(5,45,129,0.6)",
-    width: "80%"
+    // backgroundColor: "rgba(255,255,255,0.07)",
+    // backgroundColor: "rgba(255,252,76,0.07)",
+    // background:
+    //   "radial-gradient(circle, rgba(206,255,0,0.1) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
+    background:
+      "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
+    height: "100%"
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
   tabContent: {
+    // boxShadow: "0 1px 1px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23)",
     fontSize: "calc(17px + 0.4vw)",
     fontFamily: "Acme",
     // fontStyle: "oblique",

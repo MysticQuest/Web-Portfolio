@@ -24,12 +24,13 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import { activeIndex } from "../../App";
 
 //import images and media
-import blogPic from "../../images/projImages/blog.png";
-import cryptoPic from "../../images/projImages/crypto.png";
-import listPic from "../../images/projImages/list.png";
-import newsPic from "../../images/projImages/news.png";
-import whispPic from "../../images/projImages/whisp.png";
-import wikiPic from "../../images/projImages/wiki.png";
+// import blogPic from "../../images/projImages/blog.png";
+// import cryptoPic from "../../images/projImages/crypto.png";
+// import listPic from "../../images/projImages/list.png";
+// import newsPic from "../../images/projImages/news.png";
+// import whispPic from "../../images/projImages/whisp.png";
+// import wikiPic from "../../images/projImages/wiki.png";
+import nemPic from "../../images/nem.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -288,7 +289,7 @@ const WebReact = () => {
               >
                 <CardMedia
                   className={`${classes.media} ${classes.media1}`}
-                  image={blogPic}
+                  image={nemPic}
                 />
                 <CardContent className={classes.content}>
                   <Typography
@@ -353,7 +354,7 @@ const WebReact = () => {
               >
                 <CardMedia
                   className={`${classes.media} ${classes.media1}`}
-                  image={newsPic}
+                  image={nemPic}
                 />
                 <CardContent className={classes.content}>
                   <Typography
@@ -418,7 +419,7 @@ const WebReact = () => {
               >
                 <CardMedia
                   className={`${classes.media} ${classes.media2}`}
-                  image={listPic}
+                  image={nemPic}
                 />
                 <CardContent className={classes.content}>
                   <Typography
@@ -483,7 +484,7 @@ const WebReact = () => {
               >
                 <CardMedia
                   className={`${classes.media} ${classes.media2}`}
-                  image={whispPic}
+                  image={nemPic}
                 />
                 <CardContent className={classes.content}>
                   <Typography
@@ -548,7 +549,7 @@ const WebReact = () => {
               >
                 <CardMedia
                   className={`${classes.media} ${classes.media2}`}
-                  image={cryptoPic}
+                  image={nemPic}
                 />
                 <CardContent className={classes.content}>
                   <Typography
@@ -613,7 +614,7 @@ const WebReact = () => {
               >
                 <CardMedia
                   className={`${classes.media} ${classes.media2}`}
-                  image={wikiPic}
+                  image={nemPic}
                 />
                 <CardContent className={classes.content}>
                   <Typography
