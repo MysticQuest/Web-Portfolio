@@ -1,7 +1,7 @@
 import React from "react";
 //import themes
 import "./Home.css";
-import "../../themes/global.css";
+import "../../myThemes/global.css";
 import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 //import active section

@@ -57,7 +57,8 @@ const useStyles = makeStyles(theme => ({
     //   "linear-gradient(90deg, rgba(9,0,149,0.1) 0%, rgba(255,129,65,0.01) 100%)",
     color: "white",
     flexGrow: 1,
-    padding: "0 0 0 0"
+    padding: "0 0 0 0",
+    boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
   },
 
   drawerPaperHidden: {
@@ -112,6 +113,7 @@ function ResponsiveDrawer(props) {
             anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
             onClose={handleDrawerToggle}
+            onClick={handleDrawerToggle}
             classes={{
               paper: classes.drawerPaperHidden
             }}

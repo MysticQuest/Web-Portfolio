@@ -7,7 +7,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-// import Fade from "@material-ui/core/Fade";
+import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 //import my components
 import WebReact from "./WebReact";
@@ -30,18 +30,26 @@ import {
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+  const classes = useStyles();
 
   return (
-    <Typography
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
+    <Fade
+      timeout={{ enter: 500, exit: 500 }}
+      in={Boolean(value === index)}
+      style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
     >
-      <Box p={3}>{children}</Box>
-    </Typography>
+      <Typography
+        className={classes.tabPanel}
+        component="div"
+        role="tabpanel"
+        // hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        <Box p={3}>{children}</Box>
+      </Typography>
+    </Fade>
   );
 }
 
@@ -67,23 +75,39 @@ const useStyles = makeStyles(theme => ({
     // display: "table",
     // minHeight: "760px",
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
+    // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
     marginTop: "8vh",
-    // marginTop: "10vw",
-    backgroundColor: "rgba(0, 0, 0, 0.05)",
-    borderRadius: "0 0 10px 10px"
+    backgroundColor: "rgba(0, 0, 0, 0.0)",
+    borderRadius: "20px 20px 20px 20px"
+    // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
+    //0.5
+  },
+  tabPanel: {},
+  panel: {
+    backgroundColor: "rgba(0, 0, 0, 0.0)",
+    // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+
+    // background:
+    //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.4), rgba(229, 229, 190, 0.2))",
+    "&:after": {
+      filter: "blur(2px)"
+    }
   },
   tabBar: {
     backgroundColor: "rgba(0, 0, 0, 0.01)",
+    overflow: "hidden",
     // background:
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.2), rgba(229, 229, 190, 0.2))",
-    color: "white"
+    color: "white",
+    borderRadius: "20px 20px 20px 20px"
   },
   tab: { textTransform: "none !important" },
   indicator: {
-    backgroundColor: " rgba(5,45,129,0.6)"
+    backgroundColor: " rgba(5,45,129,0.6)",
+    width: "80%"
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
-  tab1: {
+  tabContent: {
     fontSize: "calc(17px + 0.4vw)",
     fontFamily: "Acme",
     // fontStyle: "oblique",
@@ -91,30 +115,6 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     filter: "drop-shadow(-2px 2px 2px black)"
     // filter: "drop-shadow(-6px 4px 2px black)"
-  },
-  tab2: {
-    fontSize: "calc(17px + 0.4vw)",
-    fontFamily: "Acme",
-    fontStyle: "oblique",
-    textTransform: "none !important",
-    fontWeight: "bold",
-    filter: "drop-shadow(-2px 2px 2px black)"
-  },
-  tab3: {
-    fontSize: "calc(17px + 0.4vw)",
-    fontFamily: "Acme",
-    fontStyle: "oblique",
-    textTransform: "none !important",
-    fontWeight: "bold",
-    filter: "drop-shadow(-2px 2px 2px black)"
-  },
-  tab4: {
-    fontSize: "calc(17px + 0.4vw)",
-    fontFamily: "Acme",
-    fontStyle: "oblique",
-    textTransform: "none !important",
-    fontWeight: "bold",
-    filter: "drop-shadow(-2px 2px 2px black)"
   }
 }));
 
@@ -162,7 +162,7 @@ export default function ProjectCategories() {
               aria-label="project categories"
             >
               <Tab
-                className={classes.tab1}
+                className={classes.tabContent}
                 label={
                   <span>
                     <FontAwesomeIcon icon={faReact} />
@@ -172,7 +172,7 @@ export default function ProjectCategories() {
                 {...a11yProps(0)}
               />
               <Tab
-                className={classes.tab2}
+                className={classes.tabContent}
                 label={
                   <span>
                     <FontAwesomeIcon icon={faNodeJs} />
@@ -182,7 +182,7 @@ export default function ProjectCategories() {
                 {...a11yProps(1)}
               />
               <Tab
-                className={classes.tab3}
+                className={classes.tabContent}
                 label={
                   <span>
                     <FontAwesomeIcon icon={faHtml5} />
@@ -192,7 +192,7 @@ export default function ProjectCategories() {
                 {...a11yProps(2)}
               />
               <Tab
-                className={classes.tab4}
+                className={classes.tabContent}
                 label={
                   <span>
                     <FontAwesomeIcon icon={faPython} />
@@ -208,16 +208,36 @@ export default function ProjectCategories() {
             index={value}
             onChangeIndex={handleChangeIndex}
           >
-            <TabPanel value={value} index={0} dir={theme.direction}>
+            <TabPanel
+              className={classes.panel}
+              value={value}
+              index={0}
+              dir={theme.direction}
+            >
               <WebReact />
             </TabPanel>
-            <TabPanel value={value} index={1} dir={theme.direction}>
+            <TabPanel
+              className={classes.panel}
+              value={value}
+              index={1}
+              dir={theme.direction}
+            >
               <WebBack />
             </TabPanel>
-            <TabPanel value={value} index={2} dir={theme.direction}>
+            <TabPanel
+              className={classes.panel}
+              value={value}
+              index={2}
+              dir={theme.direction}
+            >
               <WebMisc />
             </TabPanel>
-            <TabPanel value={value} index={3} dir={theme.direction}>
+            <TabPanel
+              className={classes.panel}
+              value={value}
+              index={3}
+              dir={theme.direction}
+            >
               <Extras />
             </TabPanel>
           </SwipeableViews>

@@ -7,7 +7,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-// import Fade from "@material-ui/core/Fade";
+import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 //import my components
 import Games from "./Games";
@@ -27,22 +27,35 @@ import //   faHtml5,
 import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import uniIcon from "../../images/uniIcon.png";
 
+var activateAnim = false;
+if (preActiveIndex === 2) {
+  activateAnim = true;
+} else {
+  activateAnim = false;
+}
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   const classes = useStyles();
 
   return (
-    <Typography
-      className={classes.tabPanel}
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
+    <Fade
+      timeout={{ enter: 500, exit: 500 }}
+      in={Boolean(value === index)}
+      style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
     >
-      <Box p={3}>{children}</Box>
-    </Typography>
+      <Typography
+        className={classes.tabPanel}
+        component="div"
+        role="tabpanel"
+        // hidden={value !== index}
+        id={`full-width-tabpanel-${index}`}
+        aria-labelledby={`full-width-tab-${index}`}
+        {...other}
+      >
+        <Box p={3}>{children}</Box>
+      </Typography>
+    </Fade>
   );
 }
 
@@ -70,28 +83,51 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
     marginTop: "8vh",
     // marginTop: "10vw",
-    backgroundColor: "rgba(0, 0, 0, 0.05)",
-    borderRadius: "0 0 10px 10px"
+    // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+    backgroundColor: "rgba(0, 0, 0, 0.00)",
+    borderRadius: "10px 10px 10px 10px"
 
+    // display: "flex",
+    // flexGrow: 1,
+    // flexFlow: "column",
+    // height: "-webkit-fill-available"
     // boxShadow: "inset 0 0 0 200px rgba(255,255,255,0.05)",
     // filter: "blur(10px)"
-  },
-  tabBar: {
-    backgroundColor: "rgba(0, 0, 0, 0.01)",
-    // background:
-    //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.2), rgba(229, 229, 190, 0.2))",
-    color: "white"
   },
   tabPanel: {
     // boxShadow: "inset 0 0 0 200px rgba(255,255,255,0.05)"
     // filter: "blur(10px)",
+    // height: "100%",
+    // transition: "opacity 0.5s ease-in-out",
+    // webkitTransition: "opacity 0.5s ease-in-outs",
+    // mozTransition: "opacity 0.5s ease-in-out",
+    // oTransition: "opacity 0.5s ease-in-out "
   },
+  panel: {
+    backgroundColor: "rgba(0, 0, 0, 0.0)"
+    // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+
+    // background:
+    //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.4), rgba(229, 229, 190, 0.2))",
+    // "&:after": {
+    //   filter: "blur(2px)"
+    // }
+  },
+  tabBar: {
+    backgroundColor: "rgba(0, 0, 0, 0.01)",
+    borderRadius: "10px 10px 10px 10px",
+    overflow: "hidden",
+    // background:
+    //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.2), rgba(229, 229, 190, 0.2))",
+    color: "white"
+  },
+
   tabs: { textTransform: "none !important" },
   indicator: {
     backgroundColor: " rgba(5,45,129,0.6)"
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
-  tab1: {
+  tabContent: {
     fontSize: "calc(17px + 0.4vw)",
     fontFamily: "Acme",
     // fontStyle: "oblique",
@@ -99,27 +135,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     filter: "drop-shadow(-2px 2px 2px black)"
     // filter: "drop-shadow(-6px 4px 2px black)"
-  },
-  tab2: {
-    fontSize: "calc(17px + 0.4vw)",
-    fontFamily: "Acme",
-    fontStyle: "oblique",
-    textTransform: "none !important",
-    fontWeight: "bold",
-    filter: "drop-shadow(-2px 2px 2px black)"
-  },
-  tab3: {
-    fontSize: "calc(17px + 0.4vw)",
-    fontFamily: "Acme",
-    fontStyle: "oblique",
-    textTransform: "none !important",
-    fontWeight: "bold",
-    filter: "drop-shadow(-2px 2px 2px black)"
   }
-  //   uniIcon: { marginTop: "5px", height: "40px", width: "40px" }
 }));
-
-var activateAnim = false;
 
 export default function GameCategories() {
   const classes = useStyles();
@@ -163,7 +180,7 @@ export default function GameCategories() {
               aria-label="project categories"
             >
               <Tab
-                className={classes.tab1}
+                className={classes.tabContent}
                 label={
                   <span>
                     <img
@@ -182,7 +199,7 @@ export default function GameCategories() {
                 {...a11yProps(0)}
               />
               <Tab
-                className={classes.tab2}
+                className={classes.tabContent}
                 label={
                   <span>
                     <FontAwesomeIcon icon={faPalette} />

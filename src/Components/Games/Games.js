@@ -14,7 +14,7 @@ import Zoom from "@material-ui/core/Zoom";
 //styles
 import { makeStyles } from "@material-ui/core/styles";
 //import "../../themes/animate.css";
-import "../../themes/global.css";
+import "../../myThemes/global.css";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { library } from "@fortawesome/fontawesome-svg-core";
@@ -75,26 +75,38 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       "& $media1": {
         backgroundImage: `url(${rpgGif}) !important`,
-        transition: "background-image 0.3s ease-in-out",
-        webkitTransition: "background-image 0.3s ease-in-out",
-        mozTransition: "background-image 0.3s ease-in-out",
-        oTransition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
       "& $media2": {
         backgroundImage: `url(${blockGif}) !important`,
-        transition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
       "& $media3": {
         backgroundImage: `url(${tdGif}) !important`,
-        transition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
       "& $media4": {
         backgroundImage: `url(${shootGif}) !important`,
-        transition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
       "& $media5": {
         backgroundImage: `url(${platGif}) !important`,
-        transition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
       // "& $media6": {
       //   backgroundImage: `url(${gif1}) !important`,

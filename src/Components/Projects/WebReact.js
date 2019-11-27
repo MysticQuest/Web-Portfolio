@@ -13,7 +13,7 @@ import Zoom from "@material-ui/core/Zoom";
 //import Fade from "@material-ui/core/Fade";
 //styles
 import { makeStyles } from "@material-ui/core/styles";
-import "../../themes/global.css";
+import "../../myThemes/global.css";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { library } from "@fortawesome/fontawesome-svg-core";
@@ -31,7 +31,8 @@ import tetrisGif from "../../images/projImages/tetris.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    rowHeight: "15vh"
   },
   // grid: { textAlign: "-webkit-center" },
   gridItem: {
@@ -74,7 +75,10 @@ const useStyles = makeStyles(theme => ({
       // },
       "& $media2": {
         backgroundImage: `url(${tetrisGif}) !important`,
-        transition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
       // "& $media3": {
       //   backgroundImage: `url(${tdGif}) !important`,
@@ -93,7 +97,8 @@ const useStyles = makeStyles(theme => ({
       //   transition: "background-image 0.3s ease-in-out"
       // },
       boxShadow: "-3px 3px 9px 0 rgba(0, 0, 0, 0.69)",
-      transition: "box-shadow 0.3s ease-in-out"
+      transition: "box-shadow 0.3s ease-in-out",
+      filter: "blur(0) !important"
       // filter: "grayscale(0%)"
     },
     // filter: "grayscale(50%)",
@@ -138,7 +143,7 @@ const useStyles = makeStyles(theme => ({
     // background:
     //   "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
     background:
-      "linear-gradient(90deg, rgba(43,43,43,1) 0%, rgba(94,94,94,1) 50%, rgba(139,139,139,1) 100%)",
+      "linear-gradient(270deg, rgba(89,100,117,1) 0%, rgba(76,77,113,1) 34%, rgba(58,59,89,1) 69%, rgba(40,41,77,1) 100%)",
     backgroundColor: "#393f47", //test color for firefox bug
     // background:
     //   "linear-gradient(to right, #406483, #42728f, #46809a, #4b8ea3, #539cac)", // lighter bluish grad
@@ -215,8 +220,8 @@ const exitDuration = 1;
 // };
 
 // Titles
-const portTi = "This Portfolio";
-const recTi = "Face Recognition App";
+const portTi = "Portfolio";
+const recTi = "Face Recognition";
 const tetrisTi = "React Tetris";
 
 // Descriptions

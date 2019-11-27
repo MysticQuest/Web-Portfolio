@@ -13,7 +13,7 @@ import Zoom from "@material-ui/core/Zoom";
 //import Fade from "@material-ui/core/Fade";
 //styles
 import { makeStyles } from "@material-ui/core/styles";
-import "../../themes/global.css";
+import "../../myThemes/global.css";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { library } from "@fortawesome/fontawesome-svg-core";
@@ -138,7 +138,7 @@ const useStyles = makeStyles(theme => ({
     // background:
     //   "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
     background:
-      "linear-gradient(90deg, rgba(43,43,43,1) 0%, rgba(94,94,94,1) 50%, rgba(139,139,139,1) 100%)",
+      "linear-gradient(270deg, rgba(89,100,117,1) 0%, rgba(76,77,113,1) 34%, rgba(58,59,89,1) 69%, rgba(40,41,77,1) 100%)",
     backgroundColor: "#393f47", //test color for firefox bug
     // background:
     //   "linear-gradient(to right, #406483, #42728f, #46809a, #4b8ea3, #539cac)", // lighter bluish grad

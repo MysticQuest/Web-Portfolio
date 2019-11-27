@@ -14,7 +14,7 @@ import Zoom from "@material-ui/core/Zoom";
 //styles
 import { makeStyles } from "@material-ui/core/styles";
 //import "../../themes/animate.css";
-import "../../themes/global.css";
+import "../../myThemes/global.css";
 //import bender from "../../images/bender.png";
 //import bender2 from "../../images/bender.svg";
 //icons
@@ -74,7 +74,10 @@ const useStyles = makeStyles(theme => ({
     "&:hover": {
       "& $media1": {
         backgroundImage: `url(${mapPic2}) !important`,
-        transition: "background-image 0.3s ease-in-out"
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
       //   "& $media2": {
       //     backgroundImage: `url(${blockGif}) !important`,

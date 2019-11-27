@@ -5,7 +5,7 @@ import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import GitHubIcon from "@material-ui/icons/GitHub";
 //import themes
 //import "../../themes/animate.css";
-import "../../themes/global.css";
+import "../../myThemes/global.css";
 import "./MyLinks.css";
 import { makeStyles } from "@material-ui/styles";
 //import active section

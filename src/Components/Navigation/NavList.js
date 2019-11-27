@@ -8,7 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 //import theming
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import fontTheme1 from "../../themes/barFonts.js";
+import fontTheme1 from "../../myThemes/barFonts.js";
 //import ICONS
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
 import HomeIcon from "@material-ui/icons/Home";

@@ -16,8 +16,8 @@ import Icons from "./Components/About/MyLinks";
 import "./scrollEffect.css";
 import "./App.css";
 import Particles from "react-particles-js";
-import { humidity } from "./themes/humidity";
-import { fireflies2 } from "./themes/fireflies2";
+import { humidity } from "./myThemes/humidity";
+import { fireflies2 } from "./myThemes/fireflies2";
 //hooks?
 //import { useAnimHandler } from "./hooks/useAnimHandler";
 import { mouseEffect } from "./mouseEffect";

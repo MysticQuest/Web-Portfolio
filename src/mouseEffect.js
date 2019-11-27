@@ -7,7 +7,7 @@ export const mouseEffect = () => {
     lFollowY = 0,
     x = 0,
     y = 0,
-    friction = 1 / 30;
+    friction = 1 / 60;
 
   if (bg) {
     bg.addEventListener("mousemove", e => {

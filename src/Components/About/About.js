@@ -1,7 +1,7 @@
 import React from "react";
 //import themes
 import "./About.css";
-import "../../themes/global.css";
+import "../../myThemes/global.css";
 //mui components
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
@@ -235,6 +235,36 @@ const Home = () => {
                             <GitHubIcon />
                           </IconButton>
                         </p>
+                      </Grid>
+                    </Fade>
+                  </Grid>
+                </div>
+              </div>
+            </Zoom>
+          </div>
+        </Slide>
+        <Slide
+          direction="right"
+          timeout={{ enter: 400, exit: 900 }}
+          in={permaAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <div>
+            <Zoom
+              timeout={{ enter: 450, exit: exitDuration }}
+              in={activateAnim}
+              style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+            >
+              <div className="tacky-container-2">
+                <div className="subtext-info">
+                  <Grid container spacing={1}>
+                    <Fade
+                      timeout={{ enter: 2000, exit: exitDuration }}
+                      in={permaAnim}
+                      style={{ transitionDelay: permaAnim ? "300ms" : "0ms" }}
+                    >
+                      <Grid item xs={12} sm={6}>
+                        <p className="mini-header-about">Get in touch:</p>
                       </Grid>
                     </Fade>
                   </Grid>
