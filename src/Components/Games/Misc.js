@@ -30,10 +30,10 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import image and media
 //import pic1 from "../../images/pic1.png";
 //import gif1 from "../../images/tenor.gif";
-import mapPic1 from "../../images/map.png";
-import mapPic2 from "../../images/map2.png";
-import uniGif from "../../images/uni.gif";
-import vufPic from "../../images/vuf.png";
+import mapPic1 from "../../images/gameImages/map.png";
+import mapPic2 from "../../images/gameImages/map2.png";
+import uniGif from "../../images/gameImages/uni.gif";
+import vufPic from "../../images/gameImages/vuf.png";
 
 const useStyles = makeStyles(theme => ({
   root: {

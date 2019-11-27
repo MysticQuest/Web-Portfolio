@@ -26,17 +26,16 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import active section
 import { activeIndex } from "../../App";
 //import image and media
-import gif1 from "../../images/tenor.gif";
-import rpgGif from "../../images/rpg.gif";
-import rpgPic from "../../images/rpg.png";
-import blockPic from "../../images/block.png";
-import blockGif from "../../images/block.gif";
-import tdPic from "../../images/td.png";
-import tdGif from "../../images/td.gif";
-import shootPic from "../../images/shoot.png";
-import shootGif from "../../images/shoot.gif";
-import platPic from "../../images/plat.png";
-import platGif from "../../images/plat.gif";
+import rpgGif from "../../images/gameImages/rpg.gif";
+import rpgPic from "../../images/gameImages/rpg.png";
+import blockPic from "../../images/gameImages/block.png";
+import blockGif from "../../images/gameImages/block.gif";
+import tdPic from "../../images/gameImages/td.png";
+import tdGif from "../../images/gameImages/td.gif";
+import shootPic from "../../images/gameImages/shoot.png";
+import shootGif from "../../images/gameImages/shoot.gif";
+import platPic from "../../images/gameImages/plat.png";
+import platGif from "../../images/gameImages/plat.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -97,10 +96,10 @@ const useStyles = makeStyles(theme => ({
         backgroundImage: `url(${platGif}) !important`,
         transition: "background-image 0.3s ease-in-out"
       },
-      "& $media6": {
-        backgroundImage: `url(${gif1}) !important`,
-        transition: "background-image 0.3s ease-in-out"
-      },
+      // "& $media6": {
+      //   backgroundImage: `url(${gif1}) !important`,
+      //   transition: "background-image 0.3s ease-in-out"
+      // },
       boxShadow: "-3px 3px 9px 0 rgba(0, 0, 0, 0.69)",
       transition: "box-shadow 0.3s ease-in-out"
       // filter: "grayscale(0%)"

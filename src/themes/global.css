@@ -121,21 +121,20 @@
     /* margin: 130px 60px 120px 30px; */
     padding-left: 15vh;
     padding-right: 15vh;
-    padding-top: 2vh;
-    padding-bottom: 4vh;
+    /* padding-top: 2vh;
+    padding-bottom: 4vh; */
   }
 }
 
 @media only screen and (max-width: 1280px) {
   .full-container-2,
-  .full-container-projects,
   .full-container-games,
   .full-container-OFsafe,
   .full-container-grid {
     /* margin: 130px 60px 120px 30px; */
     padding-left: 5vh;
-    padding-top: 6vh;
     padding-right: 5vh;
+    padding-top: 6vh;
     padding-bottom: 8vh;
   }
 }
@@ -143,18 +142,18 @@
 @media only screen and (max-width: 1280px) {
   .full-container-projects {
     /* margin: 130px 60px 120px 30px; */
-    padding-left: 15vh;
-    padding-right: 15vh;
-    padding-top: 6vh;
-    padding-bottom: 1vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    /* padding-top: 6vh;
+    padding-bottom: 1vh; */
   }
 }
 
 @media only screen and (max-width: 1280px) {
   .full-container-1 {
     /* margin: 130px 60px 120px 30px; */
-    padding-left: 15vh;
-    padding-right: 15vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
     padding-top: 6vh;
     padding-bottom: 1vh;
   }
@@ -168,9 +167,9 @@
   .full-container-grid {
     margin: 130px 45px 120px 20px;
     padding-left: 0;
-    padding-top: 6vh;
     padding-right: 0;
-    padding-bottom: 8vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
 }
 

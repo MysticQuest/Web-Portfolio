@@ -199,7 +199,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolTipsCard: {
     fontSize: theme.typography.pxToRem(20),
-    backgroundColor: "#c96b34",
+    backgroundColor: "#496dfc",
     margin: "0"
   }
 }));
@@ -244,7 +244,7 @@ const Extras = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="Play"
+              title=""
               placement="top"
             >
               <CardActionArea

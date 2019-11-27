@@ -14,7 +14,7 @@
   background-image: url("./images/naturetheme1.jpg");
   /* background-size: 150%; */
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
   /* background-position: center center; */
   top: 0;
   left: 0;
@@ -30,6 +30,13 @@
   -ms-transition: transform 1s ease-in-out; */
   /* z-index: 9999; */
   /* pointer-events: none; */
+}
+
+@media only screen and (max-width: 1280px) {
+  .bg1 {
+    height: 110%;
+    background-position: center center;
+  }
 }
 
 .bg2 {

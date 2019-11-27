@@ -202,7 +202,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolTipsCard: {
     fontSize: theme.typography.pxToRem(20),
-    backgroundColor: "#c96b34",
+    backgroundColor: "#496dfc",
     margin: "0"
   }
 }));
@@ -223,7 +223,7 @@ const mockTi = "A Startup Mockup Page";
 // Descriptions
 const memDes = "A classic memory/'Simon says' game made with JQuery.";
 const drumDes = "A soundboard page made with Javascript.";
-const diceDes = "A dice-throwing page with Javascript.";
+const diceDes = "A dice-throwing page made with Javascript.";
 const mockDes = "A startup company product page made with Bootstrap.";
 
 // Tooltip info
@@ -261,7 +261,7 @@ const WebMisc = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="Play"
+              title="View"
               placement="top"
             >
               <CardActionArea
@@ -326,7 +326,7 @@ const WebMisc = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="Play"
+              title="View"
               placement="top"
             >
               <CardActionArea
@@ -391,7 +391,7 @@ const WebMisc = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="Play"
+              title="View"
               placement="top"
             >
               <CardActionArea
@@ -456,7 +456,7 @@ const WebMisc = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="Play"
+              title="View"
               placement="top"
             >
               <CardActionArea
