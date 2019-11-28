@@ -97,14 +97,12 @@ const App = () => (
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper className="wrapper">
-            <div className="section container1">
-              <div className="bg1">
-                <Particles
-                  id="particle-effects"
-                  className="particles-js"
-                  params={humidity}
-                />
-              </div>
+            <div className="section container1 bg1">
+              <Particles
+                id="particle-effects"
+                className="particles-js"
+                params={humidity}
+              />
               <Home />
             </div>
 
