@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
     marginTop: "8vh",
     backgroundColor: "rgba(0, 0, 0, 0.0)",
-    borderRadius: "10px 10px 10px 10px"
+    borderRadius: "5px 5px 5px 5px"
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
     //0.5
   },
@@ -99,7 +99,7 @@ const useStyles = makeStyles(theme => ({
     // background:
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.2), rgba(229, 229, 190, 0.2))",
     color: "white",
-    borderRadius: "10px 10px 10px 10px"
+    borderRadius: "5px 5px 5px 5px"
   },
   tab: {},
   indicator: {

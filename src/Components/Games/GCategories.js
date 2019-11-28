@@ -85,7 +85,7 @@ const useStyles = makeStyles(theme => ({
     // marginTop: "10vw",
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
     backgroundColor: "rgba(0, 0, 0, 0.00)",
-    borderRadius: "10px 10px 10px 10px"
+    borderRadius: "5px 5px 5px 5px"
 
     // display: "flex",
     // flexGrow: 1,
@@ -115,7 +115,7 @@ const useStyles = makeStyles(theme => ({
   },
   tabBar: {
     backgroundColor: "rgba(0, 0, 0, 0.01)",
-    borderRadius: "10px 10px 10px 10px",
+    borderRadius: "5px 5px 5px 5px",
     overflow: "hidden",
     // background:
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.2), rgba(229, 229, 190, 0.2))",

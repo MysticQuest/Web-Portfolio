@@ -47,13 +47,13 @@ const Home = () => {
       <div className="text-container-about">
         <Slide
           direction="left"
-          timeout={{ enter: 500, exit: 500 }}
+          timeout={{ enter: 600, exit: 500 }}
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "350ms" : "0ms" }}
         >
           <div>
             <Zoom
-              timeout={{ enter: 400, exit: 250 }}
+              timeout={{ enter: 500, exit: 250 }}
               in={activateAnim}
               style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
             >
@@ -158,13 +158,13 @@ const Home = () => {
 
         <Slide
           direction="top"
-          timeout={{ enter: 500, exit: 500 }}
+          timeout={{ enter: 600, exit: 500 }}
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "350ms" : "0ms" }}
         >
           <div>
             <Zoom
-              timeout={{ enter: 400, exit: 250 }}
+              timeout={{ enter: 500, exit: 250 }}
               in={activateAnim}
               style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
             >
@@ -202,13 +202,13 @@ const Home = () => {
 
         <Slide
           direction="right"
-          timeout={{ enter: 500, exit: 500 }}
+          timeout={{ enter: 600, exit: 500 }}
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "350ms" : "0ms" }}
         >
           <div>
             <Zoom
-              timeout={{ enter: 400, exit: 250 }}
+              timeout={{ enter: 500, exit: 250 }}
               in={activateAnim}
               style={{ transitionDelay: activateAnim ? "450ms" : "0ms" }}
             >

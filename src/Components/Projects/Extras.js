@@ -106,7 +106,8 @@ const useStyles = makeStyles(theme => ({
     height: "100%",
     transition: "box-shadow 0.3s ease-in-out",
     // maxWidth: "300px",
-    maxHeight: "400px"
+    maxHeight: "400px",
+    backgroundColor: "black"
   },
   media: {
     height: "auto",
