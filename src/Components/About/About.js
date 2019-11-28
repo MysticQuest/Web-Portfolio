@@ -157,7 +157,7 @@ const Home = () => {
         </Slide>
 
         <Slide
-          direction="top"
+          direction="down"
           timeout={{ enter: 600, exit: 500 }}
           in={activateAnim}
           style={{ transitionDelay: activateAnim ? "350ms" : "0ms" }}

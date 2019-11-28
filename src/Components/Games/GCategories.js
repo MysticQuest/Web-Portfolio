@@ -81,7 +81,7 @@ const useStyles = makeStyles(theme => ({
     // minHeight: "760px",
     // display: "table",
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
-    marginTop: "8vh",
+    marginTop: "70px",
     // marginTop: "10vw",
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
     backgroundColor: "rgba(0, 0, 0, 0.00)",
@@ -104,9 +104,8 @@ const useStyles = makeStyles(theme => ({
     // oTransition: "opacity 0.5s ease-in-out "
   },
   panel: {
-    backgroundColor: "rgba(0, 0, 0, 0.0)"
+    // backgroundColor: "rgba(0, 0, 0, 0.0)"
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-
     // background:
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.4), rgba(229, 229, 190, 0.2))",
     // "&:after": {
@@ -124,9 +123,9 @@ const useStyles = makeStyles(theme => ({
 
   tabs: { textTransform: "none !important" },
   indicator: {
-    // backgroundColor: "rgba(255,255,255,0.07)",
-    background:
-      "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
+    backgroundColor: "rgba(255,255,255,0.07)",
+    // background:
+    //   "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
     height: "100%"
     // filter: "drop-shadow(-6px 4px 2px black)"
   },

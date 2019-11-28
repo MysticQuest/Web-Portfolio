@@ -73,28 +73,40 @@ const useStyles = makeStyles(theme => ({
       //   mozTransition: "background-image 0.3s ease-in-out",
       //   oTransition: "background-image 0.3s ease-in-out"
       // },
-      "& $media2": {
+      // "& $media2": {
+      //   backgroundImage: `url(${tetrisGif}) !important`,
+      //   transition: "background-image 0.3s ease-in-out 0.1s",
+      //   webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   mozTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   oTransition: "background-image 0.3s ease-in-out 0.1s"
+      // },
+      "& $media3": {
         backgroundImage: `url(${tetrisGif}) !important`,
         transition: "background-image 0.3s ease-in-out 0.1s",
         webkitTransition: "background-image 0.3s ease-in-out 0.1s",
         mozTransition: "background-image 0.3s ease-in-out 0.1s",
         oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
-      // "& $media3": {
-      //   backgroundImage: `url(${tdGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
-      // },
       // "& $media4": {
       //   backgroundImage: `url(${shootGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
+      //   transition: "background-image 0.3s ease-in-out 0.1s",
+      //   webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   mozTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   oTransition: "background-image 0.3s ease-in-out 0.1s"
       // },
       // "& $media5": {
       //   backgroundImage: `url(${platGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
+      //   transition: "background-image 0.3s ease-in-out 0.1s",
+      //   webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   mozTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   oTransition: "background-image 0.3s ease-in-out 0.1s"
       // },
       // "& $media6": {
       //   backgroundImage: `url(${gif1}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
+      //   transition: "background-image 0.3s ease-in-out 0.1s",
+      //   webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   mozTransition: "background-image 0.3s ease-in-out 0.1s",
+      //   oTransition: "background-image 0.3s ease-in-out 0.1s"
       // },
       boxShadow: "-3px 3px 9px 0 rgba(0, 0, 0, 0.69)",
       transition: "box-shadow 0.3s ease-in-out",
@@ -246,6 +258,8 @@ const portSo = "https://github.com/MysticQuest/Web-Portfolio";
 const recSo = "https://github.com/MysticQuest/Web-Face_Recon";
 const tetrisSo = "https://github.com/MysticQuest/Web-Tetris";
 
+const tba = "Host Pending";
+
 const WebReact = () => {
   const classes = useStyles();
   if (activeIndex === 1) {
@@ -338,7 +352,7 @@ const WebReact = () => {
               <Tooltip
                 classes={{ tooltip: classes.toolTipsCard }}
                 TransitionComponent={Zoom}
-                title="TBA"
+                title={tba}
                 placement="top"
               >
                 <CardActionArea
@@ -408,7 +422,7 @@ const WebReact = () => {
               <Tooltip
                 classes={{ tooltip: classes.toolTipsCard }}
                 TransitionComponent={Zoom}
-                title="TBA"
+                title={tba}
                 placement="top"
               >
                 <CardActionArea
@@ -418,7 +432,7 @@ const WebReact = () => {
                   className={classes.cardActionArea}
                 >
                   <CardMedia
-                    className={`${classes.media} ${classes.media2}`}
+                    className={`${classes.media} ${classes.media3}`}
                     image={tetrisPic}
                   />
                   <CardContent className={classes.content}>

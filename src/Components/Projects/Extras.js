@@ -217,7 +217,7 @@ const priceTi = "ML Price Predictor";
 
 // Descriptions
 const priceDes =
-  "An exercise on neural networks, with an app that gets data from a spreadsheet, trains and predicts house prices.";
+  "An exercise on neural networks, using Python and Jupyter notebook, for an app that gets data from a spreadsheet and uses it to train and predict house prices.";
 
 // Tooltip info
 const priceTT = "";

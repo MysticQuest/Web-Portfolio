@@ -18,15 +18,8 @@ import Extras from "./Extras";
 import { preActiveIndex } from "../../App";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  // faJsSquare,
-  faPython,
-  // faGitAlt,
-  // faCss3,
-  faReact,
-  faNodeJs
-} from "@fortawesome/free-brands-svg-icons";
+import { faHtml5, faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -76,7 +69,8 @@ const useStyles = makeStyles(theme => ({
     // minHeight: "760px",
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-    marginTop: "8vh",
+    // marginTop: "8vh",
+    marginTop: "70px",
     backgroundColor: "rgba(0, 0, 0, 0.0)",
     borderRadius: "5px 5px 5px 5px"
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
@@ -103,12 +97,12 @@ const useStyles = makeStyles(theme => ({
   },
   tab: {},
   indicator: {
-    // backgroundColor: "rgba(255,255,255,0.07)",
+    backgroundColor: "rgba(255,255,255,0.07)",
     // backgroundColor: "rgba(255,252,76,0.07)",
     // background:
     //   "radial-gradient(circle, rgba(206,255,0,0.1) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
-    background:
-      "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
+    // background:
+    //   "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
     height: "100%"
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
@@ -182,7 +176,7 @@ export default function ProjectCategories() {
                 label={
                   <span>
                     <FontAwesomeIcon icon={faNodeJs} />
-                    <span>&nbsp;</span>Back End
+                    <span>&nbsp;</span>Node
                   </span>
                 }
                 {...a11yProps(1)}
@@ -201,8 +195,8 @@ export default function ProjectCategories() {
                 className={classes.tabContent}
                 label={
                   <span>
-                    <FontAwesomeIcon icon={faPython} />
-                    <span>&nbsp;</span>Extras
+                    <FontAwesomeIcon icon={faFolderOpen} />
+                    <span>&nbsp;</span>Other
                   </span>
                 }
                 {...a11yProps(2)}

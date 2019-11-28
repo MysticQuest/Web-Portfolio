@@ -24,13 +24,13 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import { activeIndex } from "../../App";
 
 //import images and media
-// import blogPic from "../../images/projImages/blog.png";
-// import cryptoPic from "../../images/projImages/crypto.png";
-// import listPic from "../../images/projImages/list.png";
-// import newsPic from "../../images/projImages/news.png";
-// import whispPic from "../../images/projImages/whisp.png";
-// import wikiPic from "../../images/projImages/wiki.png";
-import nemPic from "../../images/nem.jpg";
+import blogPic from "../../images/projImages/blog.png";
+import cryptoPic from "../../images/projImages/crypto.png";
+import listPic from "../../images/projImages/list.png";
+import newsPic from "../../images/projImages/news.png";
+import whispPic from "../../images/projImages/whisp.png";
+import wikiPic from "../../images/projImages/wiki.png";
+import nemPic from "../../images/men.jpg";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -68,33 +68,48 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     "&:hover": {
-      // "& $media1": {
-      //   backgroundImage: `url(${rpgGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out",
-      //   webkitTransition: "background-image 0.3s ease-in-out",
-      //   mozTransition: "background-image 0.3s ease-in-out",
-      //   oTransition: "background-image 0.3s ease-in-out"
-      // },
-      // "& $media2": {
-      //   backgroundImage: `url(${tetrisGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
-      // },
-      // "& $media3": {
-      //   backgroundImage: `url(${tdGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
-      // },
-      // "& $media4": {
-      //   backgroundImage: `url(${shootGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
-      // },
-      // "& $media5": {
-      //   backgroundImage: `url(${platGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
-      // },
-      // "& $media6": {
-      //   backgroundImage: `url(${gif1}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
-      // },
+      "& $media1": {
+        backgroundImage: `url(${blogPic}) !important`,
+        transition: "background-image 0.3s ease-in-out",
+        webkitTransition: "background-image 0.3s ease-in-out",
+        mozTransition: "background-image 0.3s ease-in-out",
+        oTransition: "background-image 0.3s ease-in-out"
+      },
+      "& $media2": {
+        backgroundImage: `url(${newsPic}) !important`,
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
+      },
+      "& $media3": {
+        backgroundImage: `url(${listPic}) !important`,
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
+      },
+      "& $media4": {
+        backgroundImage: `url(${whispPic}) !important`,
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
+      },
+      "& $media5": {
+        backgroundImage: `url(${cryptoPic}) !important`,
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
+      },
+      "& $media6": {
+        backgroundImage: `url(${wikiPic}) !important`,
+        transition: "background-image 0.3s ease-in-out",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
+      },
       boxShadow: "-3px 3px 9px 0 rgba(0, 0, 0, 0.69)",
       transition: "box-shadow 0.3s ease-in-out"
       // filter: "grayscale(0%)"
@@ -262,6 +277,8 @@ const whispSo = "https://github.com/MysticQuest/Web-Whisper_app_clone";
 const cryptoSo = "https://github.com/MysticQuest/Web-Crypto_Converter";
 const wikiSo = "https://github.com/MysticQuest/Web-Wiki_API";
 
+const tba = "Host Pending";
+
 const WebReact = () => {
   const classes = useStyles();
   // if (activeIndex === 1) {
@@ -279,7 +296,7 @@ const WebReact = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="TBA"
+              title={tba}
               placement="top"
             >
               <CardActionArea
@@ -344,7 +361,7 @@ const WebReact = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="TBA"
+              title={tba}
               placement="top"
             >
               <CardActionArea
@@ -354,7 +371,7 @@ const WebReact = () => {
                 className={classes.cardActionArea}
               >
                 <CardMedia
-                  className={`${classes.media} ${classes.media1}`}
+                  className={`${classes.media} ${classes.media2}`}
                   image={nemPic}
                 />
                 <CardContent className={classes.content}>
@@ -409,7 +426,7 @@ const WebReact = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="TBA"
+              title={tba}
               placement="top"
             >
               <CardActionArea
@@ -419,7 +436,7 @@ const WebReact = () => {
                 className={classes.cardActionArea}
               >
                 <CardMedia
-                  className={`${classes.media} ${classes.media2}`}
+                  className={`${classes.media} ${classes.media3}`}
                   image={nemPic}
                 />
                 <CardContent className={classes.content}>
@@ -474,7 +491,7 @@ const WebReact = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="TBA"
+              title={tba}
               placement="top"
             >
               <CardActionArea
@@ -484,7 +501,7 @@ const WebReact = () => {
                 className={classes.cardActionArea}
               >
                 <CardMedia
-                  className={`${classes.media} ${classes.media2}`}
+                  className={`${classes.media} ${classes.media4}`}
                   image={nemPic}
                 />
                 <CardContent className={classes.content}>
@@ -539,7 +556,7 @@ const WebReact = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="TBA"
+              title={tba}
               placement="top"
             >
               <CardActionArea
@@ -549,7 +566,7 @@ const WebReact = () => {
                 className={classes.cardActionArea}
               >
                 <CardMedia
-                  className={`${classes.media} ${classes.media2}`}
+                  className={`${classes.media} ${classes.media5}`}
                   image={nemPic}
                 />
                 <CardContent className={classes.content}>
@@ -604,7 +621,7 @@ const WebReact = () => {
             <Tooltip
               classes={{ tooltip: classes.toolTipsCard }}
               TransitionComponent={Zoom}
-              title="TBA"
+              title={tba}
               placement="top"
             >
               <CardActionArea
@@ -614,7 +631,7 @@ const WebReact = () => {
                 className={classes.cardActionArea}
               >
                 <CardMedia
-                  className={`${classes.media} ${classes.media2}`}
+                  className={`${classes.media} ${classes.media6}`}
                   image={nemPic}
                 />
                 <CardContent className={classes.content}>

@@ -208,7 +208,8 @@ const useStyles = makeStyles(theme => ({
   },
   toolTipsCard: {
     fontSize: theme.typography.pxToRem(20),
-    backgroundColor: "#c96b34"
+    backgroundColor: "#c96b34",
+    margin: "0"
   }
 }));
 
