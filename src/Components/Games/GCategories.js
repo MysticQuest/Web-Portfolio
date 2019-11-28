@@ -123,9 +123,9 @@ const useStyles = makeStyles(theme => ({
 
   tabs: { textTransform: "none !important" },
   indicator: {
-    backgroundColor: "rgba(255,255,255,0.07)",
-    // background:
-    //   "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
+    // backgroundColor: "rgba(255,255,255,0.07)",
+    background:
+      "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
     height: "100%"
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
