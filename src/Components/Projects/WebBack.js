@@ -184,26 +184,36 @@ const useStyles = makeStyles(theme => ({
   buttonArea: {
     background: "linear-gradient(to right, #000000, #434343)",
     backgroundColor: "#393f47", //test color for firefox bug
-    display: "block",
-    padding: "0"
-    // display: "flex", //card has flex by default
-    // flexGrow: 1,
-    // flexShrink: 1,
-    // flexFlow: "wrap",
-    // justifyContent: "center",
+    // display: "block",
+    padding: "0",
+    flexShrink: 1,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center"
   },
   buttons: {
-    // backgroundColor: "white",
-    // flexGrow: 1,
-    // flexShrink: 1,
-    // padding: "0",
-    // minHeight: "25px",
     marginLeft: "0 !important"
-    // marginTop: "5px",
-    // marginBottom: "5px"
   },
-  icons: { color: "white", fontSize: "1.8rem" },
-  iconsTBA: { color: "#9c7e82", fontSize: "1.3rem" },
+  icons: {
+    color: "white",
+    fontSize: "1.3rem",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "1.8rem"
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.8rem"
+    }
+  },
+  iconsTBA: {
+    color: "#9c7e82",
+    fontSize: "1rem",
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "1.3rem"
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.3rem"
+    }
+  },
   toolTips: {
     // backgroundColor: "#f5f5f9",
     backgroundColor: "rgba(0, 0, 0, 1)",
