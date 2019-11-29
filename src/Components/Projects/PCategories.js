@@ -72,6 +72,10 @@ const useStyles = makeStyles(theme => ({
     // marginTop: "8vh",
     [theme.breakpoints.up("sm")]: {
       paddingLeft: "calc(7vw + 120px)",
+      paddingRight: "calc(17vw + 50px)"
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingLeft: "calc(7vw + 120px)",
       paddingRight: "calc(7vw + 50px)"
     },
 
