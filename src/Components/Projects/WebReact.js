@@ -200,7 +200,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center"
   },
   buttons: {
-    marginLeft: "0 !important"
+    marginLeft: "0 !important",
+    minWidth: "50%"
   },
   icons: {
     color: "white",

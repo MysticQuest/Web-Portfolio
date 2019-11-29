@@ -85,7 +85,7 @@ const useStyles = makeStyles(theme => ({
     // marginTop: "8vh",
     [theme.breakpoints.up("sm")]: {
       paddingLeft: "calc(7vw + 120px)",
-      paddingRight: "calc(17vw + 50px)"
+      paddingRight: "calc(15vw + 50px)"
     },
     [theme.breakpoints.up("xl")]: {
       paddingLeft: "calc(7vw + 120px)",
@@ -94,7 +94,7 @@ const useStyles = makeStyles(theme => ({
 
     [theme.breakpoints.up("1921")]: {
       paddingLeft: "calc(7vw + 120px)",
-      paddingRight: "calc(14vw + 50px)"
+      paddingRight: "calc(12vw + 50px)"
     },
 
     paddingTop: "70px",
