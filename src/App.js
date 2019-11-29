@@ -20,7 +20,7 @@ import { humidity } from "./myThemes/humidity";
 import { fireflies2 } from "./myThemes/fireflies2";
 //hooks?
 //import { useAnimHandler } from "./hooks/useAnimHandler";
-// import { mouseEffect } from "./mouseEffect";
+import { mouseEffect } from "./mouseEffect";
 
 var activeIndex = 0;
 var preActiveIndex = 0;
@@ -93,7 +93,7 @@ const App = () => (
         onLeaveIndexOrigin = origin.index;
       }}
       afterRender={() => {
-        // mouseEffect();
+        mouseEffect();
       }}
       render={({ state, fullpageApi }) => {
         return (
