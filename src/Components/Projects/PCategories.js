@@ -83,7 +83,7 @@ const useStyles = makeStyles(theme => ({
   },
   tabPanel: {},
   panel: {
-    backgroundColor: "rgba(0, 0, 0, 0.0)",
+    // backgroundColor: "rgba(0, 0, 0, 0.0)",
     paddingLeft: "6vw",
     paddingRight: "6vw"
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",

@@ -70,7 +70,15 @@
   .tacky-container-3,
   .tacky-container-2,
   .tacky-container-1 {
-    margin: 5vh;
+    /* margin: 5vh; */
+    border-radius: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tacky-container-3 {
+    margin-top: 5vw;
+    margin-left: auto;
   }
 }
 

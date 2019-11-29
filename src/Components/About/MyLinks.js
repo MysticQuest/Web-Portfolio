@@ -1,13 +1,18 @@
 import React from "react";
 //import icons
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
+import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
-//import themes
+import VerticalAlignBottomIcon from "@material-ui/icons/VerticalAlignBottom";
+//import mui
+import Tooltip from "@material-ui/core/Tooltip";
+import Zoom from "@material-ui/core/Zoom";
+
 //import "../../themes/animate.css";
 import "../../myThemes/global.css";
 import "./MyLinks.css";
 import { makeStyles } from "@material-ui/styles";
+
 //import active section
 //import { activeIndex } from "../../App";
 
@@ -53,6 +58,25 @@ const useStyles = makeStyles(theme => ({
       color: "lightblue"
     }
   },
+  Cv: {
+    fontSize: "3rem",
+    position: "fixed",
+    zIndex: "1",
+    color: "white",
+    top: "6px",
+    right: "170px",
+    transition: "all 0.2s ease-in-out",
+    "&:hover": {
+      filter: "drop-shadow(1px 1px 2px black)",
+      color: "lightblue"
+    }
+  },
+  tooltip: {
+    fontSize: 16,
+    backgroundColor: "#496dfc"
+    // margin: "0"
+  },
+
   linkContainer: {
     // mixBlendMode: "difference",
     // zIndex: "999"
@@ -60,17 +84,38 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const gitLink = "https://github.com/MysticQuest?tab=repositories";
+const linLink = "https://www.linkedin.com/in/kmls/";
 
 const Icons = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.linkContainer}>
-      <LinkedInIcon className={classes.LinkedIn} />
-      <AlternateEmailIcon className={classes.Mail} />
+      <a target="_blank" rel="noopener noreferrer" href={linLink}>
+        <LinkedInIcon className={classes.LinkedIn} />
+      </a>
+
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="mailto:kirimns@gmail.com"
+      >
+        <EmailIcon className={classes.Mail} />
+      </a>
 
       <a target="_blank" rel="noopener noreferrer" href={gitLink}>
         <GitHubIcon className={classes.Git} />
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href={gitLink}>
+        <Tooltip
+          classes={{ tooltip: classes.tooltip }}
+          TransitionComponent={Zoom}
+          title="Not available yet"
+          placement="bottom"
+        >
+          <VerticalAlignBottomIcon className={classes.Cv} />
+        </Tooltip>
       </a>
     </div>
   );

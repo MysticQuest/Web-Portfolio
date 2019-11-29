@@ -122,7 +122,7 @@ const useStyles = makeStyles(theme => ({
     color: "white"
   },
 
-  tabs: { textTransform: "none !important" },
+  tabs: {},
   indicator: {
     // backgroundColor: "rgba(255,255,255,0.07)",
     background:

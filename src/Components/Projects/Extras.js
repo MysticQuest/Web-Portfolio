@@ -132,29 +132,17 @@ const useStyles = makeStyles(theme => ({
   media6: {},
 
   content: {
-    // background:
-    //   "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
     background:
       "linear-gradient(270deg, rgba(89,100,117,1) 0%, rgba(76,77,113,1) 34%, rgba(58,59,89,1) 69%, rgba(40,41,77,1) 100%)",
     backgroundColor: "#393f47", //test color for firefox bug
-    // background:
-    //   "linear-gradient(to right, #406483, #42728f, #46809a, #4b8ea3, #539cac)", // lighter bluish grad
-    // background:
-    //   "linear-gradient(to right, #1f3f5b, #1e4e6c, #195e7d, #106f8d, #00809b)", //darker bluish grad
-    // background: "linear-gradient(to right, #ee9ca7, #ffdde1)", //old light gradient
     padding: "10px",
-    // flexShrink: 1,
     flexGrow: 1,
     display: "flex",
     flexDirection: "column"
-    // justifyContent: "space-between"
-    // alignItems: "stretch",
-    // height: "100%"
   },
   contHead: {
     color: "white",
     fontFamily: "Acme"
-    // marginBottom: "3px"
   },
   contText: {
     color: "white"
@@ -164,35 +152,16 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#393f47", //test color for firefox bug
     display: "block",
     padding: "0"
-    // display: "flex", //card has flex by default
-    // flexGrow: 1,
-    // flexShrink: 1,
-    // flexFlow: "wrap",
-    // justifyContent: "center",
   },
   buttons: {
-    // backgroundColor: "white",
-    // flexGrow: 1,
-    // flexShrink: 1,
-    // padding: "0",
-    // minHeight: "25px",
     marginLeft: "0 !important"
-    // marginTop: "5px",
-    // marginBottom: "5px"
   },
   icons: { color: "white", fontSize: "1.8rem" },
   iconsTBA: { color: "#9c7e82", fontSize: "1.3rem" },
   toolTips: {
-    // backgroundColor: "#f5f5f9",
     backgroundColor: "rgba(0, 0, 0, 1)",
     maxWidth: 350,
-    // // maxHeight: 100,
     fontSize: theme.typography.pxToRem(14),
-    // border: "1px solid #dadde9",
-    // // transform: "translate(100px, 200px) rotate(50deg)"
-    // // transform: "translate(50%,90%)"
-    // marginLeft: "23vw",
-    // marginTop: "90vh",
     [theme.breakpoints.down("sm")]: {
       marginBottom: "35vh"
     }
