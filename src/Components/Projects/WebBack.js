@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
   },
   // grid: { textAlign: "-webkit-center" },
   gridItem: {
-    [theme.breakpoints.up("md")]: {
+    [theme.breakpoints.up("xl")]: {
       padding: "24px !important"
     }
     // flexShrink: 1,
@@ -131,11 +131,17 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
     height: "auto",
-    width: "100%",
-    paddingTop: "46.25%",
-    objectFit: "cover",
-    transition: "background-image 0.3s ease-in-out"
-
+    paddingTop: "33%",
+    // objectFit: "cover",
+    transition: "background-image 0.3s ease-in-out",
+    [theme.breakpoints.up("xl")]: {
+      paddingTop: "46.25%",
+      width: "100%"
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "46.25%",
+      width: "100%"
+    }
     // background: { pic2 }
     // margin: "-70px auto 0",
     // width: "80%",
@@ -163,7 +169,7 @@ const useStyles = makeStyles(theme => ({
     // background:
     //   "linear-gradient(to right, #1f3f5b, #1e4e6c, #195e7d, #106f8d, #00809b)", //darker bluish grad
     // background: "linear-gradient(to right, #ee9ca7, #ffdde1)", //old light gradient
-    padding: "10px",
+    padding: "5px",
     // flexShrink: 1,
     flexGrow: 1,
     display: "flex",
@@ -175,7 +181,16 @@ const useStyles = makeStyles(theme => ({
   contHead: {
     color: "white",
     fontFamily: "Acme",
-    fontSize: "calc(18px + 0.5vh)"
+    fontSize: "calc(18px + 0.5vh)",
+    marginBottom: "0",
+    [theme.breakpoints.up("xl")]: {
+      marginBottom: "5px",
+      marginTop: "5px"
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "5px",
+      marginTop: "5px"
+    }
   },
   contText: {
     color: "white",
