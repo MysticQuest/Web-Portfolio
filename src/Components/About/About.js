@@ -183,7 +183,7 @@ const Home = () => {
                         <p>
                           <IconButton
                             className="get-in-touch"
-                            href="mailto:name@email.com"
+                            href="mailto:kirimns@gmail.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             color="inherit"
