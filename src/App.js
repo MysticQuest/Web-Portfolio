@@ -82,7 +82,7 @@ const App = () => (
       // some extra afterLoad parameters origin, destination, direction, index
       scrollOverflow={true}
       // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
-      lazyLoading={true}
+      // lazyLoading={true}
       css3={true}
       afterLoad={(origin, destination, direction) => {
         activeIndex = destination.index;

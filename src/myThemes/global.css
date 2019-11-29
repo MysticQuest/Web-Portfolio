@@ -6,22 +6,12 @@ body {
 } */
 
 .full-container-1 {
-  padding: 60px 60px 1px calc(7vw + 120px);
+  padding: 60px 60px 60px calc(7vw + 120px);
   word-wrap: break-word;
   padding-top: 1px;
   padding-bottom: 1px;
   overflow: hidden;
   height: max-content;
-}
-
-@media only screen and (max-width: 1280px) {
-  .full-container-1 {
-    /* margin: 130px 60px 120px 30px; */
-    padding-left: 5vh;
-    padding-right: 5vh;
-    padding-top: 6vh;
-    padding-bottom: 1vh;
-  }
 }
 
 @media only screen and (max-width: 600px) {
