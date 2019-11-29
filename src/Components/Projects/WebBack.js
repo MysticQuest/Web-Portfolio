@@ -264,27 +264,25 @@ const newsTi = "Newsletter Sub";
 const listTi = "To-Do List";
 const whispTi = "Whisper App clone";
 const wikiTi = "Wiki API";
-const cryptoTi = "Cryptocurrency Converter";
+const cryptoTi = "Crypto Converter";
 
 // Descriptions
-const blogDes = "A Blog, using NodeJS, Express and MongoDB.";
-const newsDes =
-  "A newsletter subscription service that stores subscribers through Mailchimp's API - using NodeJs and Express.";
-const listDes = "A simple to-do list using NodeJS, Express and MongoDB.";
+const blogDes = "A Blog with basic functionality.";
+const newsDes = "A newsletter subscription service through Mailchimp's API.";
+const listDes = "A simple to-do list.";
 const whispDes =
-  "An exercise on authentication using OAuth and local auth methods with NodeJs, Express and MongoDB.";
+  "An exercise on authentication using OAuth and local auth methods.";
 const cryptoDes =
-  "A cryptocurrency converter that uses the 'Bitcoin Average' API - with NodeJs and Express. ";
-const wikiDes =
-  "An exercise on RESTful APIs (without html), using NodeJs, Express and MongoDB.";
+  "A cryptocurrency converter that uses the 'Bitcoin Average' API. ";
+const wikiDes = "An exercise on RESTful APIs (without html).";
 
 // Tooltip info
-const blogTT = "";
-const newsTT = "";
-const listTT = "";
-const whispTT = "";
-const cryptoTT = "";
-const wikiTT = "";
+const blogTT = "With NodeJS, Express and MongoDB.";
+const newsTT = "With NodeJS, Express and MongoDB.";
+const listTT = "With NodeJS, Express and MongoDB.";
+const whispTT = "With NodeJS, Express and MongoDB.";
+const cryptoTT = "With NodeJS, Express.";
+const wikiTT = "With NodeJS, Express and MongoDB.";
 
 // Play links
 const blogLi = "";
@@ -372,7 +370,7 @@ const WebReact = () => {
               >
                 <Button className={classes.buttons}>
                   <FontAwesomeIcon
-                    className={classes.iconsTBA}
+                    className={classes.icons}
                     icon={faInfoCircle}
                   />
                 </Button>
@@ -437,7 +435,7 @@ const WebReact = () => {
               >
                 <Button className={classes.buttons}>
                   <FontAwesomeIcon
-                    className={classes.iconsTBA}
+                    className={classes.icons}
                     icon={faInfoCircle}
                   />
                 </Button>
@@ -502,7 +500,7 @@ const WebReact = () => {
               >
                 <Button className={classes.buttons}>
                   <FontAwesomeIcon
-                    className={classes.iconsTBA}
+                    className={classes.icons}
                     icon={faInfoCircle}
                   />
                 </Button>
@@ -567,7 +565,7 @@ const WebReact = () => {
               >
                 <Button className={classes.buttons}>
                   <FontAwesomeIcon
-                    className={classes.iconsTBA}
+                    className={classes.icons}
                     icon={faInfoCircle}
                   />
                 </Button>
@@ -632,7 +630,7 @@ const WebReact = () => {
               >
                 <Button className={classes.buttons}>
                   <FontAwesomeIcon
-                    className={classes.iconsTBA}
+                    className={classes.icons}
                     icon={faInfoCircle}
                   />
                 </Button>
@@ -697,7 +695,7 @@ const WebReact = () => {
               >
                 <Button className={classes.buttons}>
                   <FontAwesomeIcon
-                    className={classes.iconsTBA}
+                    className={classes.icons}
                     icon={faInfoCircle}
                   />
                 </Button>
