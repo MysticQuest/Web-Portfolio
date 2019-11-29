@@ -75,6 +75,11 @@ const useStyles = makeStyles(theme => ({
       paddingRight: "calc(7vw + 50px)"
     },
 
+    [theme.breakpoints.up("1921")]: {
+      paddingLeft: "calc(7vw + 120px)",
+      paddingRight: "calc(14vw + 50px)"
+    },
+
     paddingTop: "70px",
     backgroundColor: "rgba(0, 0, 0, 0.0)",
     borderRadius: "5px 5px 5px 5px"

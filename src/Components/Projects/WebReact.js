@@ -158,16 +158,19 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     display: "flex",
     flexDirection: "column"
+
     // justifyContent: "space-between"
     // alignItems: "stretch",
     // height: "100%"
   },
   contHead: {
     color: "white",
-    fontFamily: "Acme"
+    fontFamily: "Acme",
+    fontSize: "calc(18px + 0.5vh)"
   },
   contText: {
-    color: "white"
+    color: "white",
+    fontSize: "calc(10px + 0.5vh)"
   },
   buttonArea: {
     background: "linear-gradient(to right, #000000, #434343)",
@@ -190,8 +193,8 @@ const useStyles = makeStyles(theme => ({
     // marginTop: "5px",
     // marginBottom: "5px"
   },
-  icons: { color: "white", fontSize: "1.8rem" },
-  iconsTBA: { color: "#9c7e82", fontSize: "1.3rem" },
+  icons: { color: "white", fontSize: "1.5rem" },
+  iconsTBA: { color: "#9c7e82", fontSize: "1.2rem" },
   toolTips: {
     // backgroundColor: "#f5f5f9",
     backgroundColor: "rgba(0, 0, 0, 1)",
