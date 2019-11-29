@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     margin: "0 0 0 0",
     padding: "3.5vh 0 1vh 0",
     flexDirection: "column",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("xl")]: {
       padding: "6.5vh 0 2.5vh 0"
     }
   },

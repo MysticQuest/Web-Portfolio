@@ -110,8 +110,10 @@ const useStyles = makeStyles(theme => ({
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
     // background:
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.4), rgba(229, 229, 190, 0.2))",
-    paddingLeft: "6vw",
-    paddingRight: "6vw"
+    [theme.breakpoints.up("xl")]: {
+      paddingLeft: "6vw",
+      paddingRight: "6vw"
+    }
   },
   tabBar: {
     backgroundColor: "rgba(0, 0, 0, 0.01)",

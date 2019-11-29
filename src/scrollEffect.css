@@ -1,28 +1,27 @@
 /* CUSTOM SCROLL EFFECT */
 
 .fullpage-wrapper {
-  /* width: 100% !important; */
+  width: 100% !important;
   /* transform: none !important; */
 }
 
 .fp-section {
-  /* width: 100% !important;
-  
+  width: 100% !important;
+
   left: 0;
   top: 0;
-  
 
   transition: opacity 1s ease-in-out;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
-  -ms-transition: opacity 1s ease-in-out; */
+  -ms-transition: opacity 1s ease-in-out;
 
   /* position: absolute; */
 
   /* FADE */
   /* visibility: hidden; */
-  /* opacity: 0.5; */
+  opacity: 0.5;
 
   /* transition: all 1s linear; */
   /* transition: all 1s ease-out; */
@@ -53,7 +52,7 @@
 .fp-section.active {
   /* FADE */
   /* visibility: visible; */
-  /* opacity: 1; */
+  opacity: 1;
 
   /* CARD */
   /* transform: translateZ(10rem) scale(1); */
