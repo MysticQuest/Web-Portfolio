@@ -20,7 +20,7 @@ import { humidity } from "./myThemes/humidity";
 import { fireflies2 } from "./myThemes/fireflies2";
 //hooks?
 //import { useAnimHandler } from "./hooks/useAnimHandler";
-import { mouseEffect } from "./mouseEffect";
+// import { mouseEffect } from "./mouseEffect";
 
 var activeIndex = 0;
 var preActiveIndex = 0;
@@ -81,6 +81,7 @@ const App = () => (
       touchSensitivity={5}
       // some extra afterLoad parameters origin, destination, direction, index
       scrollOverflow={true}
+      touchScrollStep={50}
       // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
       // lazyLoading={true}
       css3={true}
@@ -92,12 +93,12 @@ const App = () => (
         onLeaveIndexOrigin = origin.index;
       }}
       afterRender={() => {
-        mouseEffect();
+        // mouseEffect();
       }}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper className="wrapper">
-            <div className="section container1 bg1">
+            <div className="section container1 bg1 fp-auto-height-responsive">
               <Particles
                 id="particle-effects"
                 className="particles-js"
@@ -106,14 +107,14 @@ const App = () => (
               <Home />
             </div>
 
-            <div className="section container2 bg2">
+            <div className="section container2 bg2 fp-auto-height-responsive">
               <ProjectCategories />
             </div>
 
-            <div className="section container3 bg3">
+            <div className="section container3 bg3 fp-auto-height-responsive">
               <GameCategories />
             </div>
-            <div className="section container4 bg4">
+            <div className="section container4 bg4 fp-auto-height-responsive">
               <Particles
                 id="particle-effects"
                 className="particles-js"
