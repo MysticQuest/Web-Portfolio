@@ -118,22 +118,21 @@ const useStyles = makeStyles(theme => ({
     // flexShrink: 1,
     // flexGrow: 1,
     borderRadius: "20px",
-    marginLeft: "1vw",
-    marginRight: "1vw",
+
     // position: "relative",
     // top: 0,
     display: "flex",
     flexDirection: "column",
     height: "100%",
     transition: "box-shadow 0.3s ease-in-out",
-    // maxWidth: "300px",
-    // maxHeight: "400px",
+    marginLeft: "1vw",
+    marginRight: "1vw",
     backgroundColor: "black"
   },
   media: {
     height: "auto",
     width: "100%",
-    paddingTop: "50.25%",
+    paddingTop: "46.25%",
     objectFit: "cover",
     transition: "background-image 0.3s ease-in-out"
 
@@ -247,9 +246,9 @@ const newsDes =
   "A newsletter subscription service that stores subscribers through Mailchimp's API - using NodeJs and Express.";
 const listDes = "A simple to-do list using NodeJS, Express and MongoDB.";
 const whispDes =
-  "An exercise on authentication with a 'whisper app' clone (using OAuth and local auth methods) with NodeJs, Express and MongoDB.";
+  "An exercise on authentication using OAuth and local auth methods with NodeJs, Express and MongoDB.";
 const cryptoDes =
-  "A cryptocurrency converter with some conventional currency options, via the 'Bitcoin Average' API - with NodeJs and Express. ";
+  "A cryptocurrency converter that uses the 'Bitcoin Average' API - with NodeJs and Express. ";
 const wikiDes =
   "An exercise on RESTful APIs (without html), using NodeJs, Express and MongoDB.";
 

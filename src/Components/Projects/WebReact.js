@@ -31,8 +31,7 @@ import tetrisGif from "../../images/projImages/tetris.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    rowHeight: "15vh"
+    flexGrow: 1
   },
   // grid: { textAlign: "-webkit-center" },
   gridItem: {
@@ -109,24 +108,15 @@ const useStyles = makeStyles(theme => ({
       //   oTransition: "background-image 0.3s ease-in-out 0.1s"
       // },
       boxShadow: "-3px 3px 9px 0 rgba(0, 0, 0, 0.69)",
-      transition: "box-shadow 0.3s ease-in-out",
-      filter: "blur(0) !important"
-      // filter: "grayscale(0%)"
+      transition: "box-shadow 0.3s ease-in-out"
     },
-    // filter: "grayscale(50%)",
-    // flexShrink: 1,
-    // flexGrow: 1,
     borderRadius: "20px",
-    marginLeft: "1vw",
-    marginRight: "1vw",
-    // position: "relative",
-    // top: 0,
     display: "flex",
     flexDirection: "column",
     height: "100%",
     transition: "box-shadow 0.3s ease-in-out",
-    // maxWidth: "300px",
-    // maxHeight: "400px",
+    marginLeft: "1vw",
+    marginRight: "1vw",
     backgroundColor: "black"
   },
   media: {
@@ -175,7 +165,6 @@ const useStyles = makeStyles(theme => ({
   contHead: {
     color: "white",
     fontFamily: "Acme"
-    // marginBottom: "3px"
   },
   contText: {
     color: "white"
@@ -239,8 +228,7 @@ const tetrisTi = "React Tetris";
 
 // Descriptions
 const portDes = "A casual-themed portfolio made with React and Material UI.";
-const recDes =
-  "An app that uses Clarifai's API to detect faces in pictures and sets - in the current iteration - a bordered box around them.";
+const recDes = "An app that uses Clarifai's API to detect faces in pictures.";
 const tetrisDes = "A tetris game made with React.";
 
 // Tooltip info

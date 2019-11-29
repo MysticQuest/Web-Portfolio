@@ -70,7 +70,6 @@ const App = () => (
       scrollBar={false}
       // easing={"easeInOutCubic"}
       // easingcss3={"ease"}
-      // css3={true}
       autoScrolling={true}
       fitToSection={true}
       // fixedElements={"ResponsiveDrawer"}
@@ -84,6 +83,7 @@ const App = () => (
       scrollOverflow={true}
       // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
       lazyLoading={true}
+      css3={true}
       afterLoad={(origin, destination, direction) => {
         activeIndex = destination.index;
       }}

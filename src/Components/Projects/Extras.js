@@ -97,16 +97,15 @@ const useStyles = makeStyles(theme => ({
     // flexShrink: 1,
     // flexGrow: 1,
     borderRadius: "20px",
-    marginLeft: "1vw",
-    marginRight: "1vw",
+
     // position: "relative",
     // top: 0,
     display: "flex",
     flexDirection: "column",
     height: "100%",
     transition: "box-shadow 0.3s ease-in-out",
-    // maxWidth: "300px",
-    // maxHeight: "400px",
+    marginLeft: "1vw",
+    marginRight: "1vw",
     backgroundColor: "black"
   },
   media: {
@@ -217,7 +216,7 @@ const priceTi = "ML Price Predictor";
 
 // Descriptions
 const priceDes =
-  "An exercise on neural networks, using Python and Jupyter notebook, for an app that gets data from a spreadsheet and uses it to train and predict house prices.";
+  "An exercise on neural networks, using Python and Jupyter notebook.";
 
 // Tooltip info
 const priceTT = "";

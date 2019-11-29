@@ -78,21 +78,23 @@ const useStyles = makeStyles(theme => ({
     //   paddingLeft: "1vh",
     //   paddingRight: "1vh"
     // },
-    // minHeight: "760px",
     // display: "table",
+    // minHeight: "760px",
     // backgroundColor: theme.palette.background.paper,#003973 #E5E5BE
-    marginTop: "70px",
-    // marginTop: "10vw",
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-    backgroundColor: "rgba(0, 0, 0, 0.00)",
+    // marginTop: "8vh",
+    [theme.breakpoints.up("sm")]: {
+      paddingLeft: "calc(7vw + 120px)",
+      paddingRight: "calc(7vw + 50px)"
+    },
+    [theme.breakpoints.up("1921")]: {
+      paddingTop: "70px"
+    },
+    marginTop: "70px",
+    backgroundColor: "rgba(0, 0, 0, 0.0)",
     borderRadius: "5px 5px 5px 5px"
-
-    // display: "flex",
-    // flexGrow: 1,
-    // flexFlow: "column",
-    // height: "-webkit-fill-available"
-    // boxShadow: "inset 0 0 0 200px rgba(255,255,255,0.05)",
-    // filter: "blur(10px)"
+    // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"
+    //0.5
   },
   tabPanel: {
     // boxShadow: "inset 0 0 0 200px rgba(255,255,255,0.05)"
@@ -108,9 +110,8 @@ const useStyles = makeStyles(theme => ({
     // boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
     // background:
     //   "linear-gradient(to bottom, rgba(0, 57, 115, 0.4), rgba(229, 229, 190, 0.2))",
-    // "&:after": {
-    //   filter: "blur(2px)"
-    // }
+    paddingLeft: "6vw",
+    paddingRight: "6vw"
   },
   tabBar: {
     backgroundColor: "rgba(0, 0, 0, 0.01)",
@@ -125,7 +126,7 @@ const useStyles = makeStyles(theme => ({
   indicator: {
     // backgroundColor: "rgba(255,255,255,0.07)",
     background:
-      "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
+      "radial-gradient(circle, rgba(246, 253, 200,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
     height: "100%"
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
@@ -227,13 +228,23 @@ export default function GameCategories() {
             index={value}
             onChangeIndex={handleChangeIndex}
           >
-            <TabPanel value={value} index={0} dir={theme.direction}>
+            <TabPanel
+              className={classes.panel}
+              value={value}
+              index={0}
+              dir={theme.direction}
+            >
               <Games />
             </TabPanel>
-            <TabPanel value={value} index={1} dir={theme.direction}>
+            <TabPanel
+              className={classes.panel}
+              value={value}
+              index={1}
+              dir={theme.direction}
+            >
               <Misc />
             </TabPanel>
-            {/* <TabPanel value={value} index={2} dir={theme.direction}>
+            {/* <TabPanel className={classes.panel} value={value} index={2} dir={theme.direction}>
               <Games />
             </TabPanel> */}
           </SwipeableViews>
