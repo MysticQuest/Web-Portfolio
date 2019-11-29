@@ -133,10 +133,17 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
     height: "auto",
-    width: "100%",
-    paddingTop: "56.25%",
-    objectFit: "cover",
-    transition: "background-image 0.3s ease-in-out"
+    paddingTop: "43%",
+    // objectFit: "cover",
+    transition: "background-image 0.3s ease-in-out",
+    [theme.breakpoints.up("xl")]: {
+      paddingTop: "56.25%",
+      width: "100%"
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "56.25%",
+      width: "100%"
+    }
 
     // background: { pic2 }
     // margin: "-70px auto 0",
@@ -174,11 +181,12 @@ const useStyles = makeStyles(theme => ({
   },
   contHead: {
     color: "white",
-    fontFamily: "Acme"
-    // marginBottom: "3px"
+    fontFamily: "Acme",
+    fontSize: "calc(18px + 0.5vh)"
   },
   contText: {
-    color: "white"
+    color: "white",
+    fontSize: "calc(10px + 0.5vh)"
   },
   buttonArea: {
     background: "linear-gradient(to right, #000000, #434343)",
