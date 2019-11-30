@@ -76,8 +76,9 @@ const Home = () => {
             >
               <div className="readability-container1">
                 <p className="home3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  tempor augue risus, ut tempor dolor tincidunt eu. Suspendisse
+                  Hello, I am Kiriakos, a software developer who really likes
+                  bringing stuff into existence through programming. This site
+                  is a work in progress. So here's some Lorem ipsum. Suspendisse
                   hendrerit lacus enim, a tempus ante sollicitudin eu. Vivamus
                   porta dapibus egestas.
                 </p>
