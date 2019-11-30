@@ -66,6 +66,22 @@
   margin-left: 11vw;
 }
 
+@media only screen and (max-width: 1900px) {
+  .tacky-container-3,
+  .tacky-container-2,
+  .tacky-container-1 {
+    /* margin: 5vh; */
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  .tacky-container-3 {
+    margin-top: 56vh;
+    margin-bottom: 20px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .tacky-container-3,
   .tacky-container-2,

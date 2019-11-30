@@ -243,6 +243,7 @@ const Home = () => {
                       <Grid item xs={6} sm={6}>
                         <p className="mini-header-about">Background art:</p>
                         <p className="about3">Firewatch</p>
+                        <p className="about3">(Olly Moss)</p>
                       </Grid>
 
                       <Grid item xs={6} sm={6}>
