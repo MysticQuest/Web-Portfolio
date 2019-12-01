@@ -83,7 +83,7 @@ const App = () => (
       scrollOverflow={true}
       touchScrollStep={50}
       // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
-      // lazyLoading={true}
+      lazyLoading={true}
       css3={true}
       afterLoad={(origin, destination, direction) => {
         activeIndex = destination.index;
