@@ -92,7 +92,7 @@
   width: fit-content;
   height: fit-content;
 
-  background-color: rgba(8, 8, 119, 0.42);
+  background-color: rgba(8, 8, 119, 0.6);
   /* background: linear-gradient(
     -45deg,
     rgba(0, 21, 66, 0.4) 0%,
@@ -104,7 +104,8 @@
   animation: gradientBG 15s ease infinite; */
 
   position: relative;
-  padding: 4vh;
+  padding: 6vh;
+  padding-bottom: 5vh;
   padding-top: 10vh;
   border-radius: 80%;
   max-width: 700px;

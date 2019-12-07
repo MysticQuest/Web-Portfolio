@@ -62,8 +62,8 @@ const App = () => (
       lockAnchors={true} //anchor feature
       navigation={true} //enables cool dots
       // arrowNavigation={true} //enables arrows for slides
-      slidesNavigation={true}
-      slidesNavPosition={"bottom"}
+      // slidesNavigation={false}
+      // slidesNavPosition={"bottom"}
       // navigationTooltips={[]} //tooltips for the navdots
       scrollingSpeed={1000} /* used this for something to work... */
       // sectionsColor={["black", "black", "black", "black"]}
@@ -72,6 +72,7 @@ const App = () => (
       // easingcss3={"ease"}
       autoScrolling={true}
       fitToSection={true}
+      fitToSectionDelay={1000}
       // fixedElements={"ResponsiveDrawer"}
       loopBottom={false}
       // scrollHorizontally={true}
@@ -83,7 +84,7 @@ const App = () => (
       scrollOverflow={true}
       touchScrollStep={50}
       // scrollOverflowReset={true} //if you have sections with scrollbar resets the section on change
-      lazyLoading={true}
+      lazyLoading={false}
       css3={true}
       afterLoad={(origin, destination, direction) => {
         activeIndex = destination.index;
@@ -98,7 +99,7 @@ const App = () => (
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper className="wrapper">
-            <div className="section container1 bg1 fp-auto-height-responsive">
+            <div className="section container1 bg1">
               <Particles
                 id="particle-effects"
                 className="particles-js"
@@ -107,14 +108,14 @@ const App = () => (
               <Home />
             </div>
 
-            <div className="section container2 bg2 fp-auto-height-responsive">
+            <div className="section container2 bg2">
               <ProjectCategories />
             </div>
 
-            <div className="section container3 bg3 fp-auto-height-responsive">
+            <div className="section container3 bg3">
               <GameCategories />
             </div>
-            <div className="section container4 bg4 fp-auto-height-responsive">
+            <div className="section container4 bg4">
               <Particles
                 id="particle-effects"
                 className="particles-js"

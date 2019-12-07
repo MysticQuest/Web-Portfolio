@@ -44,6 +44,11 @@ body {
   }
 } */
 
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white !important;
+}
+
 /* .fp-slidesNav.fp-bottom {
   visibility: hidden;
 }
