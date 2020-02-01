@@ -31,11 +31,13 @@ import rpgPic from "../../images/gameImages/rpg.png";
 import blockPic from "../../images/gameImages/block.png";
 import blockGif from "../../images/gameImages/block.gif";
 import tdPic from "../../images/gameImages/td.png";
+import tankPic from "../../images/gameImages/tanks.png";
 import tdGif from "../../images/gameImages/td.gif";
 import shootPic from "../../images/gameImages/shoot.png";
 import shootGif from "../../images/gameImages/shoot.gif";
 import platPic from "../../images/gameImages/plat.png";
 import platGif from "../../images/gameImages/plat.gif";
+import tankGif from "../../images/gameImages/tanks.gif";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -108,10 +110,13 @@ const useStyles = makeStyles(theme => ({
         mozTransition: "background-image 0.3s ease-in-out 0.1s",
         oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
-      // "& $media6": {
-      //   backgroundImage: `url(${gif1}) !important`,
-      //   transition: "background-image 0.3s ease-in-out"
-      // },
+      "& $media6": {
+        backgroundImage: `url(${tankGif}) !important`,
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
+      },
       boxShadow: "-3px 3px 9px 0 rgba(0, 0, 0, 0.69)",
       transition: "box-shadow 0.3s ease-in-out"
       // filter: "grayscale(0%)"
@@ -267,12 +272,14 @@ const blockTi = "Block Breaker";
 const tdTi = "Lane Defense";
 const shootTi = "Generic Shooter";
 const platTi = "Platformer";
+const tankTi = "UNet Tanks";
 // Descriptions
 const rpgDes = "A time-based 12 minute rpg, created for a bachelor thesis.";
 const blockDes = "The classic block breaker game, just a tad harder.";
 const tdDes = "A tower/lane defense game. Only for TD veterans. ";
 const shootDes = "A generic shoot-em-up game.";
 const platDes = "Like Super Mario, but not really.";
+const tankDes = "A multiplayer tank deathmatch for 2-4 players.";
 // Tooltip info
 const rpgTT =
   "Made with Unity, VS and free assets. Music by Theodore Konstantinides.";
@@ -280,18 +287,21 @@ const blockTT = "Made with Unity, VS, and free assets.";
 const tdTT = "Made with Unity, VS, and free assets.";
 const shootTT = "Made with Unity, VS, and free assets.";
 const platTT = "Made with Unity, VS, and free assets.";
+const tankTT = "Made with Unity, VS, free assets and UNet. WebGL multiplayer is not supported via a remote host. A client download will become available once the game's version is stabilized.";
 // Play links
 const rpgLi = "./webgl/rpgThesis/index.html";
 const blockLi = "./webgl/block-breaker/index.html";
 const tdLi = "./webgl/td/index.html";
 const shootLi = "./webgl/shoot/index.html";
 const platLi = "./webgl/plat/index.html";
+const tankLi = "./webgl/tanks/index.html";
 // Source links
 const rpgSo = "https://github.com/MysticQuest/Unity-Project_Thesis";
 const blockSo = "https://github.com/MysticQuest/Unity-Block_Breaker";
 const tdSo = "https://github.com/MysticQuest/Unity-Tower_Defense_V1";
 const shootSo = "https://github.com/MysticQuest/Unity-Generic_Shmup";
 const platSo = "https://github.com/MysticQuest/Unity-Platformer_Adventure";
+const tankSo = "https://github.com/MysticQuest/Unity-UNET_Tanks";
 
 const Games = () => {
   const classes = useStyles();
@@ -305,6 +315,90 @@ const Games = () => {
   return (
     <div className={classes.root}>
       <Grid className={classes.grid} container spacing={3}>
+        <Zoom
+          timeout={{ enter: 300, exit: exitDuration }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+            <Card className={classes.card}>
+              <Tooltip
+                classes={{ tooltip: classes.toolTipsCard }}
+                TransitionComponent={Zoom}
+                title="Play"
+                placement="top"
+              >
+                <CardActionArea
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={tankLi}
+                  className={classes.cardActionArea}
+                >
+                  <CardMedia
+                    className={`${classes.media} ${classes.media6}`}
+                    image={tankPic}
+                  />
+                  <CardContent className={classes.content}>
+                    <Typography
+                      className={classes.contHead}
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
+                      {tankTi}
+                    </Typography>
+                    <Typography
+                      className={classes.contText}
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {tankDes}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Tooltip>
+              <CardActions className={classes.buttonArea}>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    title="Not Available Yet"
+                    className={classes.iconsTBA}
+                    icon={faWindows}
+                  />
+                </Button>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    title="Not Available Yet"
+                    className={classes.iconsTBA}
+                    icon={faLinux}
+                  />
+                </Button>
+                <Button
+                  href={tankSo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.buttons}
+                >
+                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+                </Button>
+
+                <Tooltip
+                  classes={{ tooltip: classes.toolTips }}
+                  TransitionComponent={Zoom}
+                  title={tankTT}
+                  placement="bottom"
+                >
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      className={classes.icons}
+                      icon={faInfoCircle}
+                    />
+                  </Button>
+                </Tooltip>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Zoom>{" "}
         <Zoom
           timeout={{ enter: 300, exit: exitDuration }}
           in={activateAnim}
