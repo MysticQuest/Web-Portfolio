@@ -287,7 +287,7 @@ const blockTT = "Made with Unity, VS, and free assets.";
 const tdTT = "Made with Unity, VS, and free assets.";
 const shootTT = "Made with Unity, VS, and free assets.";
 const platTT = "Made with Unity, VS, and free assets.";
-const tankTT = "Made with Unity, VS, free assets and UNet. WebGL multiplayer is not supported via a remote host. A client download will become available once the game's version is stabilized.";
+const tankTT = "Made with Unity, VS, free assets and UNet. Music by Spyros Georgiadis. Download a client to play online. Forward the port: 7777 for a direct connection, or use Unity's relay servers (matchmaking).";
 // Play links
 const rpgLi = "./webgl/rpgThesis/index.html";
 const blockLi = "./webgl/block-breaker/index.html";
@@ -302,6 +302,9 @@ const tdSo = "https://github.com/MysticQuest/Unity-Tower_Defense_V1";
 const shootSo = "https://github.com/MysticQuest/Unity-Generic_Shmup";
 const platSo = "https://github.com/MysticQuest/Unity-Platformer_Adventure";
 const tankSo = "https://github.com/MysticQuest/Unity-UNET_Tanks";
+//DLs
+const tankWin = "https://www.dropbox.com/s/mmcaw5svih0bqfj/TanksWin.rar?dl=0";
+const tankLin = "https://www.dropbox.com/s/oluk7ppvkkswrrk/TanksLinux.rar?dl=0";
 
 const Games = () => {
   const classes = useStyles();
@@ -779,17 +782,19 @@ const Games = () => {
                 </CardActionArea>
               </Tooltip>
               <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
+                <Button href={tankWin}
+                  className={classes.buttons}
+                >
                   <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
+                    title=""
+                    className={classes.icons}
                     icon={faWindows}
                   />
                 </Button>
-                <Button className={classes.buttons}>
+                <Button href={tankLin} className={classes.buttons}>
                   <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
+                    title=""
+                    className={classes.icons}
                     icon={faLinux}
                   />
                 </Button>
