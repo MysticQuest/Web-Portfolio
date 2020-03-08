@@ -85,6 +85,7 @@ const useStyles = makeStyles(theme => ({
 
 const gitLink = "https://github.com/MysticQuest?tab=repositories";
 const linLink = "https://www.linkedin.com/in/kmls/";
+const cvLink = "https://www.dropbox.com/s/q5lp1c9oj7am0ct/CV_KManolakis.pdf?dl=0"
 
 const Icons = () => {
   const classes = useStyles();
@@ -107,11 +108,11 @@ const Icons = () => {
         <GitHubIcon className={classes.Git} />
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href={gitLink}>
+      <a target="_blank" rel="noopener noreferrer" href={cvLink}>
         <Tooltip
           classes={{ tooltip: classes.tooltip }}
           TransitionComponent={Zoom}
-          title="Not available yet"
+          title="Download my CV"
           placement="bottom"
         >
           <VerticalAlignBottomIcon className={classes.Cv} />

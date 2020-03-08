@@ -362,17 +362,19 @@ const Games = () => {
                 </CardActionArea>
               </Tooltip>
               <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
+                <Button target="_blank"
+                  rel="noopener noreferrer" href={tankWin} className={classes.buttons}>
                   <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
+                    title="Windows Client"
+                    className={classes.icons}
                     icon={faWindows}
                   />
                 </Button>
-                <Button className={classes.buttons}>
+                <Button target="_blank"
+                  rel="noopener noreferrer" href={tankLin} className={classes.buttons}>
                   <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
+                    title="Linux Client"
+                    className={classes.icons}
                     icon={faLinux}
                   />
                 </Button>
@@ -782,19 +784,19 @@ const Games = () => {
                 </CardActionArea>
               </Tooltip>
               <CardActions className={classes.buttonArea}>
-                <Button href={tankWin}
+                <Button
                   className={classes.buttons}
                 >
                   <FontAwesomeIcon
-                    title=""
-                    className={classes.icons}
+                    title="Not available yet"
+                    className={classes.iconsTBA}
                     icon={faWindows}
                   />
                 </Button>
-                <Button href={tankLin} className={classes.buttons}>
+                <Button className={classes.buttons}>
                   <FontAwesomeIcon
-                    title=""
-                    className={classes.icons}
+                    title="Not available yet"
+                    className={classes.iconsTBA}
                     icon={faLinux}
                   />
                 </Button>

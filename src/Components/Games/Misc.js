@@ -34,6 +34,7 @@ import mapPic1 from "../../images/gameImages/map.png";
 import mapPic2 from "../../images/gameImages/map2.png";
 import uniGif from "../../images/gameImages/uni.gif";
 import vufPic from "../../images/gameImages/vuf.png";
+import ter1Pic from "../../images/gameImages/ter1.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -250,6 +251,7 @@ const useStyles = makeStyles(theme => ({
 const mcTi = "Custom Voxel Terrain";
 const assetTi = "Unity Assets";
 const vufTi = "Vuforia AR";
+const ter1Ti = "Custom Terrain";
 
 // Descriptions
 const mcDes =
@@ -257,19 +259,26 @@ const mcDes =
 const assetDes =
   "A collection of assets made with Blender, Unity Shader Graph and Aseprite.";
 const vufDes = "A small AR experiment with Vuforia in Unity.";
+const ter1Des = "An ongoing terrain generation project built with Gaia and free assets in Unity.";
 
 // Tooltip info
 const mcTT = "";
 const assetTT = "";
+const ter1TT = "";
 
 // Play links
 const mcLi = "https://imgur.com/a/PTY27";
 const assetLi = "";
 const vufLi = "";
+const ter1Li = "";
 
 // Source links
 
 const vufSo = "https://github.com/MysticQuest/Unity-AR_vuforia_project";
+
+//Download Links
+
+const ter1Win = "https://www.dropbox.com/s/828zqxiwitxc5e8/Island%20Terrain.rar?dl=0&fbclid=IwAR3DJOVXyl10t1VQQrFIIi3C4FB1fElETTlxMin7TYKKMfPhOFEWKxGeUFA";
 
 const Misc = () => {
   const classes = useStyles();
@@ -344,6 +353,81 @@ const Misc = () => {
                 classes={{ tooltip: classes.toolTips }}
                 TransitionComponent={Zoom}
                 title={mcTT}
+                placement="bottom"
+              >
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    className={classes.iconsTBA}
+                    icon={faInfoCircle}
+                  />
+                </Button>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
+          <Card className={classes.card}>
+            <Tooltip
+              classes={{ tooltip: classes.toolTipsCard }}
+              TransitionComponent={Zoom}
+              title=""
+              placement="top"
+            >
+              <CardActionArea
+                target="_blank"
+                rel="noopener noreferrer"
+                href={ter1Li}
+                className={classes.cardActionArea}
+              >
+                <CardMedia
+                  //   className={`${classes.media} ${classes.media1}`}
+                  className={classes.media}
+                  image={ter1Pic}
+                />
+                <CardContent className={classes.content}>
+                  <Typography
+                    className={classes.contHead}
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                  >
+                    {ter1Ti}
+                  </Typography>
+                  <Typography
+                    className={classes.contText}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {ter1Des}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Tooltip>
+            <CardActions className={classes.buttonArea}>
+              <Button target="_blank"
+                rel="noopener noreferrer" href={ter1Win} className={classes.buttons}>
+                <FontAwesomeIcon
+                  className={classes.icons}
+                  icon={faWindows}
+                />
+              </Button>
+              <Button className={classes.buttons}>
+                <FontAwesomeIcon className={classes.iconsTBA} icon={faLinux} />
+              </Button>
+              <Button
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.buttons}
+              >
+                <FontAwesomeIcon className={classes.iconsTBA} icon={faGithub} />
+              </Button>
+
+              <Tooltip
+                classes={{ tooltip: classes.toolTips }}
+                TransitionComponent={Zoom}
+                title={ter1TT}
                 placement="bottom"
               >
                 <Button className={classes.buttons}>
