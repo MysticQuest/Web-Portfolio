@@ -26,6 +26,7 @@ import { activeIndex } from "../../App";
 //import images and media
 import portPic from "../../images/projImages/port.png";
 import recPic from "../../images/projImages/rec.png";
+import gitfindPic from "../../images/projImages/gitfind.png";
 import tetrisPic from "../../images/projImages/tetris.png";
 import tetrisGif from "../../images/projImages/tetris.gif";
 
@@ -256,26 +257,31 @@ const exitDuration = 1;
 const portTi = "Portfolio";
 const recTi = "Face Recognition";
 const tetrisTi = "React Tetris";
+const gitfindTi = "Github Finder";
 
 // Descriptions
 const portDes = "A casual-themed portfolio made with React and Material UI.";
 const recDes = "An app that uses Clarifai's API to detect faces in pictures.";
 const tetrisDes = "A tetris game made with React.";
+const gitfindDes = "An app that searches for Github users."
 
 // Tooltip info
 const portTT = "";
 const recTT = "";
 const tetrisTT = "";
+const gitfindTT = "";
 
 // Play links
 const portLi = "";
 const recLi = "";
 const tetrisLi = "";
+const gitfindLi = "";
 
 // Source links
 const portSo = "https://github.com/MysticQuest/Web-Portfolio";
 const recSo = "https://github.com/MysticQuest/Web-Face_Recon";
 const tetrisSo = "https://github.com/MysticQuest/Web-Tetris";
+const gitfindSo = "https://github.com/MysticQuest/Web-Github_Finder";
 
 const tba = "Host Pending";
 
@@ -348,6 +354,76 @@ const WebReact = () => {
                   classes={{ tooltip: classes.toolTips }}
                   TransitionComponent={Zoom}
                   title={portTT}
+                  placement="bottom"
+                >
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      className={classes.iconsTBA}
+                      icon={faInfoCircle}
+                    />
+                  </Button>
+                </Tooltip>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Zoom>
+        <Zoom
+          timeout={{ enter: 300, exit: exitDuration }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+        >
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+            <Card className={classes.card}>
+              <Tooltip
+                classes={{ tooltip: classes.toolTipsCard }}
+                TransitionComponent={Zoom}
+                title={tba}
+                placement="top"
+              >
+                <CardActionArea
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={gitfindLi}
+                  className={classes.cardActionArea}
+                >
+                  <CardMedia
+                    className={`${classes.media} ${classes.media1}`}
+                    image={gitfindPic}
+                  />
+                  <CardContent className={classes.content}>
+                    <Typography
+                      className={classes.contHead}
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
+                      {gitfindTi}
+                    </Typography>
+                    <Typography
+                      className={classes.contText}
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {gitfindDes}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Tooltip>
+              <CardActions className={classes.buttonArea}>
+                <Button
+                  href={gitfindSo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.buttons}
+                >
+                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+                </Button>
+
+                <Tooltip
+                  classes={{ tooltip: classes.toolTips }}
+                  TransitionComponent={Zoom}
+                  title={gitfindTT}
                   placement="bottom"
                 >
                   <Button className={classes.buttons}>

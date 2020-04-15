@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Unity WebGL Player | UNET_Tanks</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Desktop.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate(
+        'gameContainer',
+        'Build/Desktop.json',
+        { onProgress: UnityProgress }
+      );
     </script>
+    <style>
+      p {
+        color: green;
+        white-space: pre-line;
+        text-align: center;
+        text
+      }
+    </style>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div id="gameContainer" style="width: 960px; height: 600px;"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
+
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+
         <div class="title">UNET_Tanks</div>
+
+        <p>
+          <em>How to start the game locally:</em></br>This game is meant for multiple players, however, if you want to view the game locally, just press the "Play and Host" button in the lobby screen (under "Manual connection"), and then the "Join" button in the following player lobby.
+        </p>
+        <p>
+          
+        </p>
       </div>
     </div>
   </body>
