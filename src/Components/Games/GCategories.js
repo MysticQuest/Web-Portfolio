@@ -11,19 +11,20 @@ import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 //import my components
 import Games from "./Games";
+import GamesB from "./GamesB";
 import Misc from "./Misc";
 //import active section
 import { preActiveIndex } from "../../App";
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import //   faHtml5,
-// faJsSquare,
-// faPython,
-// faGitAlt,
-// faCss3,
-//   faReact,
-//   faNodeJs
-"@fortawesome/free-brands-svg-icons";
+  // faJsSquare,
+  // faPython,
+  // faGitAlt,
+  // faCss3,
+  //   faReact,
+  //   faNodeJs
+  "@fortawesome/free-brands-svg-icons";
 import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import uniIcon from "../../images/uniIcon.png";
 
@@ -205,10 +206,29 @@ export default function GameCategories() {
                       src={uniIcon}
                       alt="unity3d"
                     />
-                    <span>&nbsp;</span>Unity
+                    <span>&nbsp;</span>Games
                   </span>
                 }
                 {...a11yProps(0)}
+              />
+              <Tab
+                className={classes.tabContent}
+                label={
+                  <span>
+                    <img
+                      className={uniIcon}
+                      style={{
+                        height: "calc(25px + 1vw)",
+                        width: "calc(25px + 1vw)",
+                        verticalAlign: "bottom"
+                      }}
+                      src={uniIcon}
+                      alt="unity3d"
+                    />
+                    <span>&nbsp;</span>Apps
+                  </span>
+                }
+                {...a11yProps(1)}
               />
               <Tab
                 className={classes.tabContent}
@@ -218,8 +238,9 @@ export default function GameCategories() {
                     <span>&nbsp;</span>Extras
                   </span>
                 }
-                {...a11yProps(1)}
+                {...a11yProps(2)}
               />
+
               {/* <Tab
                 className={classes.tab3}
                 label={
@@ -249,6 +270,14 @@ export default function GameCategories() {
               className={classes.panel}
               value={value}
               index={1}
+              dir={theme.direction}
+            >
+              <GamesB />
+            </TabPanel>
+            <TabPanel
+              className={classes.panel}
+              value={value}
+              index={2}
               dir={theme.direction}
             >
               <Misc />

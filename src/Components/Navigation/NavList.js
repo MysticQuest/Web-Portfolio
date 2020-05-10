@@ -96,7 +96,7 @@ const NavList = () => {
           <ListItemText
             className={classes.listText}
             wrap="true"
-            primary={"Projects"}
+            primary={"Web"}
           />
         </ListItem>
 
@@ -114,7 +114,7 @@ const NavList = () => {
           <ListItemText
             className={classes.listText}
             wrap="true"
-            primary={"Games"}
+            primary={"Unity"}
           />
         </ListItem>
 
