@@ -76,11 +76,11 @@ const Home = () => {
             >
               <div className="readability-container1">
                 <p className="home3">
-                  Hello, I am Kiriakos, a software developer who really likes
-                  bringing stuff into existence through programming. This site
-                  is a work in progress and not properly hosted yet. So here's
-                  some Lorem ipsum. Suspendisse hendrerit lacus enim, a tempus
-                  ante sollicitudin eu. Vivamus porta dapibus egestas.
+                  Hello, I am Kiriakos, a software developer who enjoys
+                  bringing various projects into existence, including web pages,
+                  applications and video games. <br></br>This site has been created with
+                  ReactJs, Fullpage.Js and MaterialUI.
+                  It is currently a work in progress and not properly hosted yet.
                 </p>
                 <Fade
                   timeout={{ enter: 2000, exit: exitDuration }}

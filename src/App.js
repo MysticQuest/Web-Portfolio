@@ -21,6 +21,7 @@ import { fireflies2 } from "./myThemes/fireflies2";
 //hooks?
 //import { useAnimHandler } from "./hooks/useAnimHandler";
 import { mouseEffect } from "./mouseEffect";
+import MetaTags from 'react-meta-tags';
 
 var activeIndex = 0;
 var preActiveIndex = 0;
@@ -99,6 +100,12 @@ const App = () => (
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper className="wrapper">
+            <MetaTags>
+              {/* <title>Page 1</title> */}
+              {/* <meta name="description" content="Some description." />
+              <meta property="og:title" content="MyApp" /> */}
+              <meta property="og:image" content="./images/metaimg.png" />
+            </MetaTags>
             <div className="section container1 bg1">
               <Particles
                 id="particle-effects"
