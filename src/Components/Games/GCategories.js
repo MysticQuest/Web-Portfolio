@@ -225,7 +225,7 @@ export default function GameCategories() {
                       src={uniIcon}
                       alt="unity3d"
                     />
-                    <span>&nbsp;</span>Apps
+                    <span>&nbsp;</span>Utilities
                   </span>
                 }
                 {...a11yProps(1)}
@@ -235,7 +235,7 @@ export default function GameCategories() {
                 label={
                   <span>
                     <FontAwesomeIcon icon={faPalette} />
-                    <span>&nbsp;</span>Extras
+                    <span>&nbsp;</span>Design
                   </span>
                 }
                 {...a11yProps(2)}

@@ -33,7 +33,7 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import mapPic1 from "../../images/gameImages/map.png";
 import mapPic2 from "../../images/gameImages/map2.png";
 import uniGif from "../../images/gameImages/uni.gif";
-import vufPic from "../../images/gameImages/vuf.png";
+
 import ter1Pic from "../../images/gameImages/ter1.png";
 
 const useStyles = makeStyles(theme => ({
@@ -250,7 +250,7 @@ const useStyles = makeStyles(theme => ({
 // Titles
 const mcTi = "Custom Voxel Terrain";
 const assetTi = "Unity Assets";
-const vufTi = "Vuforia AR";
+
 const ter1Ti = "Custom Terrain";
 
 // Descriptions
@@ -258,7 +258,7 @@ const mcDes =
   "A custom voxel fantasy-themed world, created for a private server in 'Minecraft'. Made with World Machine, Terrain Control, Voxelizer, Blender and Photoshop.  ";
 const assetDes =
   "A collection of assets made with Blender, Unity Shader Graph and Aseprite.";
-const vufDes = "A small AR experiment with Vuforia in Unity.";
+
 const ter1Des = "An ongoing terrain generation project built with Gaia and free assets in Unity.";
 
 // Tooltip info
@@ -269,12 +269,12 @@ const ter1TT = "";
 // Play links
 const mcLi = "https://imgur.com/a/PTY27";
 const assetLi = "";
-const vufLi = "";
+
 const ter1Li = "";
 
 // Source links
 
-const vufSo = "https://github.com/MysticQuest/Unity-AR_vuforia_project";
+
 
 //Download Links
 
@@ -514,93 +514,7 @@ const Misc = () => {
             </CardActions>
           </Card>
         </Grid>
-        <Grid className={classes.gridItem} item xs={12} sm={6} md={4} lg={4}>
-          <Card className={classes.card}>
-            <Tooltip
-              classes={{ tooltip: classes.toolTipsCard }}
-              TransitionComponent={Zoom}
-              title=""
-              placement="top"
-            >
-              <CardActionArea
-                target="_blank"
-                rel="noopener noreferrer"
-                href={vufLi}
-                className={classes.cardActionArea}
-              >
-                <CardMedia
-                  //   className={`${classes.media} ${classes.media1}`}
-                  className={classes.media}
-                  image={vufPic}
-                />
-                <CardContent className={classes.content}>
-                  <Typography
-                    className={classes.contHead}
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                  >
-                    {vufTi}
-                  </Typography>
-                  <Typography
-                    className={classes.contText}
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {vufDes}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Tooltip>
-            <CardActions className={classes.buttonArea}>
-              <Button className={classes.buttons}>
-                <FontAwesomeIcon
-                  className={classes.iconsTBA}
-                  icon={faWindows}
-                />
-              </Button>
-              <Button className={classes.buttons}>
-                <FontAwesomeIcon className={classes.iconsTBA} icon={faLinux} />
-              </Button>
-              <Button
-                href={vufSo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.buttons}
-              >
-                <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-              </Button>
 
-              <Tooltip
-                classes={{ tooltip: classes.toolTips }}
-                TransitionComponent={Zoom}
-                title={assetTT}
-                placement="bottom"
-              >
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    className={classes.iconsTBA}
-                    icon={faInfoCircle}
-                  />
-                </Button>
-              </Tooltip>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        {/* <Grid className={classes.gridItem} item xs={12} sm={12} md={12} lg={12}>
-          <div className={classes.extra}>
-            <Button
-              className={classes.extraButton}
-              onClick={() => {
-                window.fullpage_api.moveSlideRight();
-              }}
-            >
-              <p className="extra-text">Back</p>
-            </Button>
-          </div>
-        </Grid> */}
       </Grid>
     </div>
   );
