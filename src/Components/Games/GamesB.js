@@ -268,13 +268,13 @@ const tttTi = "TicTacToe AI";
 // Descriptions
 const benDes = "Physics and rendering techniques that attempt to stress the CPU and GPU.";
 const vufDes = "A small AR experiment with Vuforia in Unity.";
-const meshDes = "placeholder";
-const tttDes = "placeholderplaceholder";
+const meshDes = "Custom mesh particle systems for performant, permanent decals, utilizing stencil buffers.";
+const tttDes = "A tic tac toe game with a few AI options, ultizing the MiniMax recursive algorith, built for Android platforms.";
 // Tooltip info
 const benTT = "Made with Unity and VS.";
 const assetTT = "";
-const meshTT = "Custom mesh particle systems for performant, permanent decals, utilizing stencil buffers.";
-const tttTT = "A tic tac toe game with a few AI options, ultizing the MiniMax recursive algorith, built for Android platforms.";
+const meshTT = "";
+const tttTT = "";
 // Play links
 const benLi = "./webgl/benchTool/index.html";
 const vufLi = "";
