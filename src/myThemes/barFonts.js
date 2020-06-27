@@ -1,5 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
-import "typeface-pacifico";
+// import "typeface-pacifico";
 
 const fontTheme1 = createMuiTheme({
   typography: {

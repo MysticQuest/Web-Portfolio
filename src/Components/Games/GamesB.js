@@ -269,7 +269,7 @@ const tttTi = "TicTacToe AI";
 const benDes = "Physics and rendering techniques that attempt to stress the CPU and GPU.";
 const vufDes = "A small AR experiment with Vuforia in Unity.";
 const meshDes = "Custom mesh particle systems for performant, permanent decals, utilizing stencil buffers.";
-const tttDes = "A tic tac toe game with a few AI options, ultizing the MiniMax recursive algorith, built for Android platforms.";
+const tttDes = "A tic tac toe game with a few AI options, ultizing the MiniMax recursive algorithm, built for Android platforms.";
 // Tooltip info
 const benTT = "Made with Unity and VS.";
 const assetTT = "";

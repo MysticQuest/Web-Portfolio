@@ -38,6 +38,8 @@ import shootGif from "../../images/gameImages/shoot.gif";
 import platPic from "../../images/gameImages/plat.png";
 import platGif from "../../images/gameImages/plat.gif";
 import tankGif from "../../images/gameImages/tanks.gif";
+// import tankGif from "../../images/gameImages/tanks.mp4";
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -340,6 +342,7 @@ const Games = () => {
                   <CardMedia
                     className={`${classes.media} ${classes.media6}`}
                     image={tankPic}
+                    alt="loading..."
                   />
                   <CardContent className={classes.content}>
                     <Typography

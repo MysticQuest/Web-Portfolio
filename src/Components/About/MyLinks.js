@@ -3,7 +3,9 @@ import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import VerticalAlignBottomIcon from "@material-ui/icons/VerticalAlignBottom";
+import CVIcon from "@material-ui/icons/AssignmentIndRounded";
+
+// import VerticalAlignBottomIcon from "@material-ui/icons/VerticalAlignBottom";
 //import mui
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
@@ -64,7 +66,7 @@ const useStyles = makeStyles(theme => ({
     zIndex: "1",
     color: "white",
     top: "6px",
-    right: "170px",
+    right: "175px",
     transition: "all 0.2s ease-in-out",
     "&:hover": {
       filter: "drop-shadow(1px 1px 2px black)",
@@ -93,7 +95,9 @@ const Icons = () => {
   return (
     <div className={classes.linkContainer}>
       <a target="_blank" rel="noopener noreferrer" href={linLink}>
+
         <LinkedInIcon className={classes.LinkedIn} />
+
       </a>
 
       <a
@@ -101,11 +105,20 @@ const Icons = () => {
         rel="noopener noreferrer"
         href="mailto:kirimns@gmail.com"
       >
-        <EmailIcon className={classes.Mail} />
+        <Tooltip
+          classes={{ tooltip: classes.tooltip }}
+          TransitionComponent={Zoom}
+          title="Send me an E-Mail"
+          placement="bottom"
+        >
+          <EmailIcon className={classes.Mail} />
+        </Tooltip>
       </a>
 
       <a target="_blank" rel="noopener noreferrer" href={gitLink}>
+
         <GitHubIcon className={classes.Git} />
+
       </a>
 
       <a target="_blank" rel="noopener noreferrer" href={cvLink}>
@@ -115,7 +128,7 @@ const Icons = () => {
           title="Download my CV"
           placement="bottom"
         >
-          <VerticalAlignBottomIcon className={classes.Cv} />
+          <CVIcon className={classes.Cv} />
         </Tooltip>
       </a>
     </div>

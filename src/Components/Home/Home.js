@@ -79,7 +79,7 @@ const Home = () => {
                   Hello, I am Kiriakos, a software developer who enjoys
                   bringing various projects into existence, including web pages,
                   applications and video games. <br></br>This site has been created with
-                  ReactJs, Fullpage.Js and MaterialUI.
+                  ReactJs, Fullpage.js and MaterialUI.
                   It is currently a work in progress and not properly hosted yet.
                 </p>
                 <Fade
@@ -90,8 +90,10 @@ const Home = () => {
                 >
                   <p className="home3">
                     <br />
-                    Visit <span className="highlight">Section 2 & 3 </span> to
+                    Visit the following sections to
                     view my projects
+                    {/* Visit <span className="highlight">Section 2 & 3 </span> to
+                    view my projects */}
                   </p>
                 </Fade>
                 <Fade
@@ -101,8 +103,7 @@ const Home = () => {
                   style={{ transitionDelay: permaAnim ? "4000ms" : "0ms" }}
                 >
                   <p className="home3">
-                    Or <span className="highlight">Section 4</span> to learn
-                    more about me
+                    Or the <span className="highlight">"About"</span> section to view a skill summary.
                   </p>
                 </Fade>
               </div>

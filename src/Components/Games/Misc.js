@@ -248,14 +248,14 @@ const useStyles = makeStyles(theme => ({
 // };
 
 // Titles
-const mcTi = "Custom Voxel Terrain";
-const assetTi = "Unity Assets";
+const mcTi = "MCrpg World Design";
+const assetTi = "Unity Assets Project";
 
-const ter1Ti = "Custom Terrain";
+const ter1Ti = "Gaia Project";
 
 // Descriptions
 const mcDes =
-  "A custom voxel fantasy-themed world, created for a private server in 'Minecraft'. Made with World Machine, Terrain Control, Voxelizer, Blender and Photoshop.  ";
+  "A fully custom voxel fantasy-themed world, created for a private server in 'Minecraft' v1.10. Made with World Machine, Terrain Control, Voxelizer, Blender and Photoshop.  ";
 const assetDes =
   "A collection of assets made with Blender, Unity Shader Graph and Aseprite.";
 
