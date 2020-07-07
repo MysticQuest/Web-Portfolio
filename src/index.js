@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "./App";
 import * as serviceWorker from "./serviceWorker";
-import "typeface-pacifico";
-import "typeface-acme";
+// import "typeface-pacifico";
+// import "typeface-acme";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

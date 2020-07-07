@@ -13,7 +13,7 @@ import fontTheme1 from "../../myThemes/barFonts.js";
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
-import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import AccountBalanceIcon from "@material-ui/icons/Web";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 //import css
 import "./NavList.css";
@@ -30,6 +30,9 @@ const useStyles = makeStyles(theme => ({
   listText: {
     padding: "0 0 3vh 0"
   },
+  listTextWeb: {
+    padding: "0 0 3vh 4px"
+  },
   listIcons: {
     minWidth: "33px",
     color: "rgba(250, 250, 250, 0.4)",
@@ -39,6 +42,9 @@ const useStyles = makeStyles(theme => ({
   },
   videoGameIcon: {
     transform: "scale(1.1)"
+  },
+  webIcon: {
+    transform: "scale(1.0)"
   },
   toolTips: {
     // backgroundColor: "#f5f5f9",
@@ -90,13 +96,13 @@ const NavList = () => {
           key="2"
         >
           <ListItemIcon key="2a" className={classes.listIcons}>
-            <AccountBalanceIcon />
+            <AccountBalanceIcon className={classes.webIcon} />
           </ListItemIcon>
 
           <ListItemText
-            className={classes.listText}
+            className={classes.listTextWeb}
             wrap="true"
-            primary={"Web"}
+            primary={" Web"}
           />
         </ListItem>
 
@@ -114,7 +120,7 @@ const NavList = () => {
           <ListItemText
             className={classes.listText}
             wrap="true"
-            primary={"Unity"}
+            primary={"Unity C#"}
           />
         </ListItem>
 

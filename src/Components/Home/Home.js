@@ -78,7 +78,7 @@ const Home = () => {
                 <p className="home3">
                   Hello, I am Kiriakos, a software developer who enjoys
                   bringing various projects into existence, including web pages,
-                  applications and video games. <br></br>This site has been created with
+                  applications and video games. <br></br><br></br>This site has been created with
                   ReactJs, Fullpage.js and MaterialUI.
                   It is currently a work in progress and not properly hosted yet.
                 </p>
@@ -90,8 +90,8 @@ const Home = () => {
                 >
                   <p className="home3">
                     <br />
-                    Visit the following sections to
-                    view my projects
+                    Navigate through the menu to
+                    view my projects,
                     {/* Visit <span className="highlight">Section 2 & 3 </span> to
                     view my projects */}
                   </p>
@@ -103,7 +103,7 @@ const Home = () => {
                   style={{ transitionDelay: permaAnim ? "4000ms" : "0ms" }}
                 >
                   <p className="home3">
-                    Or the <span className="highlight">"About"</span> section to view a skill summary.
+                    or visit the <span className="highlight">"About"</span> section to view a skill summary.
                   </p>
                 </Fade>
               </div>
