@@ -269,22 +269,22 @@ const exitDuration = 1;
 // };
 
 // Titles
-const rpgTi = "Zulda";
+const rpgTi = "12-minute RPG";
 const blockTi = "Block Breaker";
 const tdTi = "Lane Defense";
 const shootTi = "Generic Shooter";
 const platTi = "Platformer";
 const tankTi = "UNet Tanks";
 // Descriptions
-const rpgDes = "A time-based 12 minute rpg, created for a bachelor thesis.";
-const blockDes = "The classic block breaker game, just a tad harder.";
-const tdDes = "A tower/lane defense game. Only for TD veterans. ";
-const shootDes = "A generic shoot-em-up game.";
-const platDes = "Like Super Mario, but not really.";
-const tankDes = "A multiplayer tank deathmatch for 2-4 players.";
+const rpgDes = "A time-based 12 minute rpg. Survive for three days, protect your home and defeat the final boss. My very first Unity project, created for a bachelor thesis. ";
+const blockDes = "The classic block breaker game.";
+const tdDes = "A tower/lane defense game. Find the combinations that will allow you to keep your score above zero, in three increasingly challenging levels.";
+const shootDes = "A generic shoot-em-up game using Scriptable Ojects and object pooling for enemy waves.";
+const platDes = "A short platform game.";
+const tankDes = "A fast-paced multiplayer tank deathmatch game (for 2-4 players). Obtain the power-up and use geometry to bounce bullets around and defeat your opponents.";
 // Tooltip info
 const rpgTT =
-  "Made with Unity, VS and free assets. Music by Theodore Konstantinides.";
+  "Made with Unity, VS and free assets. Music by Theodore Konstantinides. Use the 'Backspace' key to enable 'Cheat Mode'.";
 const blockTT = "Made with Unity, VS, and free assets.";
 const tdTT = "Made with Unity, VS, and free assets.";
 const shootTT = "Made with Unity, VS, and free assets.";
@@ -407,6 +407,90 @@ const Games = () => {
             </Card>
           </Grid>
         </Zoom>{" "}
+        <Zoom
+          timeout={{ enter: 300, exit: exitDuration }}
+          in={activateAnim}
+          style={{ transitionDelay: activateAnim ? "100ms" : "0ms" }}
+        >
+          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+            <Card className={classes.card}>
+              <Tooltip
+                classes={{ tooltip: classes.toolTipsCard }}
+                TransitionComponent={Zoom}
+                title="Play"
+                placement="top"
+              >
+                <CardActionArea
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={tdLi}
+                  className={classes.cardActionArea}
+                >
+                  <CardMedia
+                    className={`${classes.media} ${classes.media3}`}
+                    image={tdPic}
+                  />
+                  <CardContent className={classes.content}>
+                    <Typography
+                      className={classes.contHead}
+                      gutterBottom
+                      variant="h5"
+                      component="h2"
+                    >
+                      {tdTi}
+                    </Typography>
+                    <Typography
+                      className={classes.contText}
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {tdDes}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Tooltip>
+              <CardActions className={classes.buttonArea}>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    title="Not Available Yet"
+                    className={classes.iconsTBA}
+                    icon={faWindows}
+                  />
+                </Button>
+                <Button className={classes.buttons}>
+                  <FontAwesomeIcon
+                    title="Not Available Yet"
+                    className={classes.iconsTBA}
+                    icon={faLinux}
+                  />
+                </Button>
+                <Button
+                  href={tdSo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={classes.buttons}
+                >
+                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+                </Button>
+
+                <Tooltip
+                  classes={{ tooltip: classes.toolTips }}
+                  TransitionComponent={Zoom}
+                  title={tdTT}
+                  placement="bottom"
+                >
+                  <Button className={classes.buttons}>
+                    <FontAwesomeIcon
+                      className={classes.icons}
+                      icon={faInfoCircle}
+                    />
+                  </Button>
+                </Tooltip>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Zoom>
         <Zoom
           timeout={{ enter: 300, exit: exitDuration }}
           in={activateAnim}
@@ -575,90 +659,7 @@ const Games = () => {
             </Card>
           </Grid>
         </Zoom>
-        <Zoom
-          timeout={{ enter: 300, exit: exitDuration }}
-          in={activateAnim}
-          style={{ transitionDelay: activateAnim ? "100ms" : "0ms" }}
-        >
-          <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={tdLi}
-                  className={classes.cardActionArea}
-                >
-                  <CardMedia
-                    className={`${classes.media} ${classes.media3}`}
-                    image={tdPic}
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {tdTi}
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      {tdDes}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button
-                  href={tdSo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.buttons}
-                >
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
 
-                <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
-                  TransitionComponent={Zoom}
-                  title={tdTT}
-                  placement="bottom"
-                >
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.icons}
-                      icon={faInfoCircle}
-                    />
-                  </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Zoom>
         <Zoom
           timeout={{ enter: 300, exit: exitDuration }}
           in={activateAnim}
