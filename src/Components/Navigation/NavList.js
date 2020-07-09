@@ -21,10 +21,10 @@ import "./NavList.css";
 const useStyles = makeStyles(theme => ({
   listItems: {
     margin: "0 0 0 0",
-    padding: "3.5vh 0 1vh 0",
+    padding: "1.5vh 0 1vh 0",
     flexDirection: "column",
     [theme.breakpoints.up("xl")]: {
-      padding: "6.5vh 0 2.5vh 0"
+      padding: "6vh 0 0 0"
     }
   },
   listText: {
@@ -130,6 +130,24 @@ const NavList = () => {
           className={classes.listItems}
           button
           key="4"
+        >
+          <ListItemIcon key="3a" className={classes.listIcons}>
+            <VideogameAssetIcon className={classes.videoGameIcon} />
+          </ListItemIcon>
+
+          <ListItemText
+            className={classes.listText}
+            wrap="true"
+            primary={"U.E. C++"}
+          />
+        </ListItem>
+
+        <ListItem
+          onClick={() => window.fullpage_api.moveTo("fifthPage")}
+          data-menuanchor={"fifthPage"}
+          className={classes.listItems}
+          button
+          key="5"
         >
           <ListItemIcon key="4a" className={classes.listIcons}>
             <InfoIcon />

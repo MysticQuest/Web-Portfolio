@@ -11,6 +11,7 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import ProjectCategories from "./Components/Projects/PCategories";
 import GameCategories from "./Components/Games/GCategories";
+import UGameCategories from "./Components/UGames/UGCategories";
 import Icons from "./Components/About/MyLinks";
 //import styles
 import "./scrollEffect.css";
@@ -58,7 +59,7 @@ const App = () => (
       loopHorizontal={true}
       licenseKey={"GPLv3"}
       activeClass={"active"} //adds an active class to the correct menu button
-      anchors={["firstPage", "secondPage", "thirdPage", "fourthPage"]}
+      anchors={["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"]}
       lockAnchors={true} //anchor feature
       navigation={true} //enables cool dots
       // arrowNavigation={true} //enables arrows for slides
@@ -115,6 +116,11 @@ const App = () => (
             <div className="section container3 bg3">
               <GameCategories />
             </div>
+
+            <div className="section container3 bg35">
+              <UGameCategories />
+            </div>
+
             <div className="section container4 bg4">
               <Particles
                 id="particle-effects"

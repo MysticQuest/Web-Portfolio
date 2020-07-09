@@ -35,7 +35,7 @@ const link = "https://github.com/MysticQuest/Web-Portfolio";
 const exitDuration = 1;
 
 const Home = () => {
-  if (preActiveIndex === 3) {
+  if (preActiveIndex === 4) {
     activateAnim = true;
     permaAnim = activateAnim;
   } else {

@@ -10,13 +10,11 @@ import Box from "@material-ui/core/Box";
 import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 //import my components
-import Games from "./Games";
-import GamesB from "./GamesB";
-import Misc from "./Misc";
+import Misc from "./UGames";
 //import active section
 import { preActiveIndex } from "../../App";
 //icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import //   faHtml5,
   // faJsSquare,
   // faPython,
@@ -25,7 +23,7 @@ import //   faHtml5,
   //   faReact,
   //   faNodeJs
   "@fortawesome/free-brands-svg-icons";
-import { faPalette } from "@fortawesome/free-solid-svg-icons";
+// import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import uniIcon from "../../images/uniIcon.png";
 
 var activateAnim = false;
@@ -151,7 +149,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function GameCategories() {
+export default function UGameCategories() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -164,7 +162,7 @@ export default function GameCategories() {
     setValue(index);
   };
 
-  if (preActiveIndex === 2) {
+  if (preActiveIndex === 3) {
     activateAnim = true;
   } else {
     activateAnim = false;
@@ -211,35 +209,6 @@ export default function GameCategories() {
                 }
                 {...a11yProps(0)}
               />
-              <Tab
-                className={classes.tabContent}
-                label={
-                  <span>
-                    <img
-                      className={uniIcon}
-                      style={{
-                        height: "calc(25px + 1vw)",
-                        width: "calc(25px + 1vw)",
-                        verticalAlign: "bottom"
-                      }}
-                      src={uniIcon}
-                      alt="unity3d"
-                    />
-                    <span>&nbsp;</span>Utilities
-                  </span>
-                }
-                {...a11yProps(1)}
-              />
-              <Tab
-                className={classes.tabContent}
-                label={
-                  <span>
-                    <FontAwesomeIcon icon={faPalette} />
-                    <span>&nbsp;</span>Design
-                  </span>
-                }
-                {...a11yProps(2)}
-              />
 
               {/* <Tab
                 className={classes.tab3}
@@ -264,24 +233,9 @@ export default function GameCategories() {
               index={0}
               dir={theme.direction}
             >
-              <Games />
-            </TabPanel>
-            <TabPanel
-              className={classes.panel}
-              value={value}
-              index={1}
-              dir={theme.direction}
-            >
-              <GamesB />
-            </TabPanel>
-            <TabPanel
-              className={classes.panel}
-              value={value}
-              index={2}
-              dir={theme.direction}
-            >
               <Misc />
             </TabPanel>
+
             {/* <TabPanel className={classes.panel} value={value} index={2} dir={theme.direction}>
               <Games />
             </TabPanel> */}

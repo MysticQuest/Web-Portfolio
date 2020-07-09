@@ -115,13 +115,13 @@ const useStyles = makeStyles(theme => ({
   indicator: {
     // backgroundColor: "rgba(255,255,255,0.07)",
     background:
-      "radial-gradient(circle, rgba(246, 253, 200,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
+      "radial-gradient(circle, rgba(246, 253, 200,0.30) 0%, rgba(0,0,0,0.02) 100%, rgba(0,0,0,0) 100%)",
     // backgroundColor: "rgba(255,252,76,0.07)",
     // background:
     //   "radial-gradient(circle, rgba(206,255,0,0.1) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
     // background:
     //   "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
-    height: "100%"
+    height: "100%",
     // filter: "drop-shadow(-6px 4px 2px black)"
   },
   tabContent: {
