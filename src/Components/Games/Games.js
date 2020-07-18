@@ -170,7 +170,7 @@ const useStyles = makeStyles(theme => ({
 
   content: {
     background:
-      "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
+      "linear-gradient(0deg, rgba(90,79,185,1) 0%, rgba(94,130,143,1) 100%)",
     backgroundColor: "#393f47", //test color for firefox bug
     // background:
     //   "linear-gradient(to right, #406483, #42728f, #46809a, #4b8ea3, #539cac)", // lighter bluish grad
@@ -276,7 +276,7 @@ const shootTi = "Generic Shooter";
 const platTi = "Platformer";
 const tankTi = "UNet Tanks";
 // Descriptions
-const rpgDes = "A time-based 12 minute rpg. Survive for three days, protect your home and defeat the final boss. My very first Unity project, created for a bachelor thesis. ";
+const rpgDes = "A time-based 12 minute rpg. Survive for three days, protect your home and defeat the final boss. My first Unity project, created for a bachelor thesis. ";
 const blockDes = "The classic block breaker game.";
 const tdDes = "A tower/lane defense game. Find the combinations that will allow you to keep your score above zero, in three increasingly challenging levels.";
 const shootDes = "A generic shoot-em-up game using Scriptable Ojects and object pooling for enemy waves.";

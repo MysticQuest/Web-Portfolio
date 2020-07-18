@@ -26,6 +26,7 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import active section
 import { activeIndex } from "../../App";
 //import image and media
+import stealthimg from "../../images/gameImages/stealth.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -147,7 +148,7 @@ const useStyles = makeStyles(theme => ({
 
   content: {
     background:
-      "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #b17eba)",
+      "linear-gradient(to right, #216998, #007b9d, #008b99, #2D959A, #5da683)",
     // "linear-gradient(180deg, #977d9c, #856b8a, #7a5e80, #7f5586, #66406c)", //for ping bg
     backgroundColor: "#393f47", //test color for firefox bug
     // background:
@@ -276,12 +277,11 @@ const shootLi = "./webgl/shoot/index.html";
 // const platLi = "./webgl/plat/index.html";
 const tankLi = "";
 // Source links
-const rpgSo = "https://github.com/MysticQuest/Unity-Project_Thesis";
+const stealthSo = "https://github.com/MysticQuest/Unreal-StealthProj";
 const blockSo = "https://github.com/MysticQuest/Unity-Block_Breaker";
 const tdSo = "https://github.com/MysticQuest/Unity-Tower_Defense_V1";
 const shootSo = "https://github.com/MysticQuest/Unity-Generic_Shmup";
 const platSo = "https://github.com/MysticQuest/Unity-Platformer_Adventure";
-const tankSo = "";
 //DLs
 const tankWin = "";
 const tankLin = "";
@@ -319,7 +319,7 @@ const UGames = () => {
                 >
                   <CardMedia
                     className={`${classes.media} ${classes.media6}`}
-                    image=""
+                    image={stealthimg}
                     alt="loading..."
                   />
                   <CardContent className={classes.content}>
@@ -360,12 +360,12 @@ const UGames = () => {
                   />
                 </Button>
                 <Button
-                  href={tankSo}
+                  href={stealthSo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.buttons}
                 >
-                  <FontAwesomeIcon className={classes.iconsTBA} icon={faGithub} />
+                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
                 </Button>
 
                 <Tooltip
@@ -528,7 +528,7 @@ const UGames = () => {
                   />
                 </Button>
                 <Button
-                  href={rpgSo}
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.buttons}
