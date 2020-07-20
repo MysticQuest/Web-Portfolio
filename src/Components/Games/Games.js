@@ -170,7 +170,7 @@ const useStyles = makeStyles(theme => ({
 
   content: {
     background:
-      "linear-gradient(0deg, rgba(90,79,185,1) 0%, rgba(94,130,143,1) 100%)",
+      "linear-gradient(0deg, rgba(29,67,120,1) 0%, rgba(40,79,134,1) 49%, rgba(58,101,147,1) 77%, rgba(73,112,150,1) 100%)",
     backgroundColor: "#393f47", //test color for firefox bug
     // background:
     //   "linear-gradient(to right, #406483, #42728f, #46809a, #4b8ea3, #539cac)", // lighter bluish grad
