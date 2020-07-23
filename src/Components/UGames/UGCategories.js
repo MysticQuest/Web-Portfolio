@@ -27,7 +27,7 @@ import //   faHtml5,
 import uniIcon from "../../images/uniIcon.png";
 
 var activateAnim = false;
-if (preActiveIndex === 2) {
+if (preActiveIndex === 3) {
   activateAnim = true;
 } else {
   activateAnim = false;

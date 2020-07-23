@@ -31,7 +31,8 @@ import uniIcon from "../../images/uniIcon.png";
 var activateAnim = false;
 if (preActiveIndex === 2) {
   activateAnim = true;
-} else {
+}
+else {
   activateAnim = false;
 }
 
@@ -166,7 +167,8 @@ export default function GameCategories() {
 
   if (preActiveIndex === 2) {
     activateAnim = true;
-  } else {
+  }
+  else {
     activateAnim = false;
   }
 

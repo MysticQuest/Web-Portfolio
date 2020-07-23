@@ -66,7 +66,7 @@ const App = () => (
       // slidesNavigation={false}
       // slidesNavPosition={"bottom"}
       // navigationTooltips={[]} //tooltips for the navdots
-      scrollingSpeed={1000} /* used this for something to work... */
+      scrollingSpeed={1000} /* used this for something for bugs */
       // sectionsColor={["black", "black", "black", "black"]}
       scrollBar={false}
       // easing={"easeInOutCubic"}
