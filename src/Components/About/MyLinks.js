@@ -87,7 +87,7 @@ const useStyles = makeStyles(theme => ({
 
 const gitLink = "https://github.com/MysticQuest?tab=repositories";
 const linLink = "https://www.linkedin.com/in/kmls/";
-const cvLink = "https://www.dropbox.com/s/q8j7rm4gks604xm/CV_KManolakis.pdf?dl=0"
+const cvLink = "https://drive.google.com/file/d/1GEegzZSThiPIX-iTFTFkymN3W7Yy9qsV/view?usp=share_link"
 
 const Icons = () => {
   const classes = useStyles();

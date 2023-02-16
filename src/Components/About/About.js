@@ -28,6 +28,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import EmailIcon from "@material-ui/icons/Email";
+import unrealIcon from "../../images/unrealIcon.png";
 
 var activateAnim = false;
 var permaAnim = false;
@@ -147,7 +148,27 @@ const Home = () => {
                           <FontAwesomeIcon icon={faDatabase} />
                           <span>&nbsp;</span>SQLite
                         </p>
-                      </Grid>
+                        </Grid>
+                        <Grid item xs={6} sm={6}>
+                            <p className="about3">
+                                <img
+                                    className={unrealIcon}
+                                    style={{
+                                        height: "calc(10px + 1vw)",
+                                        width: "calc(10px + 1vw)",
+                                        verticalAlign: "bottom"
+                                    }}
+                                    src={unrealIcon}
+                                    alt="unreal engine"
+                                />
+                                <span>&nbsp;</span>Unreal
+                            </p>
+                        </Grid>
+                        <Grid item xs={6} sm={6}>
+                               <p className="about3 sharp">
+                                <span>&nbsp;</span>C++
+                            </p>
+                        </Grid>
                     </Grid>
                   </div>
                 </Fade>

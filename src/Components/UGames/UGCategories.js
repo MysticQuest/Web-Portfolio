@@ -24,7 +24,7 @@ import //   faHtml5,
   //   faNodeJs
   "@fortawesome/free-brands-svg-icons";
 // import { faPalette } from "@fortawesome/free-solid-svg-icons";
-import uniIcon from "../../images/uniIcon.png";
+import unrealIcon from "../../images/unrealIcon.png";
 
 var activateAnim = false;
 if (preActiveIndex === 3) {
@@ -195,16 +195,16 @@ export default function UGameCategories() {
                 label={
                   <span>
                     <img
-                      className={uniIcon}
+                      className={unrealIcon}
                       style={{
-                        height: "calc(25px + 1vw)",
-                        width: "calc(25px + 1vw)",
-                        verticalAlign: "bottom"
+                        height: "calc(15px + 1vw)",
+                        width: "calc(15px + 1vw)",
+                        verticalAlign: "text-bottom"
                       }}
-                      src={uniIcon}
-                      alt="unity3d"
+                      src={unrealIcon}
+                      alt="unreal engine"
                     />
-                    <span>&nbsp;</span>Games
+                        <span>&nbsp;&nbsp;&nbsp;</span>Games
                   </span>
                 }
                 {...a11yProps(0)}

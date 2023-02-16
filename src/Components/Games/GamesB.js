@@ -31,6 +31,7 @@ import benPic from "../../images/gameImages/ben.png";
 import vufPic from "../../images/gameImages/vuf.png";
 import meshPic from "../../images/gameImages/mesh.png";
 import tttPic from "../../images/gameImages/ttt.png";
+import tamaPic from "../../images/gameImages/android.png";
 //Links
 
 const useStyles = makeStyles(theme => ({
@@ -261,26 +262,31 @@ const exitDuration = 1;
 // };
 
 // Titles
+const tamaTi = "Stepcounter"
 const benTi = "Benchmarking Tool";
 const vufTi = "Vuforia AR";
 const meshTi = "Mesh Particle Systems";
 const tttTi = "TicTacToe AI";
 // Descriptions
+const tamaDes = "A unity application with an Android plugin running a background step counter & notification service."
 const benDes = "Physics and rendering techniques that attempt to stress the CPU and GPU.";
 const vufDes = "A small AR experiment with Vuforia in Unity.";
 const meshDes = "Custom mesh particle systems for performant, permanent decals, utilizing stencil buffers.";
 const tttDes = "A tic tac toe game with a few AI options, ultizing the MiniMax recursive algorithm, built for Android platforms.";
 // Tooltip info
+const tamaTT = "Made with Unity, VS and Android Studio.";
 const benTT = "Made with Unity and VS.";
 const assetTT = "";
 const meshTT = "";
 const tttTT = "";
 // Play links
+const tamaLi = "";
 const benLi = "./webgl/benchTool/index.html";
 const vufLi = "";
 const meshLi = "./webgl/mesh/index.html";
 const tttLi = "./webgl/ttt/index.html";
 // Source links
+const tamaSo = "https://github.com/MysticQuest/Unity-ProjectTmg";
 const vufSo = "https://github.com/MysticQuest/Unity-AR_vuforia_project";
 const benSo = "https://github.com/MysticQuest/Unity-Benchmarking_Tool_Mockup";
 const meshSo = "https://github.com/MysticQuest/Unity-ProjectR";
@@ -299,7 +305,99 @@ const Games = () => {
 
   return (
     <div className={classes.root}>
-      <Grid className={classes.grid} container spacing={3}>
+          <Grid className={classes.grid} container spacing={3}>
+
+              <Zoom
+                  timeout={{ enter: 300, exit: exitDuration }}
+                  in={activateAnim}
+                  style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+              >
+                  <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+                      <Card className={classes.card}>
+                          <Tooltip
+                              classes={{ tooltip: classes.toolTipsCard }}
+                              TransitionComponent={Zoom}
+                              title=""
+                              placement="top"
+                          >
+                              <CardActionArea
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href=""
+                                  className={classes.cardActionArea}
+                              >
+                                  <CardMedia
+                                      className={`${classes.media}`}
+                                      image={tamaPic}
+                                  />
+                                  <CardContent className={classes.content}>
+                                      <Typography
+                                          className={classes.contHead}
+                                          gutterBottom
+                                          variant="h5"
+                                          component="h2"
+                                      >
+                                          {tamaTi}
+                                      </Typography>
+                                      <Typography
+                                          className={classes.contText}
+                                          variant="body2"
+                                          color="textSecondary"
+                                          component="p"
+                                      >
+                                          {tamaDes}
+                                      </Typography>
+                                  </CardContent>
+                              </CardActionArea>
+                          </Tooltip>
+                          <CardActions className={classes.buttonArea}>
+                              <Button target="_blank"
+                                  rel="noopener noreferrer"
+                                  // href={tankWin}
+                                  className={classes.buttons}>
+                                  <FontAwesomeIcon
+                                      title="Windows Client"
+                                      className={classes.iconsTBA}
+                                      icon={faWindows}
+                                  />
+                              </Button>
+                              <Button target="_blank"
+                                  rel="noopener noreferrer"
+                                  // href={tankLin} 
+                                  className={classes.buttons}>
+                                  <FontAwesomeIcon
+                                      title="Linux Client"
+                                      className={classes.iconsTBA}
+                                      icon={faLinux}
+                                  />
+                              </Button>
+                              <Button
+                                  href={tamaSo}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={classes.buttons}
+                              >
+                                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+                              </Button>
+
+                              <Tooltip
+                                  classes={{ tooltip: classes.toolTips }}
+                                  TransitionComponent={Zoom}
+                                  title={tamaTT}
+                                  placement="bottom"
+                              >
+                                  <Button className={classes.buttons}>
+                                      <FontAwesomeIcon
+                                          className={classes.icons}
+                                          icon={faInfoCircle}
+                                      />
+                                  </Button>
+                              </Tooltip>
+                          </CardActions>
+                      </Card>
+                  </Grid>
+              </Zoom>
+
         <Zoom
           timeout={{ enter: 300, exit: exitDuration }}
           in={activateAnim}
