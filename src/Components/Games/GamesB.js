@@ -30,6 +30,7 @@ import benGif from "../../images/gameImages/ben.gif";
 import benPic from "../../images/gameImages/ben.png";
 import vufPic from "../../images/gameImages/vuf.png";
 import meshPic from "../../images/gameImages/mesh.png";
+import meshGif from "../../images/gameImages/mesh.gif";
 import tttPic from "../../images/gameImages/ttt.png";
 import tamaPic from "../../images/gameImages/android.png";
 //Links
@@ -77,13 +78,13 @@ const useStyles = makeStyles(theme => ({
         mozTransition: "background-image 0.3s ease-in-out 0.1s",
         oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
-      // "& $media2": {
-      //   backgroundImage: `url(${blockGif}) !important`,
-      //   transition: "background-image 0.3s ease-in-out 0.1s",
-      //   webkitTransition: "background-image 0.3s ease-in-out 0.1s",
-      //   mozTransition: "background-image 0.3s ease-in-out 0.1s",
-      //   oTransition: "background-image 0.3s ease-in-out 0.1s"
-      // },
+       "& $media2": {
+         backgroundImage: `url(${meshGif}) !important`,
+         transition: "background-image 0.3s ease-in-out 0.1s",
+         webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+         mozTransition: "background-image 0.3s ease-in-out 0.1s",
+         oTransition: "background-image 0.3s ease-in-out 0.1s"
+       },
       // "& $media3": {
       //   backgroundImage: `url(${tdGif}) !important`,
       //   transition: "background-image 0.3s ease-in-out 0.1s",
@@ -286,7 +287,7 @@ const vufLi = "";
 const meshLi = "./webgl/mesh/index.html";
 const tttLi = "./webgl/ttt/index.html";
 // Source links
-const tamaSo = "https://github.com/MysticQuest/Unity-ProjectTmg";
+const tamaSo = "https://github.com/MysticQuest/Android-StepCountService";
 const vufSo = "https://github.com/MysticQuest/Unity-AR_vuforia_project";
 const benSo = "https://github.com/MysticQuest/Unity-Benchmarking_Tool_Mockup";
 const meshSo = "https://github.com/MysticQuest/Unity-ProjectR";
@@ -508,8 +509,7 @@ const Games = () => {
                   className={classes.cardActionArea}
                 >
                   <CardMedia
-                    //   className={`${classes.media} ${classes.media1}`}
-                    className={classes.media}
+                    className={`${classes.media} ${classes.media2}`}
                     image={meshPic}
                   />
                   <CardContent className={classes.content}>

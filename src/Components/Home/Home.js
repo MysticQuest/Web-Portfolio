@@ -76,7 +76,7 @@ const Home = () => {
             >
               <div className="readability-container1">
                 <p className="home3">
-                  Hello, I am Kiriakos, a software developer who enjoys
+                  Hello, I am Kiriakos, a software developer who enjoys building experiences and 
                   bringing various projects into existence, including web pages,
                   applications and video games. <br></br><br></br>This site has been created with
                   ReactJs, Fullpage.js and MaterialUI.
@@ -103,7 +103,9 @@ const Home = () => {
                   style={{ transitionDelay: permaAnim ? "4000ms" : "0ms" }}
                 >
                   <p className="home3">
-                    or visit the <span className="highlight">"About"</span> section to view a skill summary.
+                    or visit the <span
+                        className="highlight"
+                    >"About"</span> section to view a skill summary.
                   </p>
                 </Fade>
               </div>
