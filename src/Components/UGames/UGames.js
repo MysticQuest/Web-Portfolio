@@ -287,7 +287,7 @@ const platSo = "https://github.com/MysticQuest/Unity-Platformer_Adventure";
 //DLs
 const stealthWin = "";
 const stealthLin = "";
-const adventuredemoWin = "https://drive.google.com/file/d/1C7Q4kMtNTm7W2rjgbKI4vzePhVUwCEqy/view?usp=share_link";
+const adventuredemoWin = "https://drive.google.com/file/d/1Cb-8hoJHEg2XgMCXmYbzJ7ITuQp796Xh/view?usp=share_link";
 
 const UGames = () => {
   const classes = useStyles();
