@@ -269,7 +269,7 @@ const vufTi = "Vuforia AR";
 const meshTi = "Mesh Particle Systems";
 const tttTi = "TicTacToe AI";
 // Descriptions
-const tamaDes = "A unity application with an Android plugin running a background step counter & notification service."
+const tamaDes = "A Unity application using an Android plugin developed in Android Studio, that runs a background step counter & notification service."
 const benDes = "Physics and rendering techniques that attempt to stress the CPU and GPU.";
 const vufDes = "A small AR experiment with Vuforia in Unity.";
 const meshDes = "Custom mesh particle systems for performant, permanent decals, utilizing stencil buffers.";

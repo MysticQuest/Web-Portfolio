@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\Components",
     "\\src\\Components\\About",
+    "\\src\\Components\\Games",
     "\\src\\Components\\Home",
     "\\src\\Components\\Navigation",
     "\\src\\Components\\Projects",
     "\\src\\Components\\UGames",
-    "\\src\\images",
-    "\\src\\images\\gameImages"
+    "\\src\\images"
   ],
-  "SelectedNode": "\\src\\Components\\UGames\\UGames.js",
+  "SelectedNode": "\\src\\Components\\Games\\GamesB.js",
   "PreviewInSolutionExplorer": false
 }

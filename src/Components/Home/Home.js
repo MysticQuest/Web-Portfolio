@@ -76,7 +76,7 @@ const Home = () => {
             >
               <div className="readability-container1">
                 <p className="home3">
-                  Hello, I am Kiriakos, a software developer who enjoys building experiences and 
+                  Hello, I am Kiriakos, a software developer who enjoys 
                   bringing various projects into existence, including web pages,
                   applications and video games. <br></br><br></br>This site has been created with
                   ReactJs, Fullpage.js and MaterialUI.
