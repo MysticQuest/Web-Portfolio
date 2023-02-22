@@ -33,6 +33,7 @@ import meshPic from "../../images/gameImages/mesh.png";
 import meshGif from "../../images/gameImages/mesh.gif";
 import tttPic from "../../images/gameImages/ttt.png";
 import tamaPic from "../../images/gameImages/android.png";
+import customRPPic from "../../images/gameImages/customRP.png";
 //Links
 
 const useStyles = makeStyles(theme => ({
@@ -268,30 +269,35 @@ const benTi = "Benchmarking Tool";
 const vufTi = "Vuforia AR";
 const meshTi = "Mesh Particle Systems";
 const tttTi = "TicTacToe AI";
+const customRPTi = "Custom Render Pipeline"
 // Descriptions
 const tamaDes = "A Unity application using an Android plugin developed in Android Studio, that runs a background step counter & notification service."
 const benDes = "Physics and rendering techniques that attempt to stress the CPU and GPU.";
 const vufDes = "A small AR experiment with Vuforia in Unity.";
 const meshDes = "Custom mesh particle systems for performant, permanent decals, utilizing stencil buffers.";
 const tttDes = "A tic tac toe game with a few AI options, ultizing the MiniMax recursive algorithm, built for Android platforms.";
+const customRPDes = "An exercise project on a custom render pipeline, render queue, draw calls, optimization, shaders and meshes.";
 // Tooltip info
 const tamaTT = "Made with Unity, VS and Android Studio.";
 const benTT = "Made with Unity and VS.";
-const assetTT = "";
-const meshTT = "";
-const tttTT = "";
+const assetTT = "Made with Unity and VS.";
+const meshTT = "Made with Unity and VS.";
+const tttTT = "Made with Unity and VS.";
+const customRPTT = "Made with Unity and VS."
 // Play links
 const tamaLi = "";
 const benLi = "./webgl/benchTool/index.html";
 const vufLi = "";
 const meshLi = "./webgl/mesh/index.html";
 const tttLi = "./webgl/ttt/index.html";
+const customRPLi = "";
 // Source links
 const tamaSo = "https://github.com/MysticQuest/Android-StepCountService";
 const vufSo = "https://github.com/MysticQuest/Unity-AR_vuforia_project";
 const benSo = "https://github.com/MysticQuest/Unity-Benchmarking_Tool_Mockup";
 const meshSo = "https://github.com/MysticQuest/Unity-ProjectR";
 const tttSo = "https://github.com/MysticQuest/Unity-TicTacToe";
+const customRPSo = "https://github.com/MysticQuest/unity-custom-render-pipeline";
 //DLs
 // const benWin = "https://www.dropbox.com/s/mmcaw5svih0bqfj/TanksWin.rar?dl=0";
 
@@ -307,6 +313,97 @@ const Games = () => {
   return (
     <div className={classes.root}>
           <Grid className={classes.grid} container spacing={3}>
+
+              <Zoom
+                  timeout={{ enter: 300, exit: exitDuration }}
+                  in={activateAnim}
+                  style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+              >
+                  <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+                      <Card className={classes.card}>
+                          <Tooltip
+                              classes={{ tooltip: classes.toolTipsCard }}
+                              TransitionComponent={Zoom}
+                              title=""
+                              placement="top"
+                          >
+                              <CardActionArea
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href=""
+                                  className={classes.cardActionArea}
+                              >
+                                  <CardMedia
+                                      className={`${classes.media}`}
+                                      image={customRPPic}
+                                  />
+                                  <CardContent className={classes.content}>
+                                      <Typography
+                                          className={classes.contHead}
+                                          gutterBottom
+                                          variant="h5"
+                                          component="h2"
+                                      >
+                                          {customRPTi}
+                                      </Typography>
+                                      <Typography
+                                          className={classes.contText}
+                                          variant="body2"
+                                          color="textSecondary"
+                                          component="p"
+                                      >
+                                          {customRPDes}
+                                      </Typography>
+                                  </CardContent>
+                              </CardActionArea>
+                          </Tooltip>
+                          <CardActions className={classes.buttonArea}>
+                              <Button target="_blank"
+                                  rel="noopener noreferrer"
+                                  // href={tankWin}
+                                  className={classes.buttons}>
+                                  <FontAwesomeIcon
+                                      title="Windows Client"
+                                      className={classes.iconsTBA}
+                                      icon={faWindows}
+                                  />
+                              </Button>
+                              <Button target="_blank"
+                                  rel="noopener noreferrer"
+                                  // href={tankLin} 
+                                  className={classes.buttons}>
+                                  <FontAwesomeIcon
+                                      title="Linux Client"
+                                      className={classes.iconsTBA}
+                                      icon={faLinux}
+                                  />
+                              </Button>
+                              <Button
+                                  href={customRPSo}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={classes.buttons}
+                              >
+                                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+                              </Button>
+
+                              <Tooltip
+                                  classes={{ tooltip: classes.toolTips }}
+                                  TransitionComponent={Zoom}
+                                  title={customRPSo}
+                                  placement="bottom"
+                              >
+                                  <Button className={classes.buttons}>
+                                      <FontAwesomeIcon
+                                          className={classes.icons}
+                                          icon={faInfoCircle}
+                                      />
+                                  </Button>
+                              </Tooltip>
+                          </CardActions>
+                      </Card>
+                  </Grid>
+              </Zoom>
 
               <Zoom
                   timeout={{ enter: 300, exit: exitDuration }}
