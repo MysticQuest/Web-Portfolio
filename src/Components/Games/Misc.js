@@ -32,7 +32,8 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 //import gif1 from "../../images/tenor.gif";
 import mapPic1 from "../../images/gameImages/map.png";
 import mapPic2 from "../../images/gameImages/map2.png";
-import uniGif from "../../images/gameImages/uni.gif";
+import uniPic from "../../images/gameImages/assets.png";
+import uniGif from "../../images/gameImages/assets.gif";
 
 import ter1Pic from "../../images/gameImages/ter1.png";
 
@@ -80,10 +81,13 @@ const useStyles = makeStyles(theme => ({
         mozTransition: "background-image 0.3s ease-in-out 0.1s",
         oTransition: "background-image 0.3s ease-in-out 0.1s"
       },
-      //   "& $media2": {
-      //     backgroundImage: `url(${blockGif}) !important`,
-      //     transition: "background-image 0.3s ease-in-out"
-      //   },
+       "& $media2": {
+        backgroundImage: `url(${uniGif}) !important`,
+        transition: "background-image 0.3s ease-in-out 0.1s",
+        webkitTransition: "background-image 0.3s ease-in-out 0.1s",
+        mozTransition: "background-image 0.3s ease-in-out 0.1s",
+        oTransition: "background-image 0.3s ease-in-out 0.1s"
+       },
       //   "& $media3": {
       //     backgroundImage: `url(${tdGif}) !important`,
       //     transition: "background-image 0.3s ease-in-out"
@@ -249,7 +253,7 @@ const useStyles = makeStyles(theme => ({
 
 // Titles
 const mcTi = "MCrpg World Design";
-const assetTi = "Unity Assets Project";
+const assetTi = "Assets Collection";
 
 const ter1Ti = "Gaia Project";
 
@@ -257,7 +261,7 @@ const ter1Ti = "Gaia Project";
 const mcDes =
   "A fully custom voxel fantasy-themed world, created for a private server in 'Minecraft' v1.10. Made with World Machine, Terrain Control, Voxelizer, Blender and Photoshop.  ";
 const assetDes =
-  "A collection of assets made with Blender, Unity Shader Graph and Aseprite.";
+  "A collection of assets/materials made with Blender, Unity Shader Graph, UE material editor and Aseprite.";
 
 const ter1Des = "An ongoing terrain generation project built with Gaia and free assets in Unity.";
 
@@ -456,9 +460,8 @@ const Misc = () => {
                 className={classes.cardActionArea}
               >
                 <CardMedia
-                  //   className={`${classes.media} ${classes.media1}`}
-                  className={classes.media}
-                  image={uniGif}
+                  className={`${classes.media} ${classes.media2}`}
+                  image={uniPic}
                 />
                 <CardContent className={classes.content}>
                   <Typography

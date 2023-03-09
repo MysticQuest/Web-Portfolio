@@ -352,7 +352,7 @@ const UGames = () => {
                     rel="noopener noreferrer"
                     className={classes.buttons}>
                   <FontAwesomeIcon
-                    title="Not Available Yet"
+                    title="Windows Client"
                     className={classes.icons}
                     icon={faWindows}
                   />
