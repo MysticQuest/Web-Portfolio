@@ -122,7 +122,7 @@ const useStyles = makeStyles(theme => ({
     // background:
     //   "radial-gradient(circle, rgba(0,219,255,0.25) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)",
     height: "100%",
-    // filter: "drop-shadow(-6px 4px 2px black)"
+     filter: "drop-shadow(-2px 2px 2px blue)"
   },
   tabContent: {
     // boxShadow: "0 1px 1px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23)",

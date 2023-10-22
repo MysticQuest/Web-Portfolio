@@ -135,8 +135,8 @@ const useStyles = makeStyles(theme => ({
     // backgroundColor: "rgba(255,255,255,0.07)",
     background:
       "radial-gradient(circle, rgba(246, 253, 200,0.30) 0%, rgba(0,0,0,0.02) 100%, rgba(0,0,0,0) 100%)",
-    height: "100%"
-    // filter: "drop-shadow(-6px 4px 2px black)"
+    height: "100%",
+         filter: "drop-shadow(-2px 2px 2px blue)"
   },
   tabContent: {
     fontSize: "calc(17px + 0.4vw)",
