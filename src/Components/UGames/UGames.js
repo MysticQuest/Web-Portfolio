@@ -29,6 +29,7 @@ import { activeIndex } from "../../App";
 import adventuredemoimg from "../../images/gameImages/adventuredemo.png";
 import adventuredemogif from "../../images/gameImages/adventuredemo.gif";
 import stealthimg from "../../images/gameImages/stealth.png";
+import breezeimg from "../../images/gameImages/breeze.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -250,19 +251,21 @@ const exitDuration = 1;
 // };
 
 // Titles
-const stealthTi = "WIP";
+const stealthTi = "Stealth Island";
 const adventuredemoTI = "Adventure Demo";
 const rpgTi = "12-minute RPG";
 const blockTi = "Block Breaker";
 const shootTi = "Generic Shooter";
 const platTi = "Platformer";
+const breezeTi = "C++ SDL Game Engine";
 // Descriptions
-const stealthDes = "Design and development of a multiplayer stealth game level using layered materials.";
+const stealthDes = "Design and development of a multiplayer stealth game level using layered materials. (WIP)";
 const advdemoDes = "A short adventure game focused on lighting, C++ and basic UE functionality.";
 const rpgDes = "";
 const blockDes = "The classic block breaker game.";
 const shootDes = "A generic shoot-em-up game using Scriptable Ojects and object pooling for enemy waves.";
 const platDes = "A short platform game.";
+const breezeDes = "A rudimentary game engine using SDL (WIP)."
 // Tooltip info
 const stealthTT = "";
 const adventuredemoTT = "To lower the graphics use the gameusersettings.ini in the game directory, which is generated after launching the game once.";
@@ -271,6 +274,7 @@ const rpgTT =
 const blockTT = "Made with Unity, VS, and free assets.";
 const shootTT = "Made with Unity, VS, and free assets.";
 const platTT = "Made with Unity, VS, and free assets.";
+const breezeTT = "C++ game engine using SDL. Compile the engine project as a game project dependency dll."
 // Play links
 const stealthLi = "";
 const adventuredemoLi = "";
@@ -284,6 +288,7 @@ const adventuredemoSo = "https://github.com/MysticQuest/unreal-adventuredemo";
 const blockSo = "https://github.com/MysticQuest/Unity-Block_Breaker";
 const shootSo = "https://github.com/MysticQuest/Unity-Generic_Shmup";
 const platSo = "https://github.com/MysticQuest/Unity-Platformer_Adventure";
+const breezeSo = "https://github.com/MysticQuest/sdl-game-engine";
 //DLs
 const stealthWin = "";
 const stealthLin = "";
@@ -391,6 +396,97 @@ const UGames = () => {
           </Grid>
               </Zoom>
 
+
+
+              <Zoom
+                  timeout={{ enter: 300, exit: exitDuration }}
+                  in={activateAnim}
+                  style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
+              >
+                  <Grid className={classes.gridItem} item xs={12} sm={12} md={6} lg={4}>
+                      <Card className={classes.card}>
+                          <Tooltip
+                              classes={{ tooltip: classes.toolTipsCard }}
+                              TransitionComponent={Zoom}
+                              title=""
+                              placement="top"
+                          >
+                              <CardActionArea
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href=""
+                                  className={classes.cardActionArea}
+                              >
+                                  <CardMedia
+                                      className={`${classes.media} ${classes.media1}`}
+                                      image={breezeimg}
+                                  />
+                                  <CardContent className={classes.content}>
+                                      <Typography
+                                          className={classes.contHead}
+                                          gutterBottom
+                                          variant="h5"
+                                          component="h2"
+                                      >
+                                          {breezeTi}
+                                      </Typography>
+                                      <Typography
+                                          className={classes.contText}
+                                          variant="body2"
+                                          color="textSecondary"
+                                          component="p"
+                                      >
+                                          {breezeDes}
+                                      </Typography>
+                                  </CardContent>
+                              </CardActionArea>
+                          </Tooltip>
+                          <CardActions className={classes.buttonArea}>
+                              <Button className={classes.buttons}>
+                                  <FontAwesomeIcon
+                                      title="Not Available Yet"
+                                      className={classes.iconsTBA}
+                                      icon={faWindows}
+                                  />
+                              </Button>
+                              <Button className={classes.buttons}>
+                                  <FontAwesomeIcon
+                                      title="Not Available Yet"
+                                      className={classes.iconsTBA}
+                                      icon={faLinux}
+                                  />
+                              </Button>
+                              <Button
+                                  href={breezeSo}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={classes.buttons}
+                              >
+                                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
+                              </Button>
+
+                              <Tooltip
+                                  classes={{ tooltip: classes.toolTips }}
+                                  TransitionComponent={Zoom}
+                                  title={breezeTT}
+                                  placement="bottom"
+                              >
+                                  <Button className={classes.buttons}>
+                                      <FontAwesomeIcon
+                                          className={classes.icons}
+                                          icon={faInfoCircle}
+                                      />
+                                  </Button>
+                              </Tooltip>
+                          </CardActions>
+                      </Card>
+                  </Grid>
+              </Zoom>{" "}
+
+
+
+
+
               <Zoom
                   timeout={{ enter: 300, exit: exitDuration }}
                   in={activateAnim}
@@ -480,90 +576,7 @@ const UGames = () => {
               </Zoom>{" "}
 
 
-        <Zoom
-          timeout={{ enter: 300, exit: exitDuration }}
-          in={activateAnim}
-          style={{ transitionDelay: activateAnim ? "0ms" : "0ms" }}
-        >
-          <Grid className={classes.gridItemHidden} item xs={12} sm={12} md={6} lg={4}>
-            <Card className={classes.card}>
-              <Tooltip
-                classes={{ tooltip: classes.toolTipsCard }}
-                TransitionComponent={Zoom}
-                title="Play"
-                placement="top"
-              >
-                <CardActionArea
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={rpgLi}
-                  className={classes.cardActionArea}
-                >
-                  <CardMedia
-                    className={`${classes.media} ${classes.media1}`}
-                    image=""
-                  />
-                  <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.contHead}
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                    >
-                      {rpgTi}
-                    </Typography>
-                    <Typography
-                      className={classes.contText}
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      {rpgDes}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Tooltip>
-              <CardActions className={classes.buttonArea}>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faWindows}
-                  />
-                </Button>
-                <Button className={classes.buttons}>
-                  <FontAwesomeIcon
-                    title="Not Available Yet"
-                    className={classes.iconsTBA}
-                    icon={faLinux}
-                  />
-                </Button>
-                <Button
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.buttons}
-                >
-                  <FontAwesomeIcon className={classes.icons} icon={faGithub} />
-                </Button>
 
-                <Tooltip
-                  classes={{ tooltip: classes.toolTips }}
-                  TransitionComponent={Zoom}
-                  title={rpgTT}
-                  placement="bottom"
-                >
-                  <Button className={classes.buttons}>
-                    <FontAwesomeIcon
-                      className={classes.icons}
-                      icon={faInfoCircle}
-                    />
-                  </Button>
-                </Tooltip>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Zoom>{" "}
         <Zoom
           timeout={{ enter: 300, exit: exitDuration }}
           in={activateAnim}
